@@ -1,6 +1,6 @@
 const MAD_TABII_DATA = {
     id: "mad_tabii",
-    title: "AL-MAD AT-TABI'I",
+    title: "1. MAD TABI'I",
     type: "Ahkam Al-Mad",
     steps: [
         {
@@ -23,135 +23,62 @@ const MAD_TABII_DATA = {
         },
         {
             type: "lesson",
-            prof: "Pourquoi cette définition ? C'est par élimination !",
+            prof: "Les lettres du Mad Tabi'i sont les trois voyelles longues, lorsqu'elles sont 'mortes' (Sakin).",
             html: `
             <div class="concept-card">
-                <h3>La Logique de l'Élimination</h3>
-                <p>Le Mad Tabi'i est le Mad "par défaut".</p>
-                <div style="text-align:left; margin-top:15px; font-size:0.9rem;">
-                    <div style="margin-bottom:10px;">❌ <strong>Si Hamza Avant ?</strong> <br>➡️ Ce serait un <em>Mad Badal</em> (Ex: Aamana).</div>
-                    <div style="margin-bottom:10px;">❌ <strong>Si Hamza Après ?</strong> <br>➡️ Ce serait un <em>Mad Muttasil</em> ou <em>Munfasil</em>.</div>
-                    <div style="margin-bottom:10px;">❌ <strong>Si Soukoun Après ?</strong> <br>➡️ Ce serait un <em>Mad Lazim</em> ou <em>Arid</em>.</div>
+                <h3>Les 3 Lettres (Way)</h3>
+                <div class="letters-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="l-card"><div class="l-ar">ي</div><div class="l-desc">Ya (avec Kasra avant)</div></div>
+                    <div class="l-card"><div class="l-ar">و</div><div class="l-desc">Waw (avec Damma avant)</div></div>
+                    <div class="l-card"><div class="l-ar">ا</div><div class="l-desc">Alif (avec Fatha avant)</div></div>
                 </div>
-                <div style="margin-top:15px; padding:10px; background:#e8f5e9; border:1px solid #4caf50; border-radius:5px; text-align:center; color:#2e7d32; font-weight:bold;">
-                    Pas de Hamza, Pas de Sukun = Mad Tabi'i ✅
-                </div>
-            </div>`
-        },
-        {
-            type: "lesson",
-            prof: "Les lettres du Mad sont trois (les sœurs 'Way'), et elles ont des conditions strictes.",
-            html: `
-            <div class="concept-card">
-                <h3>Les 3 Lettres et leurs Conditions</h3>
-                <div style="display:flex; justify-content:space-around; margin:20px 0;">
-                    <div class="letter-box" style="background:#fff; border-color:#00acc1;">
-                        <div class="ar-big" style="color:#00838f;">ا</div>
-                        <div>Alif</div>
-                    </div>
-                    <div class="letter-box" style="background:#fff; border-color:#00acc1;">
-                        <div class="ar-big" style="color:#00838f;">و</div>
-                        <div>Wow</div>
-                    </div>
-                    <div class="letter-box" style="background:#fff; border-color:#00acc1;">
-                        <div class="ar-big" style="color:#00838f;">ي</div>
-                        <div>Ya</div>
-                    </div>
-                </div>
-                
-                <div style="display:flex; flex-direction:column; gap:10px;">
-                    <div style="background:#fff; padding:10px; border-radius:8px; border-left:4px solid #F44336;">
-                        <strong>1. L'Alif (ا) :</strong> Toujours Sakin, précédé d'une <strong>FATHA</strong>.<br>
-                        <span class="ar-word" style="color:#D32F2F;">قَالَ</span> (Qāla)
-                    </div>
-                    <div style="background:#fff; padding:10px; border-radius:8px; border-left:4px solid #FF9800;">
-                        <strong>2. Le Wow (و) :</strong> Sakin, précédé d'une <strong>DAMMA</strong>.<br>
-                        <span class="ar-word" style="color:#E65100;">يَقُولُ</span> (Yaqūlu)
-                    </div>
-                    <div style="background:#fff; padding:10px; border-radius:8px; border-left:4px solid #2196F3;">
-                        <strong>3. Le Ya (ي) :</strong> Sakin, précédé d'une <strong>KASRA</strong>.<br>
-                        <span class="ar-word" style="color:#1565C0;">قِيلَ</span> (Qīla)
-                    </div>
+                <div style="margin-top:20px; font-style:italic; color:#666;">
+                    On les appelle les lettres de <strong>Jauf</strong> (Vide de la bouche).
                 </div>
             </div>`
-        },
-
-        // THE MASTER EXAMPLE
-        {
-            type: "lesson",
-            prof: "Pour mémoriser cela, les savants ont réuni ces 3 cas dans un seul mot du Coran.",
-            html: `
-            <div class="concept-card">
-                <h3>L'Exemple Complet (Al-Jami')</h3>
-                <div style="text-align:center; margin:20px 0;">
-                    <div class="ar-huge" style="font-size:3rem; color:#006064;">نُوحِيهَا</div>
-                    <div style="font-size:1.2rem; color:#555; margin-top:10px;">Nū - Ḥī - Hā</div>
-                </div>
-                <p style="text-align:center; font-size:0.9rem;">
-                    Analysez-le :<br>
-                    <strong>Nu</strong> (Wow + Damma)<br>
-                    <strong>Hi</strong> (Ya + Kasra)<br>
-                    <strong>Ha</strong> (Alif + Fatha)
-                </p>
-                <div class="tip-box" style="margin-top:15px; border-color:#00838f;">
-                    Ce mot ne contient aucune Hamza avant/après un Mad, et aucun Sukun. C'est du <strong>100% Naturel</strong>.
-                </div>
-                <center>
-                    <button class="play-btn" onclick="playAudio('011049', 8, 10, 'nuhiha')">🔊 Écouter (Nuhiha)</button>
-                </center>
-            </div>`
-        },
-
-        // OBSERVATION DRILL
-        {
-            type: "quiz_theory",
-            prof: "Attention au piège ! ⚡️<br>Dans le mot **بَيْتٌ** (Baytun). Le Ya est Sakina. Est-ce un Mad Tabi'i ?",
-            opts: [{ t: "Oui", good: false }, { t: "Non", good: true }],
-            exp: "NON! Car le Ya est précédé d'une Fatha (Bay), pas d'une Kasra. C'est une lettre de <strong>Lin</strong>, pas de Mad."
-        },
-
-        // WORKSHOP
-        {
-            type: "intro",
-            prof: "🎙️ <strong>Atelier de Pratique</strong><br>Le secret est la mesure. Ni trop court (1 temps), ni trop long (4 temps)."
         },
         {
             type: "workshop",
-            prof: "Répétez après le Cheikh. Visez exactement 2 temps.",
+            prof: "Écoutez la différence entre une voyelle courte (1 temps) et longue (2 temps).",
             examples: [
-                { type: "Alif (Fatha)", ar: "قَالَ", url: "002030", start: 2, end: 3, id: "qala" },
-                { type: "Wow (Damma)", ar: "يَقُولُ", url: "002008", start: 2, end: 4, id: "yaqulu" },
-                { type: "Ya (Kasra)", ar: "قِيلَ", url: "002011", start: 2, end: 3, id: "qila" },
-                { type: "Le Total", ar: "نُوحِيهَا", url: "011049", start: 8, end: 10, id: "nuhiha-w" }
+                { type: "Court", ar: "بَ", url: "top_ba" },
+                { type: "Long (Mad)", ar: "بَا", url: "top_baa" },
+                { type: "Court", ar: "قُ", url: "top_qu" },
+                { type: "Long (Mad)", ar: "قُو", url: "top_quu" }
             ]
         },
-
-        // EXAM
-        { type: "intro", prof: "🧐 <strong>Évaluation</strong>" },
-
+        // IMMERSION SURAH AL-FIL
         {
-            type: "quiz_theory",
-            prof: "1/4 - Quelle est la définition du Mad Tabi'i ?",
-            opts: [{ t: "Suivi d'une Hamza", good: false }, { t: "Ni Hamza avant, ni Hamza/Sukun après", good: true }],
-            exp: "C'est la définition par exclusion de toutes les causes d'allongement supplémentaire."
+            type: "immersion",
+            prof: "🔍 <strong>Immersion : Surah Al-Fil (105)</strong><br>Trouvez les Mads Tabi'i (Alif, Waw, Ya sans Hamza/Sukun).",
+            instruction: "Cliquez sur les lettres de prolongation.",
+            surah: 105,
+            options: ["Mad Tabi'i (2 Temps)", "Autre (Ignorer)"],
+            words: [
+                { t: "أَلَمْ", ok: false }, { t: "تَرَ", ok: false }, { t: "كَيْفَ", ok: false },
+                { t: "فَعَلَ", ok: false }, { t: "رَبُّكَ", ok: false },
+                { t: "بِأَصْحَٰبِ", ok: true, optIdx: 0, reason: "Mad Tabi'i (Alif Khanjariya)." },
+                { t: "ٱلْفِيلِ", ok: true, optIdx: 0, reason: "Mad Tabi'i (Ya)." }, { t: "١", endVerse: true },
+                { t: "أَلَمْ", ok: false }, { t: "يَجْعَلْ", ok: false },
+                { t: "كَيْدَهُمْ", ok: false },
+                { t: "فِى", ok: true, optIdx: 0, reason: "Mad Tabi'i (Ya)." },
+                { t: "تَضْلِيلٍ", ok: true, optIdx: 0, reason: "Mad Tabi'i (Ya)." }, { t: "٢", endVerse: true },
+                { t: "وَأَرْسَلَ", ok: false }, { t: "عَلَيْهِمْ", ok: false },
+                { t: "طَيْرًا", ok: false },
+                { t: "أَبَابِيلَ", ok: true, optIdx: 0, reason: "Mad Tabi'i (Alif et Ya)." }, { t: "٣", endVerse: true },
+                { t: "تَرْمِيهِم", ok: true, optIdx: 0, reason: "Mad Tabi'i (Ya)." },
+                { t: "بِحِجَارَةٍ", ok: true, optIdx: 0, reason: "Mad Tabi'i (Alif)." },
+                { t: "مِّن", ok: false }, { t: "سِجِّيلٍ", ok: true, optIdx: 0, reason: "Mad Tabi'i (Ya)." }, { t: "٤", endVerse: true },
+                { t: "فَجَعَلَهُمْ", ok: false },
+                { t: "كَعَصْفٍ", ok: false },
+                { t: "مَّأْكُولٍۭ", ok: true, optIdx: 0, reason: "Mad Tabi'i (Waw)." }, { t: "٥", endVerse: true }
+            ]
         },
         {
             type: "quiz_theory",
-            prof: "2/4 - Quelle est sa durée ?",
-            opts: [{ t: "2 Harakat (Temps)", good: true }, { t: "4 Harakat", good: false }],
-            exp: "La durée naturelle de deux mouvements."
-        },
-        {
-            type: "quiz_theory",
-            prof: "3/4 - Dans **خَوْفٍ** (Khawf), pourquoi n'est-ce PAS un Mad Tabi'i ?",
-            opts: [{ t: "Car le Wow a une Fatha avant", good: true }, { t: "Car le Wow est Sakin", good: false }],
-            exp: "Pour le Mad Tabi'i, le Wow doit avoir une Damma avant (comme 'Yaqulu')."
-        },
-        {
-            type: "quiz_theory",
-            prof: "4/4 - Lequel de ces mots est un Mad Tabi'i ?",
-            opts: [{ t: "جَآءَ (Jaaa-a)", good: false }, { t: "قَالَ (Qala)", good: true }],
-            exp: "Jaa-a a une Hamza après (c'est un Muttasil). Qala est pur."
+            prof: "Question rapide :",
+            opts: [{ t: "2 Temps", good: true }, { t: "4 Temps", good: false }],
+            exp: "Le Mad Tabi'i est toujours de 2 temps."
         }
     ]
 };
