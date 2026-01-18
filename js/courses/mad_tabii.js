@@ -7,17 +7,19 @@ const MAD_TABII_DATA = {
             type: "lesson",
             prof: "Bienvenue. Commençons par la base absolue : Le **Mad Tabi'i** (Naturel).<br>Pour bien le comprendre, il faut connaître sa définition précise.",
             html: `
-            <div class="concept-card">
+                <div class="concept-card">
                 <h3>Définition Technique</h3>
                 <p>C'est tout Mad qui respecte deux conditions négatives :</p>
-                <ul style="text-align:left; margin:15px; list-style-type:none; background:#e0f7fa; padding:15px; border-radius:10px; border:2px solid #00acc1;">
+                <ul class="def-box">
                     <li>1. <strong>Ni précédé</strong> d'une Hamza (ء).</li>
                     <li>2. <strong>Ni suivi</strong> d'une Hamza (ء) ou d'un Soukoun (°) (Original ou dû à l'arrêt).</li>
                 </ul>
                 <p>Si ces conditions sont remplies, la lettre reste dans son état <strong>Naturel</strong>.</p>
-                <div class="tip-box">
-                    <strong>Durée :</strong> 2 Harakat (Temps).<br>
-                    C'est le temps nécessaire pour prononcer deux lettres voyellées.
+                <div style="background:#e3f2fd; border:2px solid #2196f3; border-radius:12px; padding:20px; text-align:center; margin-top:20px;">
+                    <div style="font-size:0.9rem; color:#1565c0; font-weight:bold; letter-spacing:1px; text-transform:uppercase; margin-bottom:5px;">La Règle d'Or</div>
+                    <div style="font-size:2.5rem; color:#0d47a1; font-weight:800; line-height:1;">2 TEMPS</div>
+                    <div style="font-size:1.1rem; color:#1976d2; margin-top:5px;">(Deux Harakat)</div>
+                    <p style="font-size:0.9rem; color:#555; margin-top:15px;">Ni plus, ni moins. C'est le rythme naturel.</p>
                 </div>
             </div>`
         },
@@ -37,14 +39,36 @@ const MAD_TABII_DATA = {
                 </div>
             </div>`
         },
+        // QUIZ THEORIE NOUVEAU
+        {
+            type: "quiz_theory",
+            prof: "Avant de pratiquer, vérifions la théorie.",
+            questions: [
+                {
+                    q: "Combien de temps dure le Mad Tabi'i ?",
+                    opts: ["2 Temps (Harakat)", "4 ou 5 Temps", "6 Temps"],
+                    good: 0
+                },
+                {
+                    q: "Quelle condition est VRAIE pour le Mad Tabi'i ?",
+                    opts: ["Il est suivi d'une Hamza", "Il n'a ni Hamza ni Soukoun après", "Il a un Soukoun avant"],
+                    good: 1
+                },
+                {
+                    q: "Pourquoi dit-on qu'il est 'Naturel' ?",
+                    opts: ["C'est la longueur normale sans effort", "Il vient de la nature", "C'est le plus long"],
+                    good: 0
+                }
+            ]
+        },
         {
             type: "workshop",
             prof: "Écoutez la différence entre une voyelle courte (1 temps) et longue (2 temps).",
             examples: [
-                { type: "Court", ar: "بَ", url: "top_ba" },
-                { type: "Long (Mad)", ar: "بَا", url: "top_baa" },
-                { type: "Court", ar: "قُ", url: "top_qu" },
-                { type: "Long (Mad)", ar: "قُو", url: "top_quu" }
+                { type: "1 Temps", ar: "بَ", url: "top_ba" },
+                { type: "2 Temps", ar: "بَا", url: "top_baa" },
+                { type: "1 Temps", ar: "قُ", url: "top_qu" },
+                { type: "2 Temps", ar: "قُو", url: "top_quu" }
             ]
         },
         // IMMERSION SURAH AL-FIL
@@ -53,7 +77,7 @@ const MAD_TABII_DATA = {
             prof: "🔍 <strong>Immersion : Surah Al-Fil (105)</strong><br>Trouvez les Mads Tabi'i (Alif, Waw, Ya sans Hamza/Sukun).",
             instruction: "Cliquez sur les lettres de prolongation.",
             surah: 105,
-            options: ["Mad Tabi'i (2 Temps)", "Autre (Ignorer)"],
+            // options removed for simple selection
             words: [
                 { t: "أَلَمْ", ok: false }, { t: "تَرَ", ok: false }, { t: "كَيْفَ", ok: false },
                 { t: "فَعَلَ", ok: false }, { t: "رَبُّكَ", ok: false },
@@ -73,12 +97,6 @@ const MAD_TABII_DATA = {
                 { t: "كَعَصْفٍ", ok: false },
                 { t: "مَّأْكُولٍۭ", ok: true, optIdx: 0, reason: "Mad Tabi'i (Waw)." }, { t: "٥", endVerse: true }
             ]
-        },
-        {
-            type: "quiz_theory",
-            prof: "Question rapide :",
-            opts: [{ t: "2 Temps", good: true }, { t: "4 Temps", good: false }],
-            exp: "Le Mad Tabi'i est toujours de 2 temps."
         }
     ]
 };

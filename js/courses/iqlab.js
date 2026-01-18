@@ -18,11 +18,10 @@ const IQLAB_DATA = {
             </div>
             <p style="font-size:0.8rem; margin-top:20px; color:#888;">Le son 'N' est totalement remplacé par 'M'.</p></div>`
         },
-        // Equation
         {
             type: "lesson",
-            prof: "Résumé de la règle.<br>Formule à retenir.",
-            html: `<div class="eq-container"><div class="eq-card"><div style="font-size:0.9rem; color:#888; margin-bottom:15px; text-transform:uppercase; letter-spacing:1px;">Formule Iqlab</div><div class="eq-formula"><div class="eq-tag tag-blue">Noun / Tanween</div><div class="eq-plus">+</div><div class="eq-tag tag-green">ب</div><div class="eq-plus">=</div><div class="res-text">MIM (م) + GHUNNAH</div></div></div></div>`
+            prof: "La condition d'application.<br>L'Iqlab s'applique uniquement avec une seule lettre.",
+            html: `<div class="concept-card"><div style="color:#d63031; font-weight:700; margin-bottom:15px; text-transform:uppercase; font-size:0.8rem;">À mémoriser</div><div class="letters-grid" style="grid-template-columns: 1fr;"><div class="l-card"><div class="l-ar">ب</div></div></div><div class="tip-box"><div style="font-size:0.8rem; color:#555; margin-bottom:10px; font-weight:bold;">Lettre Unique :</div><div class="letters-grid" style="grid-template-columns: 1fr; margin-top:0;"><div class="l-ar" style="font-size:1.5rem; color:#0984e3;">ب</div></div><div style="font-size:0.9rem; margin-top:10px; line-height:1.6; color:#444;">Le <strong>Ba (ب)</strong> est la seule lettre qui transforme le Noun en Mim.</div></div></div>`
         },
 
         // Exemples Visuels
@@ -36,6 +35,11 @@ const IQLAB_DATA = {
             prof: "Exemple 2 : Tanween + Ba.<br>Le son 'oun' devient 'oum'.",
             html: `<div class="concept-card"><div class="mz-container"><div class="mz-phrase">سَمِيعٌۢ بَصِيرٌ</div><div class="mz-analysis"><div class="mz-group"><div class="mz-box mz-green">ب</div><div class="mz-label green">Lettre</div></div><div class="mz-icon">+</div><div class="mz-group"><div class="mz-box mz-blue">ــٌۢ</div><div class="mz-label blue">Tanween</div></div></div></div><div class="ex-logic">Le <strong>Tanween</strong> rencontre le <strong>Ba (ب)</strong>.<br>Transformation ➡ <strong>SAMI'UM-BASEER</strong>.<span class="ex-def">La finale 'N' mute en 'M'.</span></div></div>`
         },
+        {
+            type: "lesson",
+            prof: "Cas particulier : Dans un seul mot.<br>Le Noun et le Ba peuvent être collés.",
+            html: `<div class="concept-card"><div class="mz-container"><div class="mz-phrase">لَيُنۢبَذَنَّ</div><div class="mz-analysis"><div class="mz-group"><div class="mz-box mz-green">ب</div><div class="mz-label green">Lettre</div></div><div class="mz-icon">+</div><div class="mz-group"><div class="mz-box mz-blue">نۢ</div><div class="mz-label blue">Noun</div></div></div></div><div class="ex-logic">Le <strong>Noun Sakina</strong> est suivi du <strong>Ba (ب)</strong> dans le même mot.<br>Règle : <strong>IQLAB</strong> (Transformation en M).</div></div>`
+        },
 
         // Quiz Théorie
         {
@@ -46,6 +50,12 @@ const IQLAB_DATA = {
                 { t: "Ba (ب)", good: true }
             ],
             exp: "Correct. Le Ba (ب) est l'unique lettre qui déclenche l'Iqlab lorsqu'elle suit un Noun Sakina ou un Tanween."
+        },
+        // Equation
+        {
+            type: "lesson",
+            prof: "Résumé de la règle.<br>Formule à retenir.",
+            html: `<div class="eq-container"><div class="eq-card"><div style="font-size:0.9rem; color:#888; margin-bottom:15px; text-transform:uppercase; letter-spacing:1px;">Formule Iqlab</div><div class="eq-formula"><div class="eq-tag tag-blue">Noun / Tanween</div><div class="eq-plus">+</div><div class="eq-tag tag-green">ب</div><div class="eq-plus">=</div><div class="res-text">MIM (م) + GHUNNAH</div></div></div></div>`
         },
         // Algorithme
         {

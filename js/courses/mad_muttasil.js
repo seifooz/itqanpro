@@ -9,7 +9,7 @@ const MAD_MUTTASIL_DATA = {
             html: `
             <div class="concept-card">
                 <h3>Définition</h3>
-                <p>On l’appelle ainsi lorsque la lettre de l’allongement est suivie de la lettre <strong>Hamza ( هَمْزَة )</strong>, le tout en un <strong>SEUL mot</strong>.</p>
+                <p style="color:#333;">On l’appelle ainsi lorsque la lettre de l’allongement est suivie de la lettre <strong>Hamza ( هَمْزَة )</strong>, le tout en un <strong>SEUL mot</strong>.</p>
                 <div style="background:#e3f2fd; padding:15px; border-radius:10px; margin:15px 0; text-align:center; border:2px solid #2196f3;">
                     <div style="font-size:2rem; color:#0d47a1;">سَمَآءَ</div>
                     <div style="color:#0d47a1; font-weight:bold; margin-top:5px;">Mad + Hamza ( هَمْزَة ) = Même mot 🏠</div>
@@ -25,7 +25,7 @@ const MAD_MUTTASIL_DATA = {
             html: `
             <div class="concept-card">
                 <h3>La Logique : Connexion</h3>
-                <p><strong>Muttasil ( مُتَّصِل )</strong> signifie "Attaché". La cause de l'allongement (la Hamza) est attachée à la lettre de Mad dans le même corps (le mot).</p>
+                <p style="color:#333;"><strong>Muttasil ( مُتَّصِل )</strong> signifie "Attaché". La cause de l'allongement (la Hamza) est attachée à la lettre de Mad dans le même corps (le mot).</p>
                 <div class="tip-box" style="border-left-color:#ff9800;">
                     <strong>Jugement : Wajib (Obligatoire)</strong><br>
                     Il est interdit de le raccourcir à 2 temps. Tous les lecteurs l'allongent.

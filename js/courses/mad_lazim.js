@@ -9,7 +9,7 @@ const MAD_LAZIM_DATA = {
             html: `
             <div class="concept-card">
                 <h3>Définition</h3>
-                <p>On l’appelle ainsi lorsque la lettre de l’allongement est suivie d’une lettre ayant un <strong>Sukun ( سُكُون )</strong> originel (qui ne part jamais) ou d'une <strong>Shadda ( شَدَّة )</strong>.</p>
+                <p style="color:#333;">On l’appelle ainsi lorsque la lettre de l’allongement est suivie d’une lettre ayant un <strong>Sukun ( سُكُون )</strong> originel (qui ne part jamais) ou d'une <strong>Shadda ( شَدَّة )</strong>.</p>
                 <div style="background:#212121; padding:15px; border-radius:10px; margin-top:15px; text-align:center; border:2px solid #000;">
                     <div style="font-size:2rem; color:#fff;">6 TEMPS</div>
                     <div style="color:#bdbdbd; font-weight:bold; margin-top:5px;">Durée obligatoire (Tul).</div>
@@ -24,8 +24,8 @@ const MAD_LAZIM_DATA = {
             html: `
             <div class="concept-card">
                 <h3>1. Kilmi Muthaqqal (Mot Lourd)</h3>
-                <p>Lorsque la lettre de madd est suivie d’une lettre dédoublée ayant une <strong>Shadda ( شَدَّة )</strong> (et compris en un mot).</p>
-                <p><strong>Muthaqqal ( مُثَقَّل )</strong> signifie "Lourd", à cause de la Shadda.</p>
+                <p style="color:#333;">Lorsque la lettre de madd est suivie d’une lettre dédoublée ayant une <strong>Shadda ( شَدَّة )</strong> (et compris en un mot).</p>
+                <p style="color:#333;"><strong>Muthaqqal ( مُثَقَّل )</strong> signifie "Lourd", à cause de la Shadda.</p>
                 <div style="display:flex; flex-direction:column; gap:10px; margin-top:10px;">
                     <div style="display:flex; align-items:center; gap:10px; background:#fff; padding:10px; border-radius:8px; border-left: 4px solid #d32f2f;">
                         <div class="ar-word ar-medium" style="color:#d32f2f;">ٱلْحَآقَّةُ</div>
@@ -52,8 +52,8 @@ const MAD_LAZIM_DATA = {
             html: `
             <div class="concept-card">
                 <h3>2. Kilmi Mukhaffaf (Mot Léger)</h3>
-                <p>Lorsque la lettre de madd est suivie d’une lettre ayant un <strong>Sukun ( سُكُون )</strong> originel et compris en un mot.</p>
-                <p><strong>Mukhaffaf ( مُخَفَّف )</strong> signifie "Léger", car il n'y a pas de Shadda, juste un Sukun.</p>
+                <p style="color:#333;">Lorsque la lettre de madd est suivie d’une lettre ayant un <strong>Sukun ( سُكُون )</strong> originel et compris en un mot.</p>
+                <p style="color:#333;"><strong>Mukhaffaf ( مُخَفَّف )</strong> signifie "Léger", car il n'y a pas de Shadda, juste un Sukun.</p>
                 <div class="tip-box">
                     Ce cas est unique ! Il n'apparaît que dans le mot <strong>( ءَآلْـَٰٔنَ )</strong> répété deux fois dans la Sourate Yunus (10:51, 91).
                 </div>
@@ -77,7 +77,7 @@ const MAD_LAZIM_DATA = {
             html: `
             <div class="concept-card">
                 <h3>3. Harfi Muthaqqal (Lettre Lourde)</h3>
-                <p>Concerne les lettres au début des sourates (Muqatta'at). C'est 'Lourd' s'il y a une <strong>Fusion (Idgham - إِدْغَام)</strong> avec la lettre suivante.</p>
+                <p style="color:#333;">Concerne les lettres au début des sourates (Muqatta'at). C'est 'Lourd' s'il y a une <strong>Fusion (Idgham - إِدْغَام)</strong> avec la lettre suivante.</p>
                 
                 <div style="margin-top:15px; background:#fff; padding:10px; border-radius:8px; border:1px solid #ccc;">
                     <div class="ar-word ar-medium" style="color:#7b1fa2;">الٓمٓ</div>
@@ -107,7 +107,7 @@ const MAD_LAZIM_DATA = {
             html: `
             <div class="concept-card">
                 <h3>4. Harfi Mukhaffaf (Lettre Légère)</h3>
-                <p>Lorsque la lettre de madd est suivie d’une lettre ayant un <strong>Sukun ( سُكُون )</strong> originel, mais <strong>SANS Fusion (Idgham - إِدْغَام)</strong>.</p>
+                <p style="color:#333;">Lorsque la lettre de madd est suivie d’une lettre ayant un <strong>Sukun ( سُكُون )</strong> originel, mais <strong>SANS Fusion (Idgham - إِدْغَام)</strong>.</p>
                 <div style="display:flex; flex-direction:column; gap:10px; margin-top:10px;">
                     <div style="display:flex; align-items:center; gap:10px; background:#fff; padding:10px; border-radius:8px; border-left: 4px solid #00acc1;">
                         <div class="ar-word ar-medium" style="color:#00acc1;">نٓ</div>

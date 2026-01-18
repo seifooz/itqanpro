@@ -7,7 +7,7 @@ let idx = 0;
 let hasAnswered = false;
 let currentAudioId = null;
 let immersionSelection = [];
-let immersionChoices = {}; // Map wordIndex -> optionIndex
+let immersionChoices = {};
 let currentImmersionWordIndex = null;
 let selectedQuizOpt = null;
 
@@ -22,257 +22,195 @@ const footer = document.querySelector('.footer');
 const courseTitleLabel = document.getElementById('course-title');
 const courseModeLabel = document.getElementById('course-mode');
 
+/* --- DATA MAPPING HELPER --- */
+function getAllCourses() {
+    // Maps ID strings to Global Variables from course files
+    return {
+        'nun_sakina_intro': typeof NUN_INTRO_DATA !== 'undefined' ? NUN_INTRO_DATA : null,
+        'izhar': typeof IZHAR_DATA !== 'undefined' ? IZHAR_DATA : null,
+        'idgham_ghunnah': typeof IDGHAM_GHUNNAH_DATA !== 'undefined' ? IDGHAM_GHUNNAH_DATA : null,
+        'idgham_bila_ghunnah': typeof IDGHAM_BILA_GHUNNAH_DATA !== 'undefined' ? IDGHAM_BILA_GHUNNAH_DATA : null,
+        'iqlab': typeof IQLAB_DATA !== 'undefined' ? IQLAB_DATA : null,
+        'ikhfaa': typeof IKHFAA_DATA !== 'undefined' ? IKHFAA_DATA : null,
+        'qalqala': typeof QALQALA_DATA !== 'undefined' ? QALQALA_DATA : null,
+        'ra_tafkhim': typeof RA_TAFKHIM_DATA !== 'undefined' ? RA_TAFKHIM_DATA : null,
+        'ra_tarqiq': typeof RA_TARQIQ_DATA !== 'undefined' ? RA_TARQIQ_DATA : null,
+        'ra_jawaz': typeof RA_JAWAZ_DATA !== 'undefined' ? RA_JAWAZ_DATA : null,
+        'lam': typeof LAM_DATA !== 'undefined' ? LAM_DATA : null,
+        'ghunna': typeof GHUNNA_DATA !== 'undefined' ? GHUNNA_DATA : null,
+        'mad_intro': typeof MAD_INTRO_DATA !== 'undefined' ? MAD_INTRO_DATA : null,
+        'mad_tabii': typeof MAD_TABII_DATA !== 'undefined' ? MAD_TABII_DATA : null,
+        'mad_badal': typeof MAD_BADAL_DATA !== 'undefined' ? MAD_BADAL_DATA : null,
+        'mad_ewad': typeof MAD_EWAD_DATA !== 'undefined' ? MAD_EWAD_DATA : null,
+        'mad_sila': typeof MAD_SILA_DATA !== 'undefined' ? MAD_SILA_DATA : null,
+        'mad_muttasil': typeof MAD_MUTTASIL_DATA !== 'undefined' ? MAD_MUTTASIL_DATA : null,
+        'mad_munfasil': typeof MAD_MUNFASIL_DATA !== 'undefined' ? MAD_MUNFASIL_DATA : null,
+        'mad_arid': typeof MAD_ARID_DATA !== 'undefined' ? MAD_ARID_DATA : null,
+        'mad_lin': typeof MAD_LIN_DATA !== 'undefined' ? MAD_LIN_DATA : null,
+        'mad_lazim': typeof MAD_LAZIM_DATA !== 'undefined' ? MAD_LAZIM_DATA : null,
+        'mad_review': typeof MAD_REVIEW_DATA !== 'undefined' ? MAD_REVIEW_DATA : null,
+        'mim_idgham': typeof MIM_IDGHAM_DATA !== 'undefined' ? MIM_IDGHAM_DATA : null,
+        'mim_ikhfaa': typeof MIM_IKHFAA_DATA !== 'undefined' ? MIM_IKHFAA_DATA : null,
+        'mim_izhar': typeof MIM_IZHAR_DATA !== 'undefined' ? MIM_IZHAR_DATA : null,
+        'nun_review': typeof NUN_REVIEW_DATA !== 'undefined' ? NUN_REVIEW_DATA : null
+    };
+}
+
+// HELPER FOR COURSE METADATA (Dark Reference Style)
+function getCourseMeta(id, title) {
+    const defaultMeta = {
+        tag: "Module",
+        iconColor: "icon-yellow",
+        icon: "📖",
+        letter: "A"
+    };
+
+    if (!title) return defaultMeta;
+
+    let meta = { ...defaultMeta };
+
+    if (id === 'nun_sakina_intro') {
+        meta.tag = "Essentiel";
+        meta.iconColor = "icon-yellow";
+        meta.icon = "🚪";
+        meta.letter = "م"; // Intro
+    }
+    else if (id === 'izhar') {
+        meta.tag = "6 Lettres";
+        meta.iconColor = "icon-green";
+        meta.icon = "🎤";
+        meta.letter = "ظ";
+    }
+    else if (id.includes('idgham')) {
+        meta.tag = "4 Lettres";
+        meta.iconColor = "icon-blue";
+        meta.icon = "⚡";
+        meta.letter = "غ";
+    }
+    else if (id.includes('iqlab')) {
+        meta.tag = "1 Lettre";
+        meta.iconColor = "icon-purple";
+        meta.icon = "🔄";
+        meta.letter = "ب";
+    }
+    else if (id.includes('ikhfa')) {
+        meta.tag = "15 Lettres";
+        meta.iconColor = "icon-purple";
+        meta.icon = "🌫️";
+        meta.letter = "خ";
+    }
+    else if (id.includes('mad')) {
+        meta.tag = "Prolongation";
+        meta.iconColor = "icon-yellow";
+        meta.icon = "🌊";
+        meta.letter = "م";
+        if (id === 'mad_intro') { meta.tag = "Concept"; meta.icon = "🗝️"; }
+        if (id === 'mad_review') { meta.tag = "Bilan"; meta.icon = "🎓"; }
+    }
+
+    return meta;
+}
+
 function showPortal() {
     currentCourse = null;
     header.style.display = 'none';
     footer.style.display = 'none';
 
+    const courses = getAllCourses();
+
+    // Define Sections - ALL COURSES
+    const sections = [
+        {
+            title: "Ahkam Noun Sakina & Tanwin",
+            subtitle: "Règles de base",
+            ids: ['nun_sakina_intro', 'izhar', 'idgham_ghunnah', 'idgham_bila_ghunnah', 'iqlab', 'ikhfaa']
+        },
+        {
+            title: "Al-Moudoud (Prolongations)",
+            subtitle: "9 types de Mad",
+            ids: ['mad_intro', 'mad_tabii', 'mad_badal', 'mad_ewad', 'mad_sila', 'mad_muttasil', 'mad_munfasil', 'mad_arid', 'mad_lin', 'mad_lazim', 'mad_review']
+        },
+        {
+            title: "Autres Règles",
+            subtitle: "Qalqala, Ra, Lam, Ghunna",
+            ids: ['qalqala', 'ra_tafkhim', 'ra_tarqiq', 'ra_jawaz', 'lam', 'ghunna']
+        },
+        {
+            title: "Ahkam Mim Sakina",
+            subtitle: "3 règles du Mim",
+            ids: ['mim_idgham', 'mim_ikhfaa', 'mim_izhar']
+        },
+        {
+            title: "Révisions",
+            subtitle: "Tests complets",
+            ids: ['nun_review']
+        }
+    ];
+
+    let sectionsHTML = '';
+
+    sections.forEach(sec => {
+        let cards = '';
+        sec.ids.forEach(id => {
+            const c = courses[id];
+            if (c) {
+                const meta = getCourseMeta(id, c.title);
+                cards += `
+                <div class="dark-card" data-letter="${meta.letter}" onclick="startCourse('${id}')">
+                    <div class="dc-icon-box ${meta.iconColor}">
+                        ${meta.icon}
+                    </div>
+                    <div class="dc-content">
+                        <h3 class="dc-title">${c.title}</h3>
+                        <p class="dc-desc">${c.desc || 'Apprenez les règles de récitation.'}</p>
+                    </div>
+                    <div class="dc-footer">
+                        <span class="dc-tag">${meta.tag}</span>
+                        <div class="dc-link">Accéder <span>➜</span></div>
+                    </div>
+                </div>`;
+            }
+        });
+
+        if (cards) {
+            sectionsHTML += `
+            <div class="section-header">
+                <h2 class="section-title">${sec.title}</h2>
+                <span class="section-subtitle">${sec.subtitle}</span>
+            </div>
+            <div class="dark-grid">
+                ${cards}
+            </div>`;
+        }
+    });
+
     viewport.innerHTML = `
-        <div class="portal-container">
-            <h1 class="portal-title">Itqān Pro</h1>
-            <p style="text-align:center; color:var(--text-light); font-size:0.9rem; margin-bottom:30px;">
-                Sélectionnez un module pour commencer.
-            </p>
+    <div class="dashboard-shell">
+        <nav class="top-nav">
+            <div class="brand-logo">Itqān <span>Pro</span></div>
+            <div class="user-greet">Bienvenue, Étudiant</div>
+        </nav>
+
+        <div class="main-container">
             
-            <div class="course-card card-intro" style="border-color:#74b9ff; background:#e3f2fd;" onclick="startCourse(NUN_INTRO_DATA)">
-                <div class="course-info">
-                    <div class="course-name">INTRODUCTION</div>
-                    <div class="course-desc">Comprendre le Noun Sakina & Tanwin.</div>
+            <!-- HERO HERO HERO -->
+            <div class="hero-card">
+                <div class="hero-text">
+                    <h1>Bismillāh, continuez votre apprentissage</h1>
+                    <p>Le module "Introduction" est recommandé pour commencer.</p>
                 </div>
-                <div class="course-arrow">➜</div>
+                <button class="btn-hero" onclick="startCourse('nun_sakina_intro')">
+                    Reprendre le cours ➜
+                </button>
             </div>
 
-            <div class="course-card card-izhar" onclick="startCourse(IZHAR_DATA)">
-                <div class="course-info">
-                    <div class="course-name">AL-IZHAR</div>
-                    <div class="course-desc">La Clarification (Lettres de la gorge).</div>
-                </div>
-                <div class="course-arrow">➜</div>
+            ${sectionsHTML}
+
+             <div style="margin-top:60px; text-align:center; padding-top:20px; border-top:1px solid rgba(255,255,255,0.05); color:#475569; font-size:0.85rem;">
+                © 2024 Itqān Pro • Excellence Tajweed
             </div>
-
-            <div class="course-card card-idgham" onclick="startCourse(IDGHAM_GHUNNAH_DATA)">
-                <div class="course-info">
-                    <div class="course-name">IDGHAM BI-GHUNNAH</div>
-                    <div class="course-desc">Assimilation avec nasalisation.</div>
-                </div>
-                <div class="course-arrow">➜</div>
-            </div>
-
-            <div class="course-card card-bila" onclick="startCourse(IDGHAM_BILA_GHUNNAH_DATA)">
-                <div class="course-info">
-                    <div class="course-name">IDGHAM BILA-GHUNNAH</div>
-                    <div class="course-desc">Assimilation sans nasalisation.</div>
-                </div>
-                <div class="course-arrow">➜</div>
-            </div>
-
-            <div class="course-card card-ikhfaa" onclick="startCourse(IKHFAA_DATA)">
-                <div class="course-info">
-                    <div class="course-name">AL-IKHFAA</div>
-                    <div class="course-desc">La Dissimulation (15 lettres).</div>
-                </div>
-                <div class="course-arrow">➜</div>
-            </div>
-
-            <div class="course-card card-iqlab" onclick="startCourse(IQLAB_DATA)">
-                <div class="course-info">
-                    <div class="course-name">AL-IQLAB</div>
-                    <div class="course-desc">Transformation du Noun en Mim.</div>
-                </div>
-                <div class="course-arrow">➜</div>
-            </div>
-
-        <!-- QALQALA -->
-        <div class="course-card card-qalqala" onclick="startCourse(QALQALA_DATA)">
-            <div class="course-info">
-                <div class="course-name">AL-QALQALA</div>
-                <div class="course-desc">Le Rebond (Qutb Jad).</div>
-            </div>
-            <div class="course-arrow">➜</div>
         </div>
-
-        <h2 class="portal-subtitle">Règles du Ra</h2>
-
-        <!-- TAFKHIM -->
-        <div class="course-card card-tafkhim" onclick="startCourse(RA_TAFKHIM_DATA)">
-            <div class="course-info">
-                <div class="course-name">RA TAFKHIM</div>
-                <div class="course-desc">La Lourdeur (Emphase).</div>
-            </div>
-            <div class="course-arrow">➜</div>
-        </div>
-
-
-
-        <!-- TARQIQ -->
-        <div class="course-card card-tarqiq" onclick="startCourse(RA_TARQIQ_DATA)">
-            <div class="course-info">
-                <div class="course-name">RA TARQIQ</div>
-                <div class="course-desc">La Finesse (Douceur).</div>
-            </div>
-            <div class="course-arrow">➜</div>
-        </div>
-
-        <!-- JAWAZ -->
-        <div class="course-card card-jawaz" onclick="startCourse(RA_JAWAZ_DATA)">
-            <div class="course-info">
-                <div class="course-name">RA JAWAZ</div>
-                <div class="course-desc">Les Exceptions (Choix).</div>
-            </div>
-            <div class="course-arrow">➜</div>
-        </div>
-
-        <h2 class="portal-subtitle">Ahkam Al-Lam</h2>
-
-        <!-- AHKAM AL-LAM -->
-        <div class="course-card card-lam" onclick="startCourse(LAM_DATA)">
-             <div class="course-icon">👑</div>
-             <div class="course-info">
-                 <h3>Ahkam Al-Lam</h3>
-                 <p>Nom d'Allah</p>
-             </div>
-        </div>
-
-        <!-- GHUNNA -->
-        <div class="course-card card-ghunna" onclick="startCourse(GHUNNA_DATA)">
-             <div class="course-icon">🍯</div>
-             <div class="course-info">
-                 <h3>Al-Ghunna</h3>
-                 <p>Le Chant (2 Temps)</p>
-             </div>
-        </div>
-
-        <h2 class="portal-subtitle">Ahkam Al-Mad (Prolongations)</h2>
-
-        <!-- MAD TABII -->
-        <div class="course-card card-mad" onclick="startCourse(MAD_TABII_DATA)">
-             <div class="course-icon">🌊</div>
-             <div class="course-info">
-                 <h3>1. Mad Tabi'i</h3>
-                 <p>Le Naturel (2 Temps)</p>
-             </div>
-        </div>
-
-        <!-- MAD BADAL -->
-        <div class="course-card card-mad" onclick="startCourse(MAD_BADAL_DATA)">
-             <div class="course-icon">🔄</div>
-             <div class="course-info">
-                 <h3>2. Mad Al-Badal</h3>
-                 <p>Hamza avant (2 Temps)</p>
-             </div>
-        </div>
-
-        <!-- MAD EWAD -->
-        <div class="course-card card-mad" onclick="startCourse(MAD_EWAD_DATA)">
-             <div class="course-icon">🛑</div>
-             <div class="course-info">
-                 <h3>3. Mad Al-Ewad</h3>
-                 <p>L'Arrêt "An" -> "Aa"</p>
-             </div>
-        </div>
-
-        <!-- MAD SILA -->
-        <div class="course-card card-mad" onclick="startCourse(MAD_SILA_DATA)">
-             <div class="course-icon">🔗</div>
-             <div class="course-info">
-                 <h3>4. Mad As-Sila</h3>
-                 <p>Petite (2) & Grande (4-5)</p>
-             </div>
-        </div>
-
-        <!-- MAD MUTTASIL -->
-        <div class="course-card card-mad" onclick="startCourse(MAD_MUTTASIL_DATA)">
-             <div class="course-icon">🏠</div>
-             <div class="course-info">
-                 <h3>5. Wajib Muttasil</h3>
-                 <p>Connecté (4-5 Temps)</p>
-             </div>
-        </div>
-
-        <!-- MAD MUNFASIL -->
-        <div class="course-card card-mad" onclick="startCourse(MAD_MUNFASIL_DATA)">
-             <div class="course-icon">✂️</div>
-             <div class="course-info">
-                 <h3>6. Jaiz Munfasil</h3>
-                 <p>Séparé (4-5 Temps)</p>
-             </div>
-        </div>
-
-        <!-- MAD ARID -->
-        <div class="course-card card-mad" onclick="startCourse(MAD_ARID_DATA)">
-             <div class="course-icon">🛑</div>
-             <div class="course-info">
-                 <h3>7. Arid Lissukun</h3>
-                 <p>Arrêt Temporaire (2-4-6)</p>
-             </div>
-        </div>
-
-        <!-- MAD LIN -->
-        <div class="course-card card-mad" onclick="startCourse(MAD_LIN_DATA)">
-             <div class="course-icon">🍃</div>
-             <div class="course-info">
-                 <h3>8. Mad Lin</h3>
-                 <p>La Douceur (2-4-6)</p>
-             </div>
-        </div>
-
-        <!-- MAD LAZIM -->
-        <div class="course-card card-mad" onclick="startCourse(MAD_LAZIM_DATA)">
-             <div class="course-icon">🌋</div>
-             <div class="course-info">
-                 <h3>9. Mad Lazim</h3>
-                 <p>L'Obligatoire (6 Temps)</p>
-             </div>
-        </div>
-
-        <!-- MAD REVIEW -->
-        <div class="course-card card-mad" style="border-color:#ffeb3b; background:#fffde7;" onclick="startCourse(MAD_REVIEW_DATA)">
-             <div class="course-icon">🎓</div>
-             <div class="course-info">
-                 <h3>RÉVISION MADS</h3>
-                 <p>Grand Test Final</p>
-             </div>
-        </div>
-
-            <h2 class="portal-subtitle">Règles du Mim Sakina</h2>
-
-            <div class="course-card card-idgham" onclick="startCourse(MIM_IDGHAM_DATA)">
-                <div class="course-info">
-                    <div class="course-name">IDGHAM SHAFAWI</div>
-                    <div class="course-desc">Fusion Orale (Mim + Mim).</div>
-                </div>
-                <div class="course-arrow">➜</div>
-            </div>
-
-            <div class="course-card card-ikhfaa" onclick="startCourse(MIM_IKHFAA_DATA)">
-                <div class="course-info">
-                    <div class="course-name">IKHFAA SHAFAWI</div>
-                    <div class="course-desc">Dissimulation Orale (Mim + Ba).</div>
-                </div>
-                <div class="course-arrow">➜</div>
-            </div>
-
-            <div class="course-card card-izhar" onclick="startCourse(MIM_IZHAR_DATA)">
-                <div class="course-info">
-                    <div class="course-name">IZHAR SHAFAWI</div>
-                    <div class="course-desc">Clarté Orale (26 lettres).</div>
-                </div>
-                <div class="course-arrow">➜</div>
-            </div>
-
-            <!-- NUN REVIEW -->
-            <div class="course-card card-idgham" style="border-color:#a29bfe; background:#f3f0ff;" onclick="startCourse(NUN_REVIEW_DATA)">
-                 <div class="course-icon">💎</div>
-                 <div class="course-info">
-                     <h3>RÉVISION NOUN</h3>
-                     <p>10 Sourates Interactives</p>
-                 </div>
-            </div>
-
-            <p style="text-align:center; margin-top:40px; color:var(--text-light); font-size:0.8rem; font-weight:500;">
-                Version 2.0 • Pro Edition
-            </p>
-        </div>
+    </div>
     `;
 }
 
@@ -284,7 +222,19 @@ function resetStepState() {
     selectedQuizOpt = null;
 }
 
-function startCourse(courseData) {
+function startCourse(dataOrId) {
+    let courseData = dataOrId;
+
+    // Handle string ID
+    if (typeof dataOrId === 'string') {
+        const courses = getAllCourses();
+        courseData = courses[dataOrId];
+        if (!courseData) {
+            console.error("Course not found:", dataOrId);
+            return;
+        }
+    }
+
     currentCourse = courseData;
     idx = 0;
     resetStepState();
@@ -392,13 +342,32 @@ function render() {
     }
     else if (step.type === "quiz_theory") {
         if (step.html) html += step.html;
-        html += `<div class="quiz-opts">`;
-        if (step.opts) {
-            step.opts.forEach((o, i) => {
-                html += `<div class="q-btn" id="opt-${i}" onclick="checkTheory(${i})"><span>${o.t}</span></div>`;
+
+        // Support for multiple questions (New Format)
+        if (step.questions && step.questions.length > 0) {
+            html += `<div class="quiz-grid">`;
+            step.questions.forEach((q, qIdx) => {
+                html += `
+                <div class="theory-q-block" id="tq-block-${qIdx}" style="background:white; border:1px solid #eee; padding:20px; border-radius:12px; margin-bottom:15px;">
+                    <div style="font-weight:700; color:var(--primary); margin-bottom:15px;">${q.q}</div>
+                    <div class="tq-opts">`;
+                q.opts.forEach((opt, oIdx) => {
+                    html += `<div class="q-btn-small" id="tq-${qIdx}-${oIdx}" onclick="checkTheoryMulti(${qIdx}, ${oIdx})" style="padding:12px; border:1px solid #eee; border-radius:6px; margin-bottom:8px; cursor:pointer;">${opt}</div>`;
+                });
+                html += `</div><div class="tq-feedback" id="tq-fb-${qIdx}" style="margin-top:10px; font-size:0.9rem; font-weight:600; display:none;"></div></div>`;
             });
+            html += `</div>`;
         }
-        html += `</div><div id="feedback" style="margin-top:20px; padding:20px; border-radius:8px; text-align:center; font-weight:500; display:none; border:1px solid #eee;"></div>`;
+        // Support for single question (Legacy Format)
+        else {
+            html += `<div class="quiz-opts">`;
+            if (step.opts) {
+                step.opts.forEach((o, i) => {
+                    html += `<div class="q-btn" id="opt-${i}" onclick="checkTheory(${i})"><span>${o.t}</span></div>`;
+                });
+            }
+            html += `</div><div id="feedback" style="margin-top:20px; padding:20px; border-radius:8px; text-align:center; font-weight:500; display:none; border:1px solid #eee;"></div>`;
+        }
     }
     else if (step.type === "immersion") {
         html += `<div class="immersion-instruction">${step.instruction}</div><div class="mushaf-container">`;
@@ -411,6 +380,9 @@ function render() {
             const uChoice = immersionChoices[i];
             if (uChoice !== undefined) {
                 classes += ' answered';
+            }
+            if (immersionSelection.includes(i)) {
+                classes += ' selected';
             }
 
             let symbol = w.endVerse ? '<span class="verse-end">۝</span>' : '';
@@ -778,9 +750,15 @@ function selectImmersionOption(optIdx, mIdx) {
 
     const step = currentCourse.steps[idx];
 
+    // Add word to selection array if not already present
+    if (!immersionSelection.includes(currentImmersionWordIndex)) {
+        immersionSelection.push(currentImmersionWordIndex);
+    }
+
     const el = document.getElementById(`m-word-${currentImmersionWordIndex}`);
     if (el) {
         el.classList.add('answered');
+        el.classList.add('selected');
     }
 
     renderSidePanel(step);
@@ -898,4 +876,50 @@ function validateImmersion() {
     btnMain.onclick = next;
     btnNext.disabled = false;
     renderSidePanel(step);
+}
+
+function checkTheoryMulti(qIdx, oIdx) {
+    // Prevent multiple clicks on same question
+    const qBlock = document.getElementById(`tq-block-${qIdx}`);
+    if (qBlock.classList.contains('answered')) return;
+
+    qBlock.classList.add('answered');
+    const step = currentCourse.steps[idx];
+    const question = step.questions[qIdx];
+
+    const isCorrect = (oIdx === question.good);
+    const feedbackEl = document.getElementById(`tq-fb-${qIdx}`);
+    const selectedBtn = document.getElementById(`tq-${qIdx}-${oIdx}`);
+
+    if (isCorrect) {
+        selectedBtn.style.backgroundColor = '#d4edda';
+        selectedBtn.style.borderColor = '#c3e6cb';
+        selectedBtn.style.color = '#155724';
+        selectedBtn.innerHTML += ' ✅';
+        feedbackEl.innerHTML = '<span style="color:#155724;">Correct !</span>';
+    } else {
+        selectedBtn.style.backgroundColor = '#f8d7da';
+        selectedBtn.style.borderColor = '#f5c6cb';
+        selectedBtn.style.color = '#721c24';
+        selectedBtn.innerHTML += ' ❌';
+
+        // Show correct
+        const correctBtn = document.getElementById(`tq-${qIdx}-${question.good}`);
+        correctBtn.style.backgroundColor = '#d4edda';
+        correctBtn.style.borderColor = '#c3e6cb';
+
+        feedbackEl.innerHTML = `<span style="color:#721c24;">Non, la bonne réponse était : ${question.opts[question.good]}</span>`;
+    }
+    feedbackEl.style.display = 'block';
+
+    // Verify if all questions are answered to enable Next
+    const totalQ = step.questions.length;
+    const totalAns = document.querySelectorAll('.theory-q-block.answered').length;
+
+    if (totalAns === totalQ) {
+        btnMain.disabled = false;
+        btnMain.innerText = "CONTINUER";
+        btnMain.onclick = next;
+        btnNext.disabled = false;
+    }
 }

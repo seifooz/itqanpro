@@ -4,49 +4,82 @@ const MAD_ARID_DATA = {
     type: "Ahkam Al-Mad",
     steps: [
         {
-            type: "lesson",
-            prof: "Ce Mad est le plus fréquent à l'écoute, car il survient à la fin des versets.",
+            type: "quiz_theory",
+            prof: "Comparons deux façons de lire les Versets 2 et 3 de la Fatiha.<br>Regardez bien la fin du mot <strong>Al-Alamiin</strong>.",
             html: `
-            <div class="concept-card">
-                <h3>Définition</h3>
-                <p>On l’appelle ainsi lorsque la lettre de l’allongement est suivie d’une lettre ayant un <strong>Sukun ( سُكُون )</strong> dû à l’arrêt.</p>
-                <div style="background:#fff3e0; padding:15px; border-radius:10px; margin:15px 0; text-align:center; border:2px solid #ff9800;">
-                    <div style="font-size:2rem; color:#e65100;">ٱلْعَٰلَمِينَ 🛑</div>
-                    <div style="color:#e65100; font-weight:bold; margin-top:5px;">Le "Na" ( نُون ) final devient muet (Sukun).<br>Le "Yaa" ( ي ) s'allonge.</div>
+            <div class="concept-card" style="text-align:center;">
+                <h3>Situation 1 : Je m'arrête 🛑</h3>
+                <div style="background:#fff3e0; padding:10px; border-radius:10px; border:2px solid #ff9800; margin-bottom:15px;">
+                    <div style="font-size:1.4rem; color:#006064; font-family: 'Scheherazade New', serif; direction:rtl;">
+                        ٱلْحَمْدُ لِلَّهِ رَبِّ <span style="color:#d32f2f;">ٱلْعَٰلَمِينَ</span> 🛑 ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+                    </div>
+                     <button class="btn-audio btn-listen" id="play-lid-stop" onclick="playAudio('001002', 0, 100, 'intro-lid-stop')" style="margin-top:10px; width:100%; justify-content:center; background:#e65100; color:white;">
+                        <span>▶️</span> Écouter l'Arrêt
+                    </button>
+                    <div style="font-size:0.85rem; color:#555; margin-top:5px; font-style:italic;">J'ai coupé mon souffle sur "Min".</div>
                 </div>
-                <div class="tip-box">
-                    <strong>Durée :</strong> 2, 4 ou 6 temps (au choix).
+
+                <h3>Situation 2 : Je continue 🏃 (Liaison)</h3>
+                <div style="background:#e8f5e9; padding:10px; border-radius:10px; border:2px solid #4caf50; opacity:0.9;">
+                    <div style="font-size:1.4rem; color:#006064; font-family: 'Scheherazade New', serif; direction:rtl;">
+                        ٱلْحَمْدُ لِلَّهِ رَبِّ <span style="color:#2e7d32;">ٱلْعَٰلَمِينَ</span> ➡️ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+                    </div>
+                    <div style="font-size:0.85rem; color:#555; margin-top:5px; font-style:italic;">Je ne m'arrête pas, je lie les deux versets.</div>
+                </div>
+
+            </div>`,
+            questions: [
+                {
+                    q: "Dans l'Exemple 1 (Arrêt), comment ai-je fini le mot ?",
+                    opts: ["Al-AlamiinA (Court)", "Al-Alamiiiiiin (Long)"],
+                    good: 1
+                },
+                {
+                    q: "Dans l'Exemple 2 (Liaison), comment dois-je lire le mot ?",
+                    opts: ["Al-AlamiinA (Court, je prononce la voyelle)", "Al-Alamiiiiiin (Long, je prolonge)"],
+                    good: 0
+                }
+            ],
+            exp: "Bravo ! Le Mad Long (Arid) n'existe <strong>QUE</strong> si je m'arrête. Si je continue, la voyelle reste courte."
+        },
+        {
+            type: "lesson",
+            prof: "Pourquoi cet allongement ? Parce que nous avons créé un 'Obstacle' artificiel.",
+            html: `<div class="concept-card">
+                <h3>Le Secret : L'Arrêt (Stop)</h3>
+                <p style="color:#333;">En arabe, on ne s'arrête jamais sur une voyelle courte. On la remplace par un <strong>Sukun</strong> (Silence/Absence de voyelle).</p>
+                <div style="background:#fff3e0; padding:15px; border-radius:10px; margin:20px 0; text-align:center; border:2px solid #ff9800;">
+                    <div style="font-size:1.8rem; color:#e65100; margin-bottom:10px;">ٱلْعَٰلَمِينَ ➡️ ٱلْعَٰلَمِينْ</div>
+                    <div style="color:#bf360c; font-weight:bold;">Al-Alamiin<span style="text-decoration:line-through; color:#aaa;">a</span> ➡️ Al-Alamiin<strong>°</strong></div>
+                </div>
+                <p style="color:#333;">Ce Sukun est <strong>"Arid" (Accidentel)</strong> car il n'existe que parce qu'on s'est arrêté.</p>
+            </div>`
+        },
+        {
+            type: "lesson",
+            prof: "Comme c'est un arrêt accidentel et temporaire, vous avez le choix de la durée.",
+            html: `<div class="concept-card">
+                <h3>Les 3 Choix de Durée</h3>
+                <p style="color:#333;">Vous pouvez adapter la longueur selon votre rythme de lecture :</p>
+                <div style="display:flex; flex-direction:column; gap:10px; margin-top:15px;">
+                    <div style="background:#e8f5e9; padding:10px; border-radius:8px; border-left:4px solid #4caf50; color:#333;">
+                        <strong>2 Temps (Qasr)</strong> : Rapide (Comme Tabi'i).
+                    </div>
+                    <div style="background:#e3f2fd; padding:10px; border-radius:8px; border-left:4px solid #2196f3; color:#333;">
+                        <strong>4 Temps (Tawassut)</strong> : Moyen (Recommandé - Le plus beau).
+                    </div>
+                    <div style="background:#ffebee; padding:10px; border-radius:8px; border-left:4px solid #f44336; color:#333;">
+                        <strong>6 Temps (Tul)</strong> : Long (Très lent).
+                    </div>
                 </div>
             </div>`
         },
         {
             type: "lesson",
-            prof: "Pourquoi 'Arid' ? Parce que le Sukun n'est pas là à l'origine.",
+            prof: "Voyons la transformation en action sur d'autres exemples.",
             html: `
             <div class="concept-card">
-                <h3>La Logique : Accidentel</h3>
-                <p><strong>Arid ( عَارِض )</strong> signifie "Accidentel".</p>
-                <ul style="text-align:left; margin:15px; list-style-type:none; background:#fff; padding:15px; border-radius:10px; border:1px solid #ddd;">
-                    <li style="margin-bottom:10px;">🏃 <strong>En continuant</strong> : La lettre se prononce normalement (pas de Mad Arid).</li>
-                    <li>🛑 <strong>À l'arrêt</strong> : La dernière voyelle saute, le Sukun apparaît ➡️ Mad Arid.</li>
-                </ul>
-                <div class="tip-box">
-                    <strong>Le Choix :</strong>
-                    <ul>
-                    <li>2 Harakat (Qasr)</li>
-                    <li>4 Harakat (Tawassut - Recommandé)</li>
-                    <li>6 Harakat (Tul)</li>
-                    </ul>
-                </div>
-            </div>`
-        },
-        {
-            type: "lesson",
-            prof: "Observez comment la dernière voyelle disparaît à l'arrêt pour laisser place à l'allongement.",
-            html: `
-            <div class="concept-card">
-                <h3>Exemples de Transformation</h3>
-                
+                <h3>Exemples Visuels</h3>
                 <div style="display:flex; flex-direction:column; gap:10px; margin-top:10px;">
                     <!-- Ya -->
                     <div style="display:flex; align-items:center; gap:10px; background:#fff; padding:10px; border-radius:8px; border-left: 4px solid #ef6c00;">
@@ -60,7 +93,6 @@ const MAD_ARID_DATA = {
                             <div style="font-size:0.8rem; color:#bf360c;">Al-'Aalamiiin</div>
                         </div>
                     </div>
-
                     <!-- Wow -->
                     <div style="display:flex; align-items:center; gap:10px; background:#fff; padding:10px; border-radius:8px; border-left: 4px solid #ef6c00;">
                         <div style="text-align:center; width: 45%;">
@@ -73,44 +105,29 @@ const MAD_ARID_DATA = {
                             <div style="font-size:0.8rem; color:#bf360c;">Ta'lamuuun</div>
                         </div>
                     </div>
-
-                    <!-- Alif -->
-                    <div style="display:flex; align-items:center; gap:10px; background:#fff; padding:10px; border-radius:8px; border-left: 4px solid #ef6c00;">
-                         <div style="text-align:center; width: 45%;">
-                            <div class="ar-word ar-medium" style="color:#ef6c00;">ٱلْحِسَابِ</div>
-                            <div style="font-size:0.8rem; color:#666;">Al-Hisaabi</div>
-                        </div>
-                        <div style="font-size:1.5rem;">➡️</div>
-                         <div style="text-align:center; width: 45%;">
-                            <div class="ar-word ar-medium" style="color:#bf360c;">ٱلْحِسَابْ</div>
-                            <div style="font-size:0.8rem; color:#bf360c;">Al-Hisaaab</div>
-                        </div>
-                    </div>
-
+                </div>
+                <div class="tip-box">
+                    <strong>Rappel :</strong> Cette transformation ne se fait QUE si vous ARRÊTEZ votre lecture.
                 </div>
             </div>`
         },
-
-        // WORKSHOP
         {
             type: "intro",
-            prof: "🎙️ <strong>Atelier Vocal</strong><br>Essayons le 'Tawassut' (4 Temps), le plus agréable à l'écoute."
+            prof: "🎙️ <strong>Atelier Vocal</strong><br>Pratiquons le 'Tawassut' (4 Temps), le plus équilibré."
         },
         {
             type: "workshop",
-            prof: "Arrêtez-vous nettement sur la dernière consonne.",
+            prof: "Faites bien résonner la lettre de prolongation avant de couper le son.",
             examples: [
                 { type: "Arrêt 4 Temps", ar: "ٱلْعَٰلَمِينَ", url: "001002", start: 4, end: 6, id: "arid1" },
                 { type: "Arrêt 4 Temps", ar: "ٱلدِّينِ", url: "001004", start: 3, end: 5, id: "arid2" },
                 { type: "Arrêt 4 Temps", ar: "نَسْتَعِينُ", url: "001005", start: 6, end: 8, id: "arid3" }
             ]
         },
-
-        // IMMERSION SURAH AL-FATIHAH (1)
         {
             type: "immersion",
-            prof: "🔍 <strong>Immersion Coranique</strong><br>Sourate Al-Fatihah (1). Chaque fin de verset est un Mad Arid !",
-            instruction: "Cliquez sur les derniers mots de chaque verset pour valider le Mad Arid.",
+            prof: "🔍 <strong>Immersion Coranique</strong><br>Sourate Al-Fatihah (1). Chaque arrêt crée un Mad Arid.",
+            instruction: "Cliquez sur les derniers mots pour valider le Mad.",
             surah: 1,
             words: [
                 { t: "بِسْمِ", ok: false }, { t: "ٱللَّهِ", ok: false }, { t: "ٱلرَّحْمَٰنِ", ok: false }, { t: "ٱلرَّحِيمِ", ok: true, reason: "Mad Arid : Arrêt sur la fin du verset (Ar-Rahiim)." }, { t: "١", endVerse: true },
@@ -122,26 +139,30 @@ const MAD_ARID_DATA = {
                 { t: "صِرَٰطَ", ok: false }, { t: "ٱلَّذِينَ", ok: false }, { t: "أَنْعَمْتَ", ok: false }, { t: "عَلَيْهِمْ", ok: false }, { t: "غَيْرِ", ok: false }, { t: "ٱلْمَغْضُوبِ", ok: false }, { t: "عَلَيْهِمْ", ok: false }, { t: "وَلَا", ok: false }, { t: "ٱلضَّآلِّينَ", ok: true, reason: "Mad Arid (Addaaalliiin)." }, { t: "٧", endVerse: true }
             ]
         },
-
-        // EXAM
-        { type: "intro", prof: "🧐 <strong>Évaluation</strong>" },
         {
-            type: "quiz_theory",
-            prof: "1/3 - Pourquoi appelle-t-on ce Mad 'Arid' (Accidentel) ?",
-            opts: [{ t: "Car il n'existe qu'à l'arrêt", good: true }, { t: "Car il est dur à prononcer", good: false }],
-            exp: "Si on continue la lecture, le Mad redevient Naturel (2 temps) et le Sukun disparaît."
+            type: "intro",
+            prof: "🧐 <strong>Évaluation</strong>"
         },
         {
             type: "quiz_theory",
-            prof: "2/3 - Quelle est la durée permise ?",
-            opts: [{ t: "Uniquement 4 temps", good: false }, { t: "2, 4 ou 6 temps", good: true }],
-            exp: "Le lecteur a le choix, mais doit rester constant."
-        },
-        {
-            type: "quiz_theory",
-            prof: "3/3 - Si je ne m'arrête PAS sur ( ٱلْعَٰلَمِينَ ), quelle est la durée ?",
-            opts: [{ t: "2 Temps (Naturel)", good: true }, { t: "6 Temps (Long)", good: false }],
-            exp: "En continuant, la cause de l'arrêt (le Sukun) disparaît."
+            prof: "Validons votre compréhension du concept.",
+            questions: [
+                {
+                    q: "Pourquoi dit-on 'Arid' (Accidentel) ?",
+                    opts: ["Car il n'apparaît qu'à l'arrêt", "Car il est une erreur"],
+                    good: 0
+                },
+                {
+                    q: "Si je continue ma lecture sans m'arrêter, quelle est la durée ?",
+                    opts: ["2 Temps (Naturel)", "6 Temps (Long)"],
+                    good: 0
+                },
+                {
+                    q: "Quelle est la meilleure durée (Moyenne) à l'arrêt ?",
+                    opts: ["2 Temps", "4 Temps", "6 Temps"],
+                    good: 1
+                }
+            ]
         }
     ]
 };

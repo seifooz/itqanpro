@@ -9,7 +9,7 @@ const MAD_MUNFASIL_DATA = {
             html: `
             <div class="concept-card">
                 <h3>Définition</h3>
-                <p>On l’appelle ainsi lorsque la lettre de l’allongement est située à la <strong>FIN</strong> d'un mot puis suivie de la lettre <strong>Hamza ( هَمْزَة )</strong> au <strong>DÉBUT</strong> du second mot.</p>
+                <p style="color:#333;">On l’appelle ainsi lorsque la lettre de l’allongement est située à la <strong>FIN</strong> d'un mot puis suivie de la lettre <strong>Hamza ( هَمْزَة )</strong> au <strong>DÉBUT</strong> du second mot.</p>
                 <div style="background:#e8f5e9; padding:15px; border-radius:10px; margin:15px 0; text-align:center; border:2px solid #4caf50;">
                     <div style="font-size:2rem; color:#1b5e20;">إِنَّآ أَنزَلْنَٰهُ</div>
                     <div style="color:#1b5e20; font-weight:bold; margin-top:5px;">Mad (Mot 1) + Hamza (Mot 2) 🏘️</div>
@@ -25,7 +25,7 @@ const MAD_MUNFASIL_DATA = {
             html: `
             <div class="concept-card">
                 <h3>La Logique : Séparation</h3>
-                <p><strong>Munfasil ( مُنْفَصِل )</strong> signifie "Séparé".</p>
+                <p style="color:#333;"><strong>Munfasil ( مُنْفَصِل )</strong> signifie "Séparé".</p>
                 <ul style="text-align:left; margin:15px; list-style-type:none; background:#fff; padding:15px; border-radius:10px; border:1px solid #ddd;">
                     <li style="margin-bottom:10px;">🏠 <strong>Muttasil</strong> : Colocataires (Même mot).</li>
                     <li>🏘️ <strong>Munfasil</strong> : Voisins (Deux mots séparés).</li>

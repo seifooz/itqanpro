@@ -21,33 +21,22 @@ const IKHFAA_DATA = {
         // EXCLUSION LOGIC
         {
             type: "lesson",
-            prof: "Comment retenir les 15 lettres ?<br>Par élimination.",
-            html: `<div class="concept-card"><h3>La Méthode d'Exclusion</h3>
-            <div style="text-align:left; margin-top:15px;">
-                <div style="margin-bottom:10px; border-bottom:1px solid #eee; padding-bottom:5px;">
-                    <span style="color:#d63031; font-weight:bold;">1. PAS la Gorge (Izhar) :</span>
-                    <div style="font-family:var(--font-ar); font-size:1.4rem; color:#333; margin-top:5px;">ء هـ ع ح غ خ</div>
-                </div>
-                <div style="margin-bottom:10px; border-bottom:1px solid #eee; padding-bottom:5px;">
-                    <span style="color:#0984e3; font-weight:bold;">2. PAS Yanmu/LR (Idgham) :</span>
-                    <div style="font-family:var(--font-ar); font-size:1.4rem; color:#333; margin-top:5px;">ي ر م ل و ن</div>
-                </div>
-                <div style="margin-bottom:10px;">
-                    <span style="color:#e17055; font-weight:bold;">3. PAS le Ba (Iqlab) :</span>
-                    <div style="font-family:var(--font-ar); font-size:1.4rem; color:#333; margin-top:5px;">ب</div>
-                </div>
+            prof: "La condition d'application.<br>L'Ikhfaa s'applique avec 15 lettres restantes.",
+            html: `<div class="concept-card">
+        <div style="color:#d63031; font-weight:700; margin-bottom:15px; text-transform:uppercase; font-size:0.8rem;">À mémoriser</div>
+        <div class="letters-grid" style="grid-template-columns: repeat(5, 1fr); gap:8px;">
+            <div class="l-card"><div class="l-ar">ص</div></div><div class="l-card"><div class="l-ar">ذ</div></div><div class="l-card"><div class="l-ar">ث</div></div><div class="l-card"><div class="l-ar">ك</div></div><div class="l-card"><div class="l-ar">ج</div></div>
+            <div class="l-card"><div class="l-ar">ش</div></div><div class="l-card"><div class="l-ar">ق</div></div><div class="l-card"><div class="l-ar">س</div></div><div class="l-card"><div class="l-ar">د</div></div><div class="l-card"><div class="l-ar">ط</div></div>
+            <div class="l-card"><div class="l-ar">ز</div></div><div class="l-card"><div class="l-ar">ف</div></div><div class="l-card"><div class="l-ar">ت</div></div><div class="l-card"><div class="l-ar">ض</div></div><div class="l-card"><div class="l-ar">ظ</div></div>
+        </div>
+        <div class="tip-box">
+            <div style="font-size:0.8rem; color:#555; margin-bottom:10px; font-weight:bold;">Moyen Mnémotechnique :</div>
+            <div style="font-size:0.9rem; color:#444;">
+                Retenez le début de chaque mot de ce poème :<br>
+                <em style="color:#0984e3; display:block; margin-top:5px; font-style:italic;">"Sif Dha Sana Kam Jada Shakhsun Qad Sama... Dum Tayyiban zid Fi Tuqan Da' Dhalima"</em>
             </div>
-            <div style="margin-top:15px; background:#f0fff4; padding:10px; border-radius:8px; font-weight:bold; color:#00b894;">TOUT LE RESTE = IKHFAA</div>
-            </div>`
-        },
-        {
-            type: "lesson",
-            prof: "Les 15 Lettres (Le Reste).<br>Elles sont nombreuses !",
-            html: `<div class="concept-card"><div class="letters-grid" style="grid-template-columns:repeat(5, 1fr); gap:10px;">
-            <div class="l-card"><div class="l-ar">ص</div></div><div class="l-card"><div class="l-ar">ذ</div></div><div class="l-card"><div class="l-ar">ث</div></div><div class="l-card"><div class="l-ar">ج</div></div><div class="l-card"><div class="l-ar">ش</div></div>
-            <div class="l-card"><div class="l-ar">ق</div></div><div class="l-card"><div class="l-ar">س</div></div><div class="l-card"><div class="l-ar">ك</div></div><div class="l-card"><div class="l-ar">ض</div></div><div class="l-card"><div class="l-ar">ظ</div></div>
-            <div class="l-card"><div class="l-ar">ز</div></div><div class="l-card"><div class="l-ar">ت</div></div><div class="l-card"><div class="l-ar">د</div></div><div class="l-card"><div class="l-ar">ط</div></div><div class="l-card"><div class="l-ar">ف</div></div>
-            </div></div>`
+        </div>
+    </div>`
         },
 
         // Exemples Visuels / Types de Ghunnah
@@ -67,6 +56,24 @@ const IKHFAA_DATA = {
                     <div class="ar-ex">مِن قَبْلِ</div>
                 </div>
             </div></div>`
+        },
+        {
+            type: "lesson",
+            prof: "Cas particulier : Dans un seul mot.<br>Le Noun et la lettre peuvent être attachés.",
+            html: `<div class="concept-card">
+        <div class="mz-container">
+            <div class="mz-phrase">أَنفُسَهُمْ</div>
+            <div class="mz-analysis">
+                <div class="mz-group"><div class="mz-box mz-green">ف</div><div class="mz-label green">Lettre</div></div>
+                <div class="mz-icon">+</div>
+                <div class="mz-group"><div class="mz-box mz-blue">نْ</div><div class="mz-label blue">Noun</div></div>
+            </div>
+        </div>
+        <div class="ex-logic">
+            Le <strong>Noun Sakina</strong> est suivi du <strong>Fa (ف)</strong> dans le même mot.<br>
+            Règle : <strong>IKHFAA</strong>.
+        </div>
+    </div>`
         },
 
         // Equation

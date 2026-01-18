@@ -4,35 +4,90 @@ const MAD_EWAD_DATA = {
     type: "Ahkam Al-Mad",
     steps: [
         {
-            type: "lesson",
-            prof: "Nous passons maintenant au <strong>Mad Al-Ewad</strong> (Compensation).<br>C'est une règle très fréquente qui s'applique uniquement à l'arrêt.",
+            type: "quiz_theory",
+            prof: "Observez et écoutez ce verset de Surah An-Nasr.<br>Comment l'Imam s'arrête-t-il sur le dernier mot ?",
             html: `
-            <div class="concept-card">
-                <h3>Définition Technique</h3>
-                <p>C'est tout Mad apparaissant lors de l’arrêt sur un mot se terminant par un <strong>Tanween Fatha ( ً )</strong>.</p>
-                <div style="background:#e0f7fa; padding:15px; border-radius:10px; margin:15px 0; text-align:center; border:2px solid #00acc1;">
-                    <div style="font-size:2rem; color:#006064;">ً ⬅️ ـَا</div>
-                    <div style="color:#006064; font-weight:bold; margin-top:5px;">On "compense" le son 'N' du Tanween par un Alif ( أَلِف ).</div>
+            <div class="concept-card" style="text-align:center;">
+                <h3>Observation Audio</h3>
+                <div style="font-size:1.8rem; margin-top:20px; margin-bottom:10px; color:#006064; font-family: 'Scheherazade New', serif; line-height:1.6;">
+                    وَرَأَيْتَ ٱلنَّاسَ يَدْخُلُونَ فِى دِينِ ٱللَّهِ <span style="color:#d32f2f;">أَفْوَاجًا</span>
                 </div>
-                <div class="tip-box">
-                    <strong>Durée :</strong> 2 Harakat (Temps).<br>
-                    Exactement comme le Mad Tabi'i. Ni plus, ni moins.
+                
+                <div style="margin-bottom:20px;">
+                    <button class="btn-audio btn-listen" id="play-intro-nasr" onclick="playAudio('110002', 0, 100, 'intro-nasr')" style="background:#e0f7fa; color:#006064; border:none; padding:10px 20px; border-radius:30px; font-weight:bold; cursor:pointer; display:inline-flex; align-items:center; gap:8px;">
+                        <span>▶️</span> Écouter la Récitation
+                    </button>
+                </div>
+            </div>`,
+            questions: [
+                {
+                    q: "À l'arrêt, qu'avez-vous entendu ?",
+                    opts: ["Afwajan (On prononce le 'N')", "AfwajAA (On prolonge le 'A')"],
+                    good: 1
+                }
+            ],
+            exp: "Exact ! Le 'N' disparaît et laisse place à une belle prolongation (Mad). C'est le Mad Ewad."
+        },
+        {
+            type: "lesson",
+            prof: "Exactement ! Vous dites naturellement <strong>AfwajAA</strong>. Vous avez appliqué le Mad Ewad sans le savoir.",
+            html: `<div class="concept-card">
+                <h3>Le Secret de l'Arrêt</h3>
+                <div style="display:flex; flex-direction:column; gap:10px; margin-top:15px;">
+                    <div style="padding:15px; background:#ffebee; border-left:5px solid #d32f2f; border-radius:4px; opacity:0.6;">
+                        <div style="font-weight:bold; color:#d32f2f;">❌ Lecture "Afwajan"</div>
+                        <p style="margin:5px 0 0 0; color:#333; font-size:0.9rem;">S'arrêter sur le 'N' est interdit ici.</p>
+                    </div>
+                     <div style="padding:15px; background:#e8f5e9; border-left:5px solid #2e7d32; border-radius:4px;">
+                        <div style="font-weight:bold; color:#2e7d32;">✅ Lecture "Afwajaa"</div>
+                        <p style="margin:5px 0 0 0; color:#333; font-size:0.9rem;">On remplace le Tanween par un <strong>Alif</strong> (2 Temps).</p>
+                    </div>
+                </div>
+                <p style="margin-top:15px; font-size:0.9rem; text-align:center; color:#333;">C'est la règle de la <strong>Compensation (Ewad)</strong>.</p>
+            </div>`
+        },
+        {
+            type: "lesson",
+            prof: "Attention : Cette transformation ne concerne QUE le Tanween du haut (Fatha).",
+            html: `<div class="concept-card">
+                <h3>Classification des Arrêts</h3>
+                <div class="def-box" style="display:flex; flex-direction:column; gap:15px;">
+                    
+                    <div style="display:flex; gap:15px; align-items:flex-start;">
+                        <div style="min-width:12px; height:12px; margin-top:6px; background:#d32f2f; border-radius:50%;"></div>
+                        <div>
+                            <strong style="color:#d32f2f;">1. Tanween Damma (UN) ou Kasra (IN)</strong>
+                            <div style="color:#333; font-size:0.9rem; margin-top:3px;">On s'arrête sur un <strong>Sukun</strong> (Silence).</div>
+                            <div style="font-size:0.85rem; color:#444; margin-top:2px;">Ghafurun ➡️ Ghafur</div>
+                        </div>
+                    </div>
+
+                    <div style="height:1px; background:#eee; margin:0 10px;"></div>
+
+                    <div style="display:flex; gap:15px; align-items:flex-start;">
+                         <div style="min-width:12px; height:12px; margin-top:6px; background:#2e7d32; border-radius:50%;"></div>
+                        <div>
+                            <strong style="color:#2e7d32;">2. Tanween Fatha (AN)</strong>
+                            <div style="color:#333; font-size:0.9rem; margin-top:3px;">On transforme en <strong>Mad (2 Temps)</strong>.</div>
+                            <div style="font-size:0.85rem; color:#444; margin-top:2px;">Afwajan ➡️ Afwajaa</div>
+                        </div>
+                    </div>
+
                 </div>
             </div>`
         },
         {
             type: "lesson",
-            prof: "Pourquoi ce changement ? C'est une question de fluidité à l'arrêt.",
+            prof: "Maintenant que vous l'avez observé, voici la définition technique.",
             html: `
-            <div class="concept-card">
-                <h3>La Logique : Compensation</h3>
-                <p>En arabe, on ne s'arrête jamais sur une voyelle courte, ni sur le son 'N' du Tanween Fatha.</p>
-                <ul style="text-align:left; margin:15px; list-style-type:none; background:#fff; padding:15px; border-radius:10px; border:1px solid #ddd;">
-                    <li style="margin-bottom:10px;">🛑 <strong>Tanween Damma/Kasra</strong> ( ـٌ / ـٍ ) ➡️ Devient Sukun ( سُكُون ).</li>
-                    <li>✨ <strong>Tanween Fatha</strong> ( ـًا ) ➡️ Devient Alif ( أَلِف ).</li>
-                </ul>
-                <div style="margin-top:15px; padding:10px; background:#e8f5e9; border:1px solid #4caf50; border-radius:5px; text-align:center; color:#2e7d32; font-weight:bold;">
-                    An ➡️ Aa
+                <div class="concept-card">
+                <h3>Définition Technique</h3>
+                <p>Le <strong>Mad Ewad</strong> est le remplacement du Tanween Fatha ( ً ) par un Alif lors de l'arrêt.</p>
+                
+                <div style="background:#e3f2fd; border:2px solid #2196f3; border-radius:12px; padding:20px; text-align:center; margin-top:20px;">
+                    <div style="font-size:0.9rem; color:#1565c0; font-weight:bold; letter-spacing:1px; text-transform:uppercase; margin-bottom:5px;">Durée (Compensée)</div>
+                    <div style="font-size:2.5rem; color:#0d47a1; font-weight:800; line-height:1;">2 TEMPS</div>
+                    <div style="font-size:1.1rem; color:#1976d2; margin-top:5px;">(Comme le Mad Naturel)</div>
                 </div>
             </div>`
         },
@@ -73,7 +128,7 @@ const MAD_EWAD_DATA = {
 
         // EXCEPTION
         {
-            type: "quiz_theory",
+            type: "lesson",
             prof: "⚠️ Attention ! Il y a une exception majeure.<br>Si le mot finit par une <strong>Ta Marbuta ( ة )</strong>.",
             html: `
             <div class="concept-card">
@@ -85,9 +140,7 @@ const MAD_EWAD_DATA = {
                     <div class="ar-word ar-medium" style="color:#333;">رَحْمَهْ</div>
                 </div>
                 <div style="text-align:center;">Rahmatan ➡️ Rahmah</div>
-            </div>`,
-            opts: [{ t: "On allonge (Rahmataa)", good: false }, { t: "On arrête sur Ha (Rahmah)", good: true }],
-            exp: "Avec la Taa Marbuta (ة), l'arrêt se fait toujours en transformant la lettre en Ha (ه) avec Sukun."
+            </div>`
         },
 
         // WORKSHOP
@@ -99,10 +152,10 @@ const MAD_EWAD_DATA = {
             type: "workshop",
             prof: "Écoutez et répétez. Notez bien la durée de 2 temps.",
             examples: [
-                { type: "Ewad (Normal)", ar: "عَلِيمًا", url: "076030", start: 6, end: 8, id: "aliman" },
-                { type: "Ewad (Normal)", ar: "وَكِيلًا", url: "017002", start: 7, end: 9, id: "wakilan" },
-                { type: "Ewad (Normal)", ar: "قِيلاً", url: "025024", start: 10, end: 12, id: "qilan" },
-                { type: "Exception (Ta)", ar: "ٱلْقَارِعَةُ", url: "101001", start: 0, end: 3, id: "qariah" }
+                { type: "2 Temps", ar: "عَلِيمًا", url: "076030", start: 6, end: 8, id: "aliman" },
+                { type: "2 Temps", ar: "وَكِيلًا", url: "017002", start: 7, end: 9, id: "wakilan" },
+                { type: "2 Temps", ar: "قِيلاً", url: "025024", start: 10, end: 12, id: "qilan" },
+                { type: "Exception", ar: "ٱلْقَارِعَةُ", url: "101001", start: 0, end: 3, id: "qariah" }
             ]
         },
 
@@ -125,20 +178,24 @@ const MAD_EWAD_DATA = {
         { type: "intro", prof: "🧐 <strong>Évaluation</strong>" },
         {
             type: "quiz_theory",
-            prof: "1/3 - Quelle est la condition du Mad Ewad ?",
-            opts: [{ t: "Arrêt sur Tanween Damma", good: false }, { t: "Arrêt sur Tanween Fatha", good: true }],
-            exp: "Le Mad Ewad ne concerne QUE le Tanween Fatha (ً)."
-        },
-        {
-            type: "quiz_theory",
-            prof: "2/3 - Quelle est la durée du Mad Ewad ?",
-            opts: [{ t: "2 Temps (Harakat)", good: true }, { t: "4 Temps (Harakat)", good: false }],
-            exp: "C'est un Mad Naturel accidentel, donc 2 temps."
-        },
-        {
-            prof: "3/3 - Comment s'arrête-t-on sur le mot **شَجَرَةً** (Shajaratan) ?",
-            opts: [{ t: "Shajarataa", good: false }, { t: "Shajarah ( Ha - هَاء )", good: true }],
-            exp: "C'est une Taa Marbuta ( ة ). Elle devient un Ha ( هَاء ) Sakin à l'arrêt, pas de Mad !"
+            prof: "Vérifions vos connaissances sur le Mad Al-Ewad.",
+            questions: [
+                {
+                    q: "Quelle est la condition du Mad Ewad ?",
+                    opts: ["Arrêt sur Tanween Damma", "Arrêt sur Tanween Fatha", "Arrêt sur Tanween Kasra"],
+                    good: 1
+                },
+                {
+                    q: "Quelle est la durée du Mad Ewad ?",
+                    opts: ["2 Temps (Harakat)", "4 Temps (Harakat)", "6 Temps"],
+                    good: 0
+                },
+                {
+                    q: "Comment s'arrête-t-on sur une Taa Marbuta ( ة ) ?",
+                    opts: ["On allonge (aa)", "On transforme en Ha (Sakin)", "On prononce le Tanween"],
+                    good: 1
+                }
+            ]
         }
     ]
 };
