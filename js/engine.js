@@ -551,7 +551,10 @@ function playAudio(url, start, end, id) {
             audioPlayer.play();
             if (!isDefBtn) {
                 const btn = document.getElementById(`play-${id}`);
-                if (btn) { btn.innerText = "Pause"; btn.classList.add('playing'); }
+                if (btn) {
+                    if (btn.children.length === 0) btn.innerText = "Pause";
+                    btn.classList.add('playing');
+                }
             } else {
                 document.getElementById(`play-${id}`).classList.add('playing');
             }
@@ -559,7 +562,10 @@ function playAudio(url, start, end, id) {
             audioPlayer.pause();
             if (!isDefBtn) {
                 const btn = document.getElementById(`play-${id}`);
-                if (btn) { btn.innerText = "Lecture"; btn.classList.remove('playing'); }
+                if (btn) {
+                    if (btn.children.length === 0) btn.innerText = "Lecture";
+                    btn.classList.remove('playing');
+                }
             } else {
                 document.getElementById(`play-${id}`).classList.remove('playing');
             }
@@ -567,10 +573,13 @@ function playAudio(url, start, end, id) {
         return;
     }
 
-    audioPlayer.src = url + ".mp3";
+    audioPlayer.src = "audio/" + url + ".m4a";
     currentAudioId = id;
 
-    document.querySelectorAll('.btn-listen').forEach(b => { b.classList.remove('playing'); b.innerText = "Lecture"; });
+    document.querySelectorAll('.btn-listen').forEach(b => {
+        b.classList.remove('playing');
+        if (b.children.length === 0) b.innerText = "Lecture";
+    });
     document.querySelectorAll('.def-audio-btn').forEach(b => b.classList.remove('playing'));
 
     audioPlayer.play().catch(e => { console.log("Erreur lecture", e); });
@@ -578,7 +587,7 @@ function playAudio(url, start, end, id) {
     if (!isDefBtn) {
         const btn = document.getElementById(`play-${id}`);
         if (btn) {
-            btn.innerText = "Pause";
+            if (btn.children.length === 0) btn.innerText = "Pause";
             btn.classList.add('playing');
         }
     } else {
@@ -591,7 +600,10 @@ audioPlayer.onended = () => {
         const isDefBtn = typeof currentAudioId === 'string' && currentAudioId.startsWith('def');
         if (!isDefBtn) {
             const btn = document.getElementById(`play-${currentAudioId}`);
-            if (btn) { btn.innerText = "Lecture"; btn.classList.remove('playing'); }
+            if (btn) {
+                if (btn.children.length === 0) btn.innerText = "Lecture";
+                btn.classList.remove('playing');
+            }
         } else {
             document.getElementById(`play-${currentAudioId}`).classList.remove('playing');
         }
@@ -848,7 +860,8 @@ function validateImmersion() {
                 el.classList.add('val-wrong');
                 mistakes = true;
                 allFound = false;
-                explanationHTML += `<div class="if-item"><span class="if-ar">${w.t}</span><span class="if-expl">❌ Ce n'est pas un Mad ici.</span></div>`;
+                const targetName = step.targetName || "un Mad";
+                explanationHTML += `<div class="if-item"><span class="if-ar">${w.t}</span><span class="if-expl">❌ Ce n'est pas ${targetName} ici.</span></div>`;
             }
         }
     });

@@ -1,248 +1,292 @@
 const NUN_INTRO_DATA = {
-    title: "Intro Noun Sakina",
+    id: "nun_sakina_intro", // Added ID for safety
+    title: "Intro Noun Sakina & Tanwin",
     mode: "Cours Interactif",
     steps: [
-        // 1. INTRO NOUN
-        {
-            type: "lesson",
-            prof: "Bienvenue ! 👋<br>Le Tajweed repose sur 2 indices clés.<br>Le premier est le <strong>Noun Sakina</strong>.",
-            html: `<div class="card"><div class="ar-big" style="font-size:3rem;">نْ</div><strong>Le Noun Sakina</strong><br><small>Un "N" avec un rond (Silence).</small></div>`
-        },
-
-        // 2. QUIZ NOUN
+        // 1. INDUCTIVE INTRO (SOUND)
         {
             type: "quiz_theory",
-            prof: "Trouve le Noun Sakina (celui qui est muet).",
-            opts: [
-                { t: "Na (نَ) - <span class='ar'>نَ</span>", good: false, exp: "Non, c'est 'Na' avec une Fatha." },
-                { t: "N (Sakina) - <span class='ar'>نْ</span>", good: true, exp: "Exact ! Le petit rond indique le silence." },
-                { t: "Nu (نُ) - <span class='ar'>نُ</span>", good: false, exp: "Non, c'est 'Nu' avec une Damma." },
-                { t: "Ba (بْ) - <span class='ar'>بْ</span>", good: false, exp: "Non, c'est un Ba." }
-            ],
-            correctIdx: 1
-        },
-
-        // 3. INTRO TANWEEN
-        {
-            type: "lesson",
-            prof: "Le deuxième indice est le <strong>Tanween</strong>.<br>C'est une <strong>double voyelle</strong> à la fin d'un mot.",
-            html: `<div class="card"><div class="ar-big" style="word-spacing:15px; font-size:3rem;">ـً  ـٍ  ـٌ</div><strong>An - In - Un</strong></div>`
-        },
-
-        // 4. SECRET TANWEEN
-        {
-            type: "lesson",
-            prof: "⚠️ <strong>Le Secret :</strong><br>Le Tanween s'écrit avec 2 traits, mais se prononce avec un <strong>'N' caché</strong> !",
-            html: `<div class="card" style="background:#fffde7; border-color:#fbc02d; padding:15px; border-radius:10px; border-left:5px solid #fbc02d;">
-                        <p style="font-weight:bold; color:#f57f17; font-size:0.9rem;">EXEMPLE : AHADUN</p>
-                        <div style="display:flex; justify-content:space-around; align-items:center; margin-top:15px;">
-                            <div style="text-align:center;"><small>ÉCRIT</small><div class="ar-med" style="color:#333; font-size:2rem;">أَحَدٌ</div></div>
-                            <div style="font-size:1.5rem; color:#fbc02d;">➡</div>
-                            <div style="text-align:center;"><small>ENTENDU</small><div class="ar-med" style="color:#00b894; font-size:2rem;">أَحَدُ<span style="color:#d63031">نْ</span></div></div>
-                        </div>
-                        <p style="margin-top:15px; font-size:0.9rem;">On entend le 'N' rouge, mais on ne l'écrit pas !</p>
-                      </div>`
-        },
-
-        // 5. QUIZ TANWEEN FATHA
-        {
-            type: "quiz_theory",
-            prof: "Entraînement : Trouve le <strong>Tanween Fathatan (ـً)</strong> (Son 'AN').",
-            opts: [
-                { t: "عَلِيمًا", good: true, exp: "Bien vu ! Les deux traits au-dessus = 'AN'." },
-                { t: "رَحِيمٌ", good: false, exp: "Non, ça c'est 'UN' (boucles)." },
-                { t: "يَوْمٍ", good: false, exp: "Non, ça c'est 'IN' (en bas)." }
-            ],
-            correctIdx: 0
-        },
-
-        // 6. QUIZ TANWEEN DAMMA
-        {
-            type: "quiz_theory",
-            prof: "Trouve le <strong>Tanween Dammatan (ـٌ)</strong> (Son 'UN').",
-            opts: [
-                { t: "كُفُوًا", good: false, exp: "C'est 'AN'." },
-                { t: "أَحَدٌ", good: true, exp: "Parfait ! La double boucle = 'UN'." },
-                { t: "حَاسِدٍ", good: false, exp: "C'est 'IN'." }
-            ],
-            correctIdx: 1
-        },
-
-        // 7. QUIZ TANWEEN KASRA
-        {
-            type: "quiz_theory",
-            prof: "Trouve le <strong>Tanween Kasratan (ـٍ)</strong> (Son 'IN').",
-            opts: [
-                { t: "نَارٌ", good: false, exp: "C'est 'UN'." },
-                { t: "لَهَبٍ", good: true, exp: "Excellent ! Les deux traits en dessous = 'IN'." },
-                { t: "أَبَدًا", good: false, exp: "C'est 'AN'." }
-            ],
-            correctIdx: 1
-        },
-
-        // 8. AUDIO ACTIVE (THE MYSTERY)
-        {
-            type: "quiz_theory",
-            prof: "👂 <strong>Écoute bien !</strong><br>Voici 3 mots avec un Noun Sakina. Est-ce qu'on prononce le 'N' toujours de la même façon ?",
-            html: `<div class="card" style="text-align:left; background:#fff; padding:15px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
-                        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #eee; padding-bottom:10px; margin-bottom:10px;">
-                            <div class="ar-med" style="font-size:1.8rem;">مَنْ ءَامَنَ</div>
-                            <div style="text-align:right;">
-                                <div style="font-size:0.8rem; color:#666;">🔊 Man 'Amana</div>
-                                <div style="font-size:0.75rem; color:#00b894; font-weight:bold;">N clair</div>
-                            </div>
-                        </div>
-                        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #eee; padding-bottom:10px; margin-bottom:10px;">
-                            <div class="ar-med" style="font-size:1.8rem;">مَن يَعْمَلُ</div>
-                            <div style="text-align:right;">
-                                <div style="font-size:0.8rem; color:#666;">🔊 May-Ya'malu</div>
-                                <div style="font-size:0.75rem; color:#0984e3; font-weight:bold;">N fusionné</div>
-                            </div>
-                        </div>
-                        <div style="display:flex; justify-content:space-between; align-items:center;">
-                            <div class="ar-med" style="font-size:1.8rem;">مِنۢ بَعْدِ</div>
-                            <div style="text-align:right;">
-                                <div style="font-size:0.8rem; color:#666;">🔊 Mim-Ba'di</div>
-                                <div style="font-size:0.75rem; color:#d63031; font-weight:bold;">N devient M</div>
-                            </div>
-                        </div>
-                      </div>`,
-            opts: [
-                { t: "Oui, c'est toujours le son 'N'", good: false, exp: "Écoute encore, ça change !" },
-                { t: "Non, le son change !", good: true, exp: "Exactement ! Parfois le Noun est clair, parfois il fusionne, parfois il se transforme." }
-            ],
-            correctIdx: 1
-        },
-
-        // 9. DETECTIVE (NEW STEP)
-        {
-            type: "quiz_theory",
-            prof: "🔍 <strong>Détective :</strong><br>Regarde bien. Ces mots commencent tous par <strong>مَنْ</strong>. Je t'aide avec l'audio.<br>À ton avis, <strong>qu'est-ce qui provoque ce changement ?</strong>",
-            html: `<div class="card" style="background:#fff; padding:15px; border-radius:10px;">
-                        <div style="display:flex; align-items:center; margin-bottom:15px;">
-                            <span style="font-size:1.2rem; font-weight:bold; color:#ccc; margin-right:10px;">1.</span>
-                            <span class="ar-med" style="font-size:2rem;">مَنْ ءَامَنَ</span>
-                            <span style="margin-left:auto;">🔊</span>
-                        </div>
-                        <div style="display:flex; align-items:center; margin-bottom:15px;">
-                            <span style="font-size:1.2rem; font-weight:bold; color:#ccc; margin-right:10px;">2.</span>
-                            <span class="ar-med" style="font-size:2rem;">مَن يَعْمَلُ</span>
-                            <span style="margin-left:auto;">🔊</span>
-                        </div>
-                        <div style="display:flex; align-items:center;">
-                            <span style="font-size:1.2rem; font-weight:bold; color:#ccc; margin-right:10px;">3.</span>
-                            <span class="ar-med" style="font-size:2rem;">مِنۢ بَعْدِ</span>
-                            <span style="margin-left:auto;">🔊</span>
-                        </div>
-                      </div>`,
-            opts: [
-                { t: "La voyelle du Noun (Harka)", good: false, exp: "Non, regardez, le Noun a toujours un Sukun." },
-                { t: "La lettre d'avant", good: false, exp: "Non, c'est toujours un Mim avant." },
-                { t: "La lettre SUIVANTE", good: true, exp: "Bravo ! C'est le voisin de gauche (le suivant) qui décide !" }
-            ],
-            correctIdx: 2
-        },
-
-        // 10. THE LOGIC
-        {
-            type: "lesson",
-            prof: "Pourquoi ça change ?<br>C'est la <strong>Règle du Voisin</strong> !<br>Le Noun Sakina s'adapte toujours à la lettre qui le suit.",
-            html: `<div class="card" style="border:2px dashed var(--secondary); padding:20px; text-align:center;">
-                        <div style="font-size:2rem; font-weight:bold;">نْ + <span style="color:var(--secondary);">?</span></div>
-                        <p>C'est le voisin de gauche qui décide de la règle !</p>
-                      </div>`
-        },
-
-        // 11. FAMILLE 1: IZHAR
-        {
-            type: "lesson",
-            prof: "1️⃣ <strong>AL-IZHAR (La Clarté)</strong><br>Si le voisin est une lettre de la Gorge (comme Hamza ou Ha), le Noun reste fort et clair.",
+            prof: "Commençons par une expérience auditive. 👂<br>Écoutez ces deux mots...",
             html: `
-            <div class="lesson-card" style="border-left:4px solid #00b894;">
-                <div style="display:flex; align-items:center;">
-                    <div style="font-size:2rem; margin-right:15px;">📢</div>
-                    <div>
-                        <strong>Man 'Amana</strong>
-                        <div class="ar-med" style="color:#00b894;">مَنْ ءَامَنَ</div>
+            <div class="concept-card" style="text-align:center;">
+                <h3>L'Expérience Sonore</h3>
+                
+                <div style="display:flex; justify-content:space-around; align-items:flex-start; margin-top:20px;">
+                    <div style="text-align:center; width:45%;">
+                        <div class="ar-med" style="font-size:2rem; color:#2d3436; margin-bottom:10px; height:50px;">مَنْ</div>
+                        <button class="btn-audio btn-listen" id="play-intro-aman" onclick="playAudio('intro_aman', 0, 100, 'intro-aman')" style="background:#fff; border:1px solid #ddd; padding:10px; border-radius:10px; width:100%;">
+                            🔊 Écouter
+                        </button>
+                    </div>
+                    <div style="text-align:center; width:45%;">
+                        <div class="ar-med" style="font-size:2rem; color:#2d3436; margin-bottom:10px; height:50px;">كِتَابًا</div>
+                        <button class="btn-audio btn-listen" id="play-intro-kitaban" onclick="playAudio('intro_kitaban', 0, 100, 'intro-kitaban')" style="background:#fff; border:1px solid #ddd; padding:10px; border-radius:10px; width:100%;">
+                            🔊 Écouter
+                        </button>
                     </div>
                 </div>
-                <p style="margin-top:10px; font-size:0.9rem;">On entend bien le "N". Pas de fusion. Pas de cachette.</p>
+            </div>`,
+            questions: [
+                {
+                    q: "Entendez-vous le son 'N' (Enne) dans ces 2 mots ?",
+                    opts: ["Non, pas du tout", "Oui, j'entends 'N' dans les deux"],
+                    good: 1
+                }
+            ],
+            exp: "Exactement ! On entend le son 'N' dans les deux cas. Voyons pourquoi."
+        },
+
+        // 2. THE NOUN SAKINA
+        {
+            type: "lesson",
+            prof: "Analysons le <strong>1er Cas</strong> (Ex : Man / مَنْ).",
+            html: `
+            <div class="concept-card">
+                <h3>1er Cas : Le Noun Sakina (Ex : Man / مَنْ)</h3>
+                <p>C'est un <strong>Noun</strong> (Lettre N) avec un <strong>Sukun</strong> (Signe du silence ْ ).</p>
+                
+                <div style="text-align:center; margin:15px; background:#e0f2f1; padding:10px; border-radius:10px;">
+                    <div style="font-size:3rem; color:#009688; font-family: 'Scheherazade New', serif;">نْ</div>
+                    <div style="color:#00796b; font-weight:bold;">"Enn"</div>
+                </div>
+
+                <p style="margin-top:10px;">⚠️ <strong>Où le trouve-t-on ?</strong><br>Contrairement au Tanween, il peut être partout !</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px;">
+                    <div style="background:#fff; border:1px solid #ddd; padding:10px; border-radius:8px; text-align:center;">
+                        <span style="display:block; font-size:0.8rem; color:#555; margin-bottom:5px;">AU MILIEU</span>
+                        <div class="ar-med" style="font-size:1.5rem; color:#333;">أَنْعَمْتَ</div>
+                        <span style="font-size:0.7rem; color:#777;">(An'amta)</span>
+                    </div>
+                    <div style="background:#fff; border:1px solid #ddd; padding:10px; border-radius:8px; text-align:center;">
+                        <span style="display:block; font-size:0.8rem; color:#555; margin-bottom:5px;">À LA FIN</span>
+                        <div class="ar-med" style="font-size:1.5rem; color:#333;">مَنْ</div>
+                        <span style="font-size:0.7rem; color:#777;">(Man)</span>
+                    </div>
+                </div>
+
+                <p style="margin-top:10px; font-size:0.9rem;"><strong>Règle d'or :</strong> Il est statique. Il ne bouge pas. Il est écrit et prononcé.</p>
             </div>`
         },
 
-        // 12. FAMILLE 2: IDGHAM
+        // 3. THE TANWEEN (VISUALS)
         {
             type: "lesson",
-            prof: "2️⃣ <strong>AL-IDGHAM (La Fusion)</strong><br>Si le voisin est fort (comme Ya ou Ra), le Noun fond à l'intérieur !",
+            prof: "Analysons le <strong>2ème Cas</strong> (Ex : Kitaban / كِتَابًا).",
             html: `
-            <div class="lesson-card" style="border-left:4px solid #0984e3;">
-                <div style="display:flex; align-items:center;">
-                    <div style="font-size:2rem; margin-right:15px;">🤝</div>
-                    <div>
-                        <strong>May-Ya'malu</strong> (Pas Man-Ya)
-                        <div class="ar-med" style="color:#0984e3;">مَن يَعْمَلُ</div>
+            <div class="concept-card">
+                <h3>2ème Cas : Le Tanween (Ex : Kitaban / كِتَابًا)</h3>
+                <p>C'est tout simplement une <strong>Double Voyelle</strong> qui se trouve <strong>toujours à la FIN</strong> du mot.</p>
+                <ul style="text-align:left; margin-top:10px; margin-bottom:15px; font-size:0.95rem;">
+                    <li>2 Fathas (Fathatan) : ً</li>
+                    <li>2 Dammas (Dammatan) : ٌ</li>
+                    <li>2 Kasras (Kasratan) : ٍ</li>
+                </ul>
+
+                <p>Regardez le secret :</p>
+
+                <!-- DAMMATAN EXAMPLE -->
+                <div style="background:#fff9c4; padding:15px; border-radius:10px; border:2px solid #fbc02d; margin-top:5px;">
+                    <div style="color:#f57f17; font-weight:bold; text-align:center; margin-bottom:10px;">EXEMPLE : AHADUN (Dammatan)</div>
+                    <div style="display:flex; justify-content:space-around; align-items:center;">
+                        <div style="text-align:center;">
+                            <small style="color:#555;">ÉCRIT</small>
+                            <div class="ar-med" style="font-size:2.5rem; color:#333;">أَحَدٌ</div>
+                        </div>
+                        <div style="font-size:2rem; color:#fbc02d;">➡</div>
+                        <div style="text-align:center;">
+                            <small style="color:#555;">ENTENDU</small>
+                            <div class="ar-med" style="font-size:2.5rem; color:#009688;">أَحَدُ<span style="color:#d63031;">نْ</span></div>
+                        </div>
+                    </div>
+                    <div style="text-align:center; font-size:0.85rem; margin-top:5px; color:#333;">On entend le 'N' rouge, mais on ne l'écrit pas !</div>
+                </div>
+
+                <!-- FATHATAN EXAMPLE -->
+                <div style="background:#e3f2fd; padding:15px; border-radius:10px; border:2px solid #2196f3; margin-top:15px;">
+                    <div style="color:#1565c0; font-weight:bold; text-align:center; margin-bottom:10px;">EXEMPLE : KITABAN (Fathatan)</div>
+                    <div style="display:flex; justify-content:space-around; align-items:center;">
+                        <div style="text-align:center;">
+                            <small style="color:#555;">ÉCRIT</small>
+                            <div class="ar-med" style="font-size:2.5rem; color:#333;">كِتَابًا</div>
+                        </div>
+                        <div style="font-size:2rem; color:#2196f3;">➡</div>
+                        <div style="text-align:center;">
+                            <small style="color:#555;">ENTENDU</small>
+                            <div class="ar-med" style="font-size:2.5rem; color:#009688;">كِتَابَ<span style="color:#d63031;">نْ</span></div>
+                        </div>
                     </div>
                 </div>
-                <p style="margin-top:10px; font-size:0.9rem;">Le Noun a disparu ! Il est entré dans le Ya.</p>
+
+                 <!-- KASRATAN EXAMPLE -->
+                <div style="background:#f3e5f5; padding:15px; border-radius:10px; border:2px solid #9c27b0; margin-top:15px;">
+                    <div style="color:#7b1fa2; font-weight:bold; text-align:center; margin-bottom:10px;">EXEMPLE : YAWMIN (Kasratan)</div>
+                    <div style="display:flex; justify-content:space-around; align-items:center;">
+                        <div style="text-align:center;">
+                            <small style="color:#555;">ÉCRIT</small>
+                            <div class="ar-med" style="font-size:2.5rem; color:#333;">يَوْمٍ</div>
+                        </div>
+                        <div style="font-size:2rem; color:#9c27b0;">➡</div>
+                        <div style="text-align:center;">
+                            <small style="color:#555;">ENTENDU</small>
+                            <div class="ar-med" style="font-size:2.5rem; color:#009688;">يَوْمِ<span style="color:#d63031;">نْ</span></div>
+                        </div>
+                    </div>
+                </div>
+
             </div>`
         },
 
-        // 13. FAMILLE 3: IQLAB
+        // 4. IDENTIFICATION GOAL
         {
             type: "lesson",
-            prof: "3️⃣ <strong>AL-IQLAB (La Transformation)</strong><br>Si le voisin est un Ba (ب), le Noun se transforme en Mim (M) !",
+            prof: "🎯 <strong>Votre Objectif Principal</strong>",
             html: `
-            <div class="lesson-card" style="border-left:4px solid #d63031;">
-                <div style="display:flex; align-items:center;">
-                    <div style="font-size:2rem; margin-right:15px;">🔄</div>
-                    <div>
-                        <strong>Mim-Ba'di</strong> (Pas Min-Ba)
-                        <div class="ar-med" style="color:#d63031;">مِنۢ بَعْدِ</div>
-                    </div>
+            <div class="concept-card" style="text-align:center;">
+                <p style="font-size:1.1rem; line-height:1.6;">Le plus important pour l'instant n'est pas de connaître toutes les règles par cœur, mais d'être capable d'<strong>IDENTIFIER</strong> ces deux cas dans le Coran.</p>
+                <div style="margin-top:20px; font-weight:bold; color:#d63031;">
+                    Dès que vous voyez un Noun Sakina (نْ) ou un Tanween (ً ٍ ٌ)...<br>
+                    <span style="font-size:1.5rem;">ALARME ! 🚨</span>
                 </div>
-                <p style="margin-top:10px; font-size:0.9rem;">C'est impossible de dire 'NB' rapidement. La bouche dit 'MB' naturellement.</p>
+                <p>Il y a une règle de Tajweed qui s'applique !</p>
             </div>`
         },
 
-        // 14. FAMILLE 4: IKHFAA
+        // 5. IMMERSION 1 (Surah 76:2)
         {
-            type: "lesson",
-            prof: "4️⃣ <strong>AL-IKHFAA (La Cachette)</strong><br>Pour la plupart des autres lettres, on cache le Noun dans le nez (Ghunna).",
-            html: `
-            <div class="lesson-card" style="border-left:4px solid #6c5ce7;">
-                <div style="display:flex; align-items:center;">
-                    <div style="font-size:2rem; margin-right:15px;">🌫️</div>
-                    <div>
-                        <strong>Min-Qablu</strong> (Son nasal)
-                        <div class="ar-med" style="color:#6c5ce7;">مِن قَبْلُ</div>
-                    </div>
-                </div>
-                <p style="margin-top:10px; font-size:0.9rem;">On n'entend pas un "N" clair, mais un son qui vibre dans le nez.</p>
-            </div>`
+            type: "immersion",
+            prof: "🔍 <strong>Niveau 1 : Surah Al-Insan (76:2)</strong><br>Touchez tous les Noun Sakina et Tanween.",
+            instruction: "Cherchez les Alarmes (N ou Tanween).",
+            surah: 76,
+            words: [
+                { t: "إِنَّا", ok: false },
+                { t: "خَلَقْنَا", ok: false },
+                { t: "ٱلْإِنسَٰنَ", ok: true, reason: "Noun Sakina au milieu (Caché)" },
+                { t: "مِن", ok: true, reason: "Noun Sakina à la fin" },
+                { t: "نُّطْفَةٍ", ok: true, reason: "Tanween Kasra à la fin" },
+                { t: "أَمْشَاجٍ", ok: true, reason: "Tanween Kasra à la fin" },
+                { t: "نَّبْتَلِيهِ", ok: false },
+                { t: "فَجَعَلْنَٰهُ", ok: false },
+                { t: "سَمِيعًۢا", ok: true, reason: "Tanween Fatha à la fin" },
+                { t: "بَصِيرًا", ok: true, reason: "Tanween Fatha à la fin" },
+                { t: "٢", endVerse: true }
+            ]
         },
 
-        // 15. TABLEAU RECAP
+        // 6. IMMERSION 2 (Surah 88:4-5)
         {
-            type: "lesson",
-            prof: "Voici le plan de votre apprentissage.<br>Chaque couleur est une règle que nous allons étudier ensemble.",
-            html: `<div class="grid" style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
-                        <div class="btn-opt" style="background:#e0f2f1; border:1px solid #00b894; color:#00695c; padding:10px; border-radius:8px; text-align:center;">1. IZHAR<br><small>Clarté</small></div>
-                        <div class="btn-opt" style="background:#e3f2fd; border:1px solid #0984e3; color:#0d47a1; padding:10px; border-radius:8px; text-align:center;">2. IDGHAM<br><small>Fusion</small></div>
-                        <div class="btn-opt" style="background:#fbe9e7; border:1px solid #ff7675; color:#c62828; padding:10px; border-radius:8px; text-align:center;">3. IQLAB<br><small>Transfo</small></div>
-                        <div class="btn-opt" style="background:#f3e5f5; border:1px solid #9c27b0; color:#4a148c; padding:10px; border-radius:8px; text-align:center;">4. IKHFA<br><small>Cachette</small></div>
-                      </div>`
+            type: "immersion",
+            prof: "🔍 <strong>Niveau 2 : Surah Al-Ghashiyah (88:4-5)</strong><br>Attention aux Tanween !",
+            instruction: "Touchez les mots finissant par un Tanween ou Noun Sakina.",
+            surah: 88,
+            words: [
+                { t: "تَصْلَىٰ", ok: false },
+                { t: "نَارًا", ok: true, reason: "Tanween Fatha à la fin" },
+                { t: "حَامِيَةً", ok: true, reason: "Tanween Fatha à la fin" },
+                { t: "٤", endVerse: true },
+                { t: "تُسْقَىٰ", ok: false },
+                { t: "مِنْ", ok: true, reason: "Noun Sakina à la fin" },
+                { t: "عَيْنٍ", ok: true, reason: "Tanween Kasra à la fin" },
+                { t: "آنِيَةٍ", ok: true, reason: "Tanween Kasra à la fin" },
+                { t: "٥", endVerse: true }
+            ]
         },
 
-        // 16. EXAMEN FINAL
+        // 7. IMMERSION 3 (Surah 96:2)
+        {
+            type: "immersion",
+            prof: "🔍 <strong>Niveau 3 : Surah Al-Alaq (96:2)</strong><br>Repérez le Noun Sakina au milieu du mot !",
+            instruction: "Où se cache le Noun ?",
+            surah: 96,
+            words: [
+                { t: "خَلَقَ", ok: false },
+                { t: "ٱلْإِنسَٰنَ", ok: true, reason: "Noun Sakina au milieu" },
+                { t: "مِنْ", ok: true, reason: "Noun Sakina à la fin" },
+                { t: "عَلَقٍ", ok: true, reason: "Tanween Kasra à la fin" },
+                { t: "٢", endVerse: true }
+            ]
+        },
+
+        // 8. OBSERVATION (LES 4 REGLES)
         {
             type: "quiz_theory",
-            prof: "Examen Final :<br>Touche le mot qui contient un <strong>Tanween</strong> (le Noun caché).",
-            opts: [
-                { t: "ٱلْفَلَقِ", good: false, exp: "Non, ça finit par une Kasra simple." },
-                { t: "غَاسِقٍ", good: true, exp: "Bravo ! 'Ghasiqin' finit par un Kasratan (IN)." },
-                { t: "إِذَا", good: false, exp: "Non, ça finit par un Alif (pas de Tanwin ici)." }
+            prof: "👂 <strong>Écoute bien !</strong><br>Voici 4 exemples (Noun Sakina et Tanween) mettant en jeu les 4 règles.<br>Est-ce qu'on entend le 'N' de la même façon ?",
+            html: `
+            <div class="concept-card" style="text-align:center;">
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:20px;">
+                    <!-- Izhar -->
+                    <div class="btn-audio btn-listen" onclick="playAudio('cham_man_amana', 0, 100, 'cham-1')" style="background:#e8f5e9; border:1px solid #c8e6c9; padding:8px; border-radius:8px;">
+                        <div class="ar-med" style="font-size:1.4rem;">مَنْ ءَامَنَ</div>
+                        <div style="font-size:0.75rem; color:#2d3436;">(Man Amana)</div>
+                        <div>🔊</div>
+                    </div>
+                    <!-- Idgham -->
+                    <div class="btn-audio btn-listen" onclick="playAudio('cham_may_yamalu', 0, 100, 'cham-2')" style="background:#e3f2fd; border:1px solid #bbdefb; padding:8px; border-radius:8px;">
+                        <div class="ar-med" style="font-size:1.4rem;">مَن يَعْمَلْ</div>
+                        <div style="font-size:0.75rem; color:#2d3436;">(May-Ya'malu)</div>
+                        <div>🔊</div>
+                    </div>
+                    <!-- Iqlab -->
+                    <div class="btn-audio btn-listen" onclick="playAudio('cham_mim_badi', 0, 100, 'cham-3')" style="background:#ffebee; border:1px solid #ffcdd2; padding:8px; border-radius:8px;">
+                        <div class="ar-med" style="font-size:1.4rem;">مِنۢ بَعْدِ</div>
+                        <div style="font-size:0.75rem; color:#2d3436;">(Mim-Ba'di)</div>
+                        <div>🔊</div>
+                    </div>
+                    <!-- Ikhfaa -->
+                    <div class="btn-audio btn-listen" onclick="playAudio('cham_min_duni', 0, 100, 'cham-4')" style="background:#f3e5f5; border:1px solid #e1bee7; padding:8px; border-radius:8px;">
+                        <div class="ar-med" style="font-size:1.4rem;">مِن دُونِ</div>
+                        <div style="font-size:0.75rem; color:#2d3436;">(Min Douni)</div>
+                        <div>🔊</div>
+                    </div>
+                </div>
+            </div>`,
+            questions: [
+                {
+                    q: "Verdict ?",
+                    opts: ["Oui, c'est pareil", "Non, ça change !"],
+                    good: 1
+                }
             ],
-            correctIdx: 1
-        }
+            exp: "Exactement ! Le son 'N' change tout le temps !"
+        },
+
+        // 9. DEDUCTION (THE CAUSE)
+        {
+            type: "quiz_theory",
+            prof: "🤔 <strong>À votre avis...</strong><br>Selon quoi on prononce le 'N' différemment ?",
+            html: `
+            <div class="concept-card" style="text-align:center;">
+                <p>Regardez bien ce qui vient <strong>après</strong> le Noun Sakina...</p>
+                <div class="ar-med" style="font-size:2rem; margin:15px 0;">
+                    نْ <span style="color:#d63031;">?</span>
+                </div>
+            </div>`,
+            questions: [
+                {
+                    q: "Qui décide de la règle ?",
+                    opts: ["La voyelle d'avant", "La phrase", "La lettre qui suit"],
+                    good: 2
+                }
+            ],
+            exp: "Bravo ! C'est la lettre qui suit (le Voisin) qui décide de la règle."
+        },
+
+        // 10. CONCLUSION (TEASER)
+        {
+            type: "lesson",
+            prof: "C'est pour cela qu'il y a <strong>4 Règles</strong>.<br>Nous allons détailler chaque règle dans les prochains cours.",
+            html: `
+            <div class="concept-card" style="text-align:center;">
+                <p style="margin-bottom:15px;">Chaque groupe de lettres (Voisins) donne une règle différente :</p>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; font-size:0.9rem;">
+                    <div style="background:#e8f5e9; padding:5px; border-radius:5px;">1. Izhar</div>
+                    <div style="background:#e3f2fd; padding:5px; border-radius:5px;">2. Idgham</div>
+                    <div style="background:#ffebee; padding:5px; border-radius:5px;">3. Iqlab</div>
+                    <div style="background:#f3e5f5; padding:5px; border-radius:5px;">4. Ikhfaa</div>
+                </div>
+            </div>`
+        },
+
+
     ]
 };
