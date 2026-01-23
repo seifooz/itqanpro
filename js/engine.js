@@ -38,6 +38,7 @@ function getAllCourses() {
         'ra_jawaz': typeof RA_JAWAZ_DATA !== 'undefined' ? RA_JAWAZ_DATA : null,
         'lam': typeof LAM_DATA !== 'undefined' ? LAM_DATA : null,
         'ghunna': typeof GHUNNA_DATA !== 'undefined' ? GHUNNA_DATA : null,
+        'ra_intro': typeof RA_INTRO_DATA !== 'undefined' ? RA_INTRO_DATA : null,
         'mad_intro': typeof MAD_INTRO_DATA !== 'undefined' ? MAD_INTRO_DATA : null,
         'mad_tabii': typeof MAD_TABII_DATA !== 'undefined' ? MAD_TABII_DATA : null,
         'mad_badal': typeof MAD_BADAL_DATA !== 'undefined' ? MAD_BADAL_DATA : null,
@@ -133,7 +134,7 @@ function showPortal() {
         {
             title: "Autres Règles",
             subtitle: "Qalqala, Ra, Lam, Ghunna",
-            ids: ['qalqala', 'ra_tafkhim', 'ra_tarqiq', 'ra_jawaz', 'lam', 'ghunna']
+            ids: ['qalqala', 'ra_intro', 'ra_tafkhim', 'ra_tarqiq', 'ra_jawaz', 'lam', 'ghunna']
         },
         {
             title: "Ahkam Mim Sakina",

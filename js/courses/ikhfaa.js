@@ -129,6 +129,9 @@ const IKHFAA_DATA = {
                 </div>
                 
                 <div style="color:#555; font-size:0.9rem; margin-bottom:10px;">Les 15 Lettres de l'Ikhfaa :</div>
+<div style="color:#777; font-size:0.85rem; margin-bottom:10px;">
+  Vous n'avez pas besoin de mémoriser toutes les lettres de l'Ikhfaa. Mémorisez simplement les lettres des règles Izhar, Idgham et Iqlab ; les lettres d'Ikhfaa sont simplement le reste.
+</div>
                 <div class="letters-grid" style="grid-template-columns:repeat(5, 1fr); gap:8px;">
                     <div class="l-card"><div class="l-ar">ص</div></div><div class="l-card"><div class="l-ar">ذ</div></div><div class="l-card"><div class="l-ar">ث</div></div><div class="l-card"><div class="l-ar">ك</div></div><div class="l-card"><div class="l-ar">ج</div></div>
                     <div class="l-card"><div class="l-ar">ش</div></div><div class="l-card"><div class="l-ar">ق</div></div><div class="l-card"><div class="l-ar">س</div></div><div class="l-card"><div class="l-ar">د</div></div><div class="l-card"><div class="l-ar">ط</div></div>

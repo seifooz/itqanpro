@@ -1,223 +1,241 @@
+const RA_TAF_HELP_HTML = `
+<div style="margin-top:10px;">
+    <button onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'" style="background:#e67e22; color:white; border:none; padding:5px 12px; border-radius:15px; font-size:0.8rem; cursor:pointer; font-weight:bold;">
+        💡 Aide : L'Algorithme du Prof
+    </button>
+    <div style="display:none; background:#fff3e0; border:1px solid #e67e22; padding:10px; border-radius:10px; margin-top:5px; font-size:0.85rem; color:#333; text-align:left;">
+        <strong>1. Le Chef 👑</strong> : Le Ra a <strong>Fatha/Damma</strong> ? ➡ <strong>LOURD</strong><br>
+        <strong>2. Le Miroir 🪞</strong> : Le Ra est <strong>Muet (Soukoun)</strong> ?<br>
+        &nbsp;&nbsp;👉 Regarde Avant : Fatha/Damma ? ➡ <strong>LOURD</strong><br>
+        <strong>3. Les Pièges ⚠️</strong> :<br>
+        &nbsp;&nbsp;👉 Hamza Wasl avant ? ➡ <strong>LOURD</strong> (Toujours !)<br>
+        &nbsp;&nbsp;👉 Lettre "Grosse" après ? ➡ <strong>LOURD</strong> (Toujours !)
+    </div>
+</div>`;
+
 const RA_TAFKHIM_DATA = {
     id: "ra_tafkhim",
-    title: "RA TAFKHIM (LOURD)",
+    title: "RA TAFKHIM (MODE LOURD)",
     type: "Ahkam Ar-Ra",
     steps: [
+        // --- INTRO ---
         {
             type: "lesson",
-            prof: "Partie 1 : <strong>Le Tafkhim</strong> (Lourdeur).<br>C'est la règle de base. Le Ra doit remplir la bouche.",
+            prof: "Bonjour ! Aujourd'hui, on s'attaque au <strong>Ra Tafkhim</strong> (Lourd).<br>C'est la personnalité 'Forte' du Ra.",
             html: `
             <div class="concept-card">
-                <h3 style="color:#d35400;">La Bouche Pleine 🐘</h3>
-                <p>Le Ra est une lettre forte. Dans environ <strong>70% des cas</strong>, elle se prononce avec emphase (Gros).</p>
-                <div style="background:#fff0e6; border:1px solid #fab1a0; padding:15px; border-radius:8px; margin-top:15px; text-align:center;">
-                    On lève l'arrière de la langue vers le palais.<br>
-                    Le son résonne comme un écho grave.
+                <h3 style="color:#d35400;">C'est quoi "Lourd" ? 🤔</h3>
+                <p style="font-size:1rem; color:#2c3e50; margin-bottom:15px;">
+                    C'est un son qui remplit la bouche. Le son doit résonner, il doit être <strong>GRAVE</strong> et <strong>IMPOSANT</strong>.
+                </p>
+                <div style="background:#fff3e0; padding:15px; border-radius:10px; text-align:center;">
+                    <div style="font-weight:bold; color:#d35400; margin-bottom:5px;">La Technique :</div>
+                    <div style="font-size:0.9rem;">
+                        Lève l'arrière de la langue vers le palais.<br>
+                        Le son va monter et prendre de l'ampleur.
+                    </div>
                 </div>
             </div>`
         },
 
-        // REGLE 1 : VOYELLES
+        // --- RÈGLE 1 : LE CHEF (VOYELLES) ---
         {
             type: "lesson",
-            prof: "Règle N°1 : Les Voyelles Fortes.<br>Fatha (Haut) et Damma (Avant) rendent le Ra lourd.",
+            prof: "Règle N°1 : <strong>Le Chef (La Voyelle)</strong>.<br>C'est le plus simple. Regarde ce que porte le Ra.",
             html: `
             <div class="concept-card">
-                <h3>1. Fatha & Damma</h3>
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
-                    <div class="audio-row-item" style="flex-direction:column; text-align:center;">
-                        <div class="ar-big" style="color:#d35400;">رَ</div>
-                        <div class="ar-word" style="font-size:1.2rem;">رَبِّ</div>
-                        <div style="font-size:0.7rem; color:#888;">(Rabb)</div>
+                <h3>Si le Ra porte "Haut" ou "Avant"...</h3>
+                
+                <!-- VISUAL BREAKDOWN: FATHA -->
+                <div class="mz-container" style="margin-bottom:15px;">
+                    <div class="mz-phrase">رَبِّ</div>
+                    <div class="mz-analysis">
+                        <div class="mz-group">
+                            <div class="mz-box mz-green" style="border-color:#e67e22; color:#d35400;">َ</div>
+                            <div class="mz-label" style="color:#d35400;">Fatha</div>
+                        </div>
+                        <div class="mz-icon">+</div>
+                        <div class="mz-group">
+                            <div class="mz-box mz-blue">ر</div>
+                            <div class="mz-label blue">Ra</div>
+                        </div>
                     </div>
-                    <div class="audio-row-item" style="flex-direction:column; text-align:center;">
-                        <div class="ar-big" style="color:#d35400;">رُ</div>
-                        <div class="ar-word" style="font-size:1.2rem;">رُزِقُوا</div>
-                        <div style="font-size:0.7rem; color:#888;">(Ruziqu)</div>
+                    <div class="ex-logic">Le Ra a une <strong>Fatha</strong> ➡ <strong>LOURD</strong></div>
+                </div>
+
+                <!-- VISUAL BREAKDOWN: DAMMA -->
+                <div class="mz-container">
+                    <div class="mz-phrase">رُزِقُوا</div>
+                    <div class="mz-analysis">
+                        <div class="mz-group">
+                            <div class="mz-box mz-green" style="border-color:#e67e22; color:#d35400;">ُ</div>
+                            <div class="mz-label" style="color:#d35400;">Damma</div>
+                        </div>
+                        <div class="mz-icon">+</div>
+                        <div class="mz-group">
+                            <div class="mz-box mz-blue">ر</div>
+                            <div class="mz-label blue">Ra</div>
+                        </div>
+                    </div>
+                    <div class="ex-logic">Le Ra a une <strong>Damma</strong> ➡ <strong>LOURD</strong></div>
+                </div>
+
+                <div class="tip-box" style="margin-top:15px;">
+                    💡 <strong>Astuce :</strong> Fatha = Bouche ouverte en haut.<br>Damma = Bouche arrondie en avant.<br>Cela aide à produire le son lourd.
+                </div>
+            </div>`
+        },
+
+        // --- RÈGLE 2 : LE MIROIR (SOUKOUN) ---
+        {
+            type: "lesson",
+            prof: "Règle N°2 : <strong>Le Miroir (Soukoun)</strong>.<br>Si le Ra est muet (stop), il ne décide plus.",
+            html: `
+            <div class="concept-card">
+                <h3>Il copie son voisin de gauche ! ⬅️</h3>
+                <p>Quand le Ra a un <strong>Soukoun</strong> (ou quand tu t'arrêtes dessus), il devient un miroir. Il reflète la lettre <strong>AVANT</strong> lui.</p>
+                
+                <div class="mz-container">
+                    <div class="mz-phrase">بَرْق</div>
+                    <div class="mz-analysis">
+                        <div class="mz-group">
+                            <div class="mz-box mz-green" style="border-color:#2ecc71;">بَ</div>
+                            <div class="mz-label green">Avec Fatha</div>
+                        </div>
+                        <div class="mz-icon">⮕</div>
+                        <div class="mz-group">
+                            <div class="mz-box mz-blue">رْ</div>
+                            <div class="mz-label blue">Ra Muet (Miroir)</div>
+                        </div>
+                    </div>
+                    <div class="ex-logic">Avant, il y a une Fatha.<br>Donc le Ra devient <strong>LOURD</strong>.</div>
+                </div>
+
+                <div style="margin-top:15px; background:#fff3e0; padding:10px; border-radius:8px;">
+                    <div class="ar-med" style="text-align:center; margin-bottom:5px;">بَرْق</div>
+                    <div style="font-size:0.9rem; text-align:center;">
+                        Ba (Fatha) ➡ Ra (LOURD)<br>
+                        <strong>"Barq"</strong>
                     </div>
                 </div>
             </div>`
         },
-        // DRILL 1
-        {
-            type: "quiz_theory",
-            prof: "Quiz Rapide ⚡️<br>Je vois **رَسُولٌ** (Rasul). Le Ra a une Fatha. Verdict ?",
-            opts: [{ t: "Tafkhim (Lourd)", good: true }, { t: "Tarqiq (Fin)", good: false }],
-            exp: "Excellent. Fatha = Force (Lourd)."
-        },
 
-        // REGLE 2 : SOUKOUN SIMPLE
+        // --- RÈGLE 3 : LE PIÈGE DU HAMZA ---
         {
             type: "lesson",
-            prof: "Règle N°2 : Le Soukoun.<br>Si le Ra est muet, on regarde la lettre <strong>AVANT</strong>.",
+            prof: "Attention ! Voici le <strong>Piège N°1</strong>.<br>Le 'Hamza Wasl' (Le trait sans Hamza).",
             html: `
             <div class="concept-card">
-                <h3>2. L'Influence Précédente</h3>
-                <p>Si la lettre avant porte une Fatha ou Damma, sa force se propage au Ra.</p>
+                <h3 style="color:#c0392b;">L'Exception du Hamza ⚠️</h3>
+                <p><strong>La Règle d'Or :</strong> Si le Ra vient après lui, c'est <strong>TOUJOURS LOURD</strong>.</p>
                 
-                <div class="eq-container">
-                    <div class="eq-formula">
-                        <div class="eq-tag tag-red">Fatha / Damma</div>
-                        <div class="eq-plus">+</div>
-                        <div class="eq-tag tag-blue">Ra Soukoun</div>
-                        <div class="eq-plus">=</div>
-                        <div class="res-text" style="color:#d35400;">LOURD</div>
+                <div class="mz-container">
+                    <div class="mz-phrase">ٱرْجِعِي</div>
+                    <div class="mz-analysis">
+                        <div class="mz-group">
+                            <div class="mz-box mz-green" style="border-color:#e74c3c;">ٱ</div>
+                            <div class="mz-label" style="color:#c0392b;">Hamza Wasl</div>
+                        </div>
+                        <div class="mz-icon">+</div>
+                        <div class="mz-group">
+                            <div class="mz-box mz-blue">رْ</div>
+                            <div class="mz-label blue">Ra</div>
+                        </div>
                     </div>
+                    <div class="ex-logic">Hamza Wasl avant ? <strong>TOUJOURS LOURD !</strong><br>(Même si on prononce 'i')</div>
                 </div>
                 
-                <div style="margin-top:15px; display:flex; gap:10px;">
-                    <div class="audio-row-item" style="flex:1; justify-content:center;">
-                        <span class="ar-word">مَرْيَمَ</span>
-                    </div>
-                    <div class="audio-row-item" style="flex:1; justify-content:center;">
-                        <span class="ar-word">قُرْءَان</span>
-                    </div>
+                <div style="background:#ffebee; padding:15px; border-radius:10px; border:2px solid #ef5350; margin-top:15px;">
+                    <button class="btn-audio btn-listen" onclick="playAudio('089028', 0, 3, 'irjii')" style="width:100%; padding:8px; background:#fff; border:1px solid #ffcdd2;">
+                        🔊 Écoute : Le Ra est GROS (IRr)
+                    </button>
                 </div>
             </div>`
         },
-        // DRILL 2
-        {
-            type: "quiz_theory",
-            prof: "Quiz Rapide ⚡️<br>Dans **بَرْق** (Barq), le Ra est Soukoun. Avant lui, un Ba avec Fatha. Le Ra est...",
-            opts: [{ t: "Tafkhim (Lourd)", good: true }, { t: "Tarqiq (Fin)", good: false }],
-            exp: "Exactement. La Fatha contamine le Ra et le rend lourd."
-        },
 
-        // REGLE 3 : HAMZA WASL
+        // --- RÈGLE 4 : LE MUR (LETTRE EMPHATIQUE) ---
         {
             type: "lesson",
-            prof: "Règle N°3 (Avancée) : <strong>Hamza Wasl</strong>.<br>C'est un piège ! Si le Ra suit un Hamza de liaison, il est <strong>TOUJOURS LOURD</strong>.",
+            prof: "Piège N°2 (Niveau Expert) : <strong>Le Mur</strong>.<br>Quand une 'Lettre Forte' bloque le passage.",
             html: `
             <div class="concept-card">
-                <h3 style="color:#c0392b;">Le Piège du Hamza Wasl</h3>
-                <p>Même si on entend une 'Kasra' (i) au début, comme c'est un Hamza instable (Wasl), le Ra reste fort.</p>
-                <div class="audio-row-item">
-                    <div class="ar-big">ٱرْجِعِي</div>
-                    <div style="margin-left:10px;">
-                        <div><strong>Irji'i</strong></div>
-                        <div style="font-size:0.8rem; color:#c0392b;">Prononcé "IR" mais LOURD !</div>
+                <h3 style="color:#c0392b;">L'influence du Futur 🔮</h3>
+                <p>Une lettre <strong>Emphatique</strong> (Sad, Dad, Ta, Dha, Qaf) après le Ra impose sa lourdeur.</p>
+                
+                <div class="mz-container">
+                    <div class="mz-phrase">مِرْصَادًا</div>
+                    <div class="mz-analysis">
+                        <div class="mz-group">
+                            <div class="mz-box mz-blue">رْ</div>
+                            <div class="mz-label blue">Ra</div>
+                        </div>
+                        <div class="mz-icon">+</div>
+                        <div class="mz-group">
+                            <div class="mz-box mz-green" style="border-color:#e74c3c;">ص</div>
+                            <div class="mz-label" style="color:#c0392b;">Sad (Fort)</div>
+                        </div>
                     </div>
-                    <button class="mini-play" onclick="playAudio('089028', 0, 3, 'irjii')">▶</button>
+                    <div class="ex-logic">Le <strong>SAD</strong> après est trop fort.<br>Il oblige le Ra à devenir <strong>LOURD</strong>.</div>
                 </div>
-                <div class="audio-row-item" style="margin-top:10px;">
-                    <div class="ar-big">لِمَنِ ٱرْتَضَىٰ</div>
-                    <div style="margin-left:10px;">
-                        <div><strong>Artada</strong></div>
-                        <div style="font-size:0.8rem; color:#c0392b;">Lourd à cause du Wasl.</div>
-                    </div>
-                </div>
-            </div>`
-        },
-        // DRILL 3
-        {
-            type: "quiz_theory",
-            prof: "Quiz 'Piège' ⚡️<br>Je lis **ٱرْكَب** (Irkab). J'entends 'i'. Pourquoi c'est lourd ?",
-            opts: [{ t: "Parce que c'est un Hamza Wasl", good: true }, { t: "C'est une erreur, c'est Fin", good: false }],
-            exp: "C'est la règle d'or : Hamza Wasl + Ra = Toujours Lourd."
-        },
 
-        // REGLE 4 : LETTRE EMPHATIQUE
-        {
-            type: "lesson",
-            prof: "Règle N°4 (Avancée) : <strong>L'Obstacle</strong>.<br>Si après le Ra, il y a une lettre très lourde (SAD, DAD, TA, DHA, QAF), le Ra devient lourd.",
-            html: `
-            <div class="concept-card">
-                <h3 style="color:#c0392b;">L'Influence Suivante</h3>
-                <p>Même si le Ra est précédé d'une Kasra (qui devrait l'amincir), la lettre <strong>lourde</strong> qui suit "annule" la douceur.</p>
-                
-                <div class="audio-row-item">
-                    <div class="ar-big">مِرْصَادًا</div>
-                    <div style="margin-left:10px;">
-                        <div class="ar-word">Mir-sada</div>
-                        <div style="font-size:0.8rem;">Le SAD (ص) force le Ra à grossir.</div>
-                    </div>
-                    <button class="mini-play" onclick="playAudio('078021', 4, 6, 'mirsada')">▶</button>
-                </div>
-                
                 <div class="tip-box">
-                    <strong>Note :</strong> Cela arrive surtout quand le Ra est entre une Kasra et une lettre Isti'la (Emphatique).
+                    👉 <strong>Règle :</strong> Une lettre forte après le Ra gagne toujours !
                 </div>
             </div>`
         },
-        // DRILL 4
+
+        // --- ALGORITHME RECAP ---
         {
-            type: "quiz_theory",
-            prof: "Quiz Expert ⚡️<br>Dans **قِرْطَاس** (Qirtas), j'ai une Kasra avant. Mais j'ai un TA (ط) après. Le Ra est...",
-            opts: [{ t: "Fin (Tarqiq)", good: false }, { t: "Lourd (Tafkhim)", good: true }],
-            exp: "Le TA est une lettre emphatique. Elle bloque la finesse."
+            type: "lesson",
+            prof: "Récapitulons avec ma méthode infaillible.<br>L'Algorithme du Prof.",
+            html: `<div class="concept-card"><div class="flow-chart"><div class="flow-step"><div class="flow-num">1</div><div>Ra a Fatha/Damma ?</div></div><div class="flow-arrow">▼</div><div class="flow-step"><div class="flow-num">2</div><div><strong>OUI</strong> ➡ C'est <strong>LOURD</strong> 🐘<br><strong>NON</strong> (Soukoun) ➡ Regarde <strong>AVANT</strong>.</div></div><div class="flow-arrow">▼</div><div class="flow-step"><div class="flow-num">3</div><div>Avant a Fatha/Damma ? ➡ <strong>LOURD</strong> 🐘<br>(Attention au Hamza Wasl !)</div></div><div class="flow-arrow">▼</div><div class="flow-step flow-final">⚠️ Regarde <strong>APRÈS</strong>.<br>Lettre 'Grosse' ? ➡ <strong>LOURD</strong> 🐘</div></div></div>`
         },
 
-        // WORKSHOP
+        // --- PARTIE 2 : ATELIER ---
+        { type: "intro", prof: "Assez parlé ! À toi de jouer.<br>Écoute et imite-moi." },
+
         {
-            type: "intro",
-            prof: "🎙️ <strong>Atelier Tafkhim</strong><br>Entraîne-toi à grossir ta voix."
-        },
-        {
-            type: "workshop",
-            prof: "Écoute et répète en gardant la bouche pleine.",
-            examples: [
-                { type: "Cas 1: Fatha", ar: "رَبِّ ٱلْعَٰلَمِينَ", url: "001002", start: 0, end: 3 },
-                { type: "Cas 1: Damma", ar: "رُزِقُوا", url: "002025", start: 7, end: 9 },
-                { type: "Cas 2: Soukoun (après Fatha)", ar: "وَٱلْمُرْسَلَٰتِ", url: "077001", start: 0, end: 3 },
-                { type: "Cas 3: Hamza Wasl", ar: "ٱرْجِعِي", url: "089028", start: 0, end: 3 },
-                { type: "Cas 4: Lettre Emphatique", ar: "مِرْصَادًا", url: "078021", start: 4, end: 6 }
+            type: "workshop", prof: `Entraînement <strong>Ra Tafkhim</strong>. Fais résonner ta voix ! ${RA_TAF_HELP_HTML}`, examples: [
+                { type: "Le Chef (Fatha)", ar: "رَبِّ ٱلْعَٰلَمِينَ", url: "001002", start: 0, end: 3, hint: "Bouche ouverte haut" },
+                { type: "Le Chef (Damma)", ar: "رُزِقُوا", url: "002025", start: 7, end: 9, hint: "Bouche en avant" },
+                { type: "Le Miroir (Barq)", ar: "بَرْق", url: "002020", start: 2, end: 4, hint: "Copie le Ba (Fatha)" },
+                { type: "Le Piège (Wasl)", ar: "ٱرْجِعِي", url: "089028", start: 0, end: 3, hint: "Malgré le 'i', c'est LOURD !" },
+                { type: "Le Mur (Sad)", ar: "مِرْصَادًا", url: "078021", start: 4, end: 6, hint: "Le Sad rend tout lourd" }
             ]
         },
 
-        // EXAMEN FINAL
-        { type: "intro", prof: "🧐 <strong>Examen Final</strong><br>Analyse bien la cause." },
+        // --- PARTIE 3 : QUIZ ---
+        { type: "intro", prof: "Contrôle Surprise (10 Questions) ! 📝<br>Sélection des Meilleurs Cas." },
 
-        {
-            type: "quiz_theory",
-            prof: "Q1/6 - Le Ra de **رُوحُ** (Ruh) est Lourd. Pourquoi ?",
-            opts: [{ t: "Car il porte une Damma", good: true }, { t: "Car il porte une Kasra", good: false }],
-            exp: "Damma = Tafkhim (Lourd)."
-        },
-        {
-            type: "quiz_theory",
-            prof: "Q2/6 - Dans **بَرْق** (Barq), le Ra est Soukoun. Pourquoi est-il Lourd ?",
-            opts: [{ t: "Car la lettre AVANT a une Kasra", good: false }, { t: "Car la lettre AVANT a une Fatha", good: true }],
-            exp: "On regarde avant : Ba avec Fatha -> Ra Lourd."
-        },
-        {
-            type: "quiz_theory",
-            prof: "Q3/6 - **قُرْءَن** (Qur'an). Ra Sakina. Pourquoi Lourd ?",
-            opts: [{ t: "Lettre avant a une Damma", good: true }, { t: "Lettre avant a un Soukoun", good: false }],
-            exp: "Lettre avant (Qaf) a une Damma -> Ra Lourd."
-        },
-        {
-            type: "quiz_theory",
-            prof: "Q4/6 - **ٱرْجِعُونِ** (Irji'uni). J'entends 'i'. Pourquoi je dois faire le Tafkhim ?",
-            opts: [{ t: "C'est une exception Hamza Wasl", good: true }, { t: "C'est une erreur, c'est Fin", good: false }],
-            exp: "Exception Hamza Wasl = Toujours Lourd."
-        },
-        {
-            type: "quiz_theory",
-            prof: "Q5/6 - **مِرْصَادًا** (Mirsada). Il y a une Kasra avant. Pourquoi c'est quand même Lourd ?",
-            opts: [{ t: "À cause de la lettre Sad (Emphatique) qui suit", good: true }, { t: "À cause du Mim initial", good: false }],
-            exp: "La lettre Emphatique après le Ra annule l'effet de la Kasra."
-        },
-        {
-            type: "quiz_theory",
-            prof: "Q6/6 - Si je m'arrête sur le mot **ٱلْأَبْتَرَ** (Al-Abtar). Le Ra devient Sakina. Avant lui il y a une Fatha. Verdict ?",
-            opts: [{ t: "Fin", good: false }, { t: "Lourd", good: true }],
-            exp: "Arrêt = Soukoun. On regarde avant : Ta avec Fatha -> Ra Lourd."
-        },
+        // SELECTION BEST OF 10
+        { type: "exam_quiz", prof: `Q1/10 - Dans **رُوحُ**, le Ra est Lourd. Pourquoi ? ${RA_TAF_HELP_HTML}`, opts: [{ ar: "Car il a une Damma", good: true, reason: "Damma = Lourd !" }, { ar: "Car il a une Kasra", good: false }], noun: "Règle 1", letter: "Le Chef" },
+        { type: "quiz_theory", prof: `Q2/10 - Je vois **رِزْقًا** (Rizqan). Le Ra a une Kasra.`, opts: [{ t: "Lourd", good: false }, { t: "Fin (Tarqiq)", good: true, reason: "Kasra = Fin" }], exp: "La Kasra est la seule voyelle qui amincit le Ra." },
+        { type: "quiz_theory", prof: `Q3/10 - **مَرْيَمَ** (Maryam). Le Ra est Muet. Avant, le Mim a une Fatha.`, opts: [{ t: "Lourd", good: true, reason: "Miroir sur Fatha = Lourd" }, { t: "Fin", good: false }], exp: "Ra Muet + Fatha avant = Lourd." },
+        { type: "quiz_theory", prof: `Q4/10 - **قُرْءَٰنً** (Qur'an). Ra Muet. Avant, Qaf avec Damma.`, opts: [{ t: "Lourd", good: true, reason: "Miroir sur Damma = Lourd" }, { t: "Fin", good: false }], exp: "Ra Muet + Damma avant = Lourd." },
+        { type: "quiz_theory", prof: `Q5/10 - **فِرْعَوْنَ** (Fir'awn). Ra Muet. Avant, Fa avec Kasra.`, opts: [{ t: "Lourd", good: false }, { t: "Fin (Tarqiq)", good: true, reason: "Miroir sur Kasra = Fin" }], exp: "Ra Muet + Kasra avant = Fin." },
 
-        // IMMERSION
-        {
-            type: "intro",
-            prof: "📖 <strong>Immersion</strong><br>Sourate Al-Kauthar (108). Trouve les Ra Lourds."
-        },
+        { type: "quiz_theory", prof: "Q6/10 - **ٱرْجِعُونِ** (Irji'uni). J'entends 'i'. C'est quel piège ?", opts: [{ t: "Hamza Wasl", good: true, reason: "Toujours Lourd" }, { t: "Aucun", good: false }], exp: "Hamza Wasl = Toujours Lourd." },
+        { type: "quiz_theory", prof: "Q7/10 - **لِمَنِ ٱرْتَضَىٰ**. Le Ra suit un Hamza Wasl (après 'Ni').", opts: [{ t: "Lourd", good: true, reason: "Hamza Wasl = Lourd" }, { t: "Fin", good: false }], exp: "Même précédé d'une Kasra (Ni), le Wasl annule tout." },
+
+        { type: "quiz_theory", prof: "Q8/10 - **مِرْصَادًا**. J'ai 'i' avant. Pourquoi c'est **Lourd** ?", opts: [{ t: "La lettre d'après (Sad) est trop grosse", good: true, reason: "Le Mur Emphatique" }, { t: "Erreur", good: false }], exp: "Lettre Emphatique après = Lourd." },
+        { type: "quiz_theory", prof: "Q9/10 - **قِرْطَاس**. Ra muet + Kasra avant. Mais Ta (ط) après.", opts: [{ t: "Lourd", good: true, reason: "Le Ta est Fort" }, { t: "Fin", good: false }], exp: "Le Ta bloque la finesse." },
+
+        { type: "quiz_theory", prof: "Q10/10 - Je m'arrête sur **ٱلْكَوْثَرَ**. Le Ra devient muet. Avant j'ai une Fatha.", opts: [{ t: "Lourd", good: true, reason: "Arrêt = Miroir sur Fatha" }, { t: "Fin", good: false }], exp: "Arrêt = Soukoun. Fatha avant = Lourd." },
+
+        // --- PARTIE 4 : IMMERSION ---
+        { type: "intro", prof: "Mission Spéciale 🕵️‍♂️<br>Trouve les Ra Lourds dans le Quran." },
+
         {
             type: "immersion",
-            prof: "Surah Al-Kauthar (108)",
-            instruction: "Touche les Ra **Lourds** (Fin de verset).",
-            surah: 108,
+            prof: `Sourate Al-Kauthar (108) ${RA_TAF_HELP_HTML}`,
+            instruction: "Touche les Ra **Lourds** uniquement.",
+            totalIzhar: 3,
+            targetName: "un Ra Lourd",
             words: [
-                { t: "إِنَّآ", ok: false }, { t: "أَعْطَيْنَٰكَ", ok: false }, { t: "ٱلْكَوْثَرَ", ok: true, noun: "رَ", letter: "Lourd (Fatha/Arrêt)" }, { t: "١", endVerse: true },
-                { t: "فَصَلِّ", ok: false }, { t: "لِرَبِّكَ", ok: true, noun: "رَ", letter: "Lourd (Fatha)" }, { t: "وَٱنْحَرْ", ok: true, noun: "رْ", letter: "Lourd (Arrêt après Fatha)" }, { t: "٢", endVerse: true },
-                { t: "إِنَّ", ok: false }, { t: "شَانِئَكَ", ok: false }, { t: "هُوَ", ok: false }, { t: "ٱلْأَبْتَرُ", ok: true, noun: "رُ", letter: "Lourd (Damma/Arrêt)" }, { t: "٣", endVerse: true }
+                { t: "إِنَّآ", ok: false }, { t: "أَعْطَيْنَٰكَ", ok: false }, { t: "ٱلْكَوْثَرَ", ok: true, noun: "رَ", letter: "Lourd (Fatha)", endVerse: true, reason: "Fatha (ou Arrêt après Fatha) = Lourd ✅" },
+                { t: "فَصَلِّ", ok: false }, { t: "لِرَبِّكَ", ok: true, noun: "رَ", letter: "Lourd (Fatha)", reason: "Fatha = Lourd ✅" }, { t: "وَٱنْحَرْ", ok: true, noun: "رْ", letter: "Miroir (Ha Fatha)", endVerse: true, reason: "Arrêt. Avant, le Ha a une Fatha = Lourd ✅" },
+                { t: "إِنَّ", ok: false }, { t: "شَانِئَكَ", ok: false }, { t: "هُوَ", ok: false }, { t: "ٱلْأَبْتَرُ", ok: true, noun: "رُ", letter: "Lourd (Damma)", endVerse: true, reason: "Damma (ou Arrêt après Fatha) = Lourd ✅" }
             ]
         }
     ]
