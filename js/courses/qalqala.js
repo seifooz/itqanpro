@@ -34,7 +34,7 @@ const QALQALA_DATA = {
                 
                 <div style="background:#e3f2fd; padding:15px; border-radius:10px; margin-bottom:15px;">
                     <div class="ar-med" style="font-size:1.8rem; margin-bottom:10px;">قُلْ هُوَ ٱللَّهُ أَحَدٌ</div>
-                    <button class="btn-audio btn-listen" onclick="playAudio('112001', 5, 8, 'intro_qalqala')" style="width:100%; background:#fff; border:1px solid #90caf9; padding:8px; border-radius:8px; cursor:pointer;">
+                    <button class="btn-audio btn-listen" onclick="playAudio('qalqala_intro_qalqala', 5, 8, 'intro_qalqala')" style="width:100%; background:#fff; border:1px solid #90caf9; padding:8px; border-radius:8px; cursor:pointer;">
                         🔊 Écouter l'effet (Ahad)
                     </button>
                 </div>
@@ -163,11 +163,11 @@ const QALQALA_DATA = {
 
         {
             type: "workshop", prof: `Exemples de <strong>Qalqala</strong> (Sughra & Kubra). ${QAL_HELP_HTML}`, examples: [
-                { type: "Qaf (Milieu)", ar: "يَقْتُلُونَ", url: "004092", start: 8, end: 10, hint: "Sughra (Rapide)" },
-                { type: "Qaf (Fin)", ar: "خَلَقَ", url: "113002", start: 0, end: 2, hint: "Kubra (Fort)" },
-                { type: "Ta (Milieu)", ar: "يَطْمَعُ", url: "070038", start: 0, end: 2, hint: "Sughra" },
-                { type: "Ba (Fin)", ar: "وَقَبَ", url: "113003", start: 2, end: 4, hint: "Kubra" },
-                { type: "Dal (Fin+Shadda)", ar: "وَتَبَّ", url: "111001", start: 4, end: 6, hint: "Akbar (Explosif)" }
+                { type: "Qaf (Milieu)", ar: "يَقْتُلُونَ", url: "qalqala_lesson_1", start: 8, end: 10, hint: "Sughra (Rapide)" },
+                { type: "Qaf (Fin)", ar: "خَلَقَ", url: "qalqala_qaf_fin__2", start: 0, end: 2, hint: "Kubra (Fort)" },
+                { type: "Ta (Milieu)", ar: "يَطْمَعُ", url: "qalqala_ta_milieu__3", start: 0, end: 2, hint: "Sughra" },
+                { type: "Ba (Fin)", ar: "وَقَبَ", url: "qalqala_ba_fin__4", start: 2, end: 4, hint: "Kubra" },
+                { type: "Dal (Fin+Shadda)", ar: "وَتَبَّ", url: "qalqala_dal_fin_shadda__5", start: 4, end: 6, hint: "Akbar (Explosif)" }
             ]
         },
 

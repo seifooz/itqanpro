@@ -544,6 +544,8 @@ function next() {
 }
 
 // AUDIO
+
+// AUDIO
 function playAudio(url, start, end, id) {
     const isDefBtn = typeof id === 'string' && id.startsWith('def');
 
@@ -575,13 +577,27 @@ function playAudio(url, start, end, id) {
     }
 
     audioPlayer.src = "audio/" + url + ".m4a";
+    audioPlayer.onerror = (e) => {
+        const err = audioPlayer.error;
+        console.error("Audio Error:", err);
+        // Code 4 = MEDIA_ERR_SRC_NOT_SUPPORTED (often due to file:// blocking or missing file)
+        if (err && err.code === 4) {
+            alert("⚠️ Erreur Audio : Impossible de lire le fichier.\n\nSi vous ouvrez ce fichier en local (file://), les navigateurs bloquent souvent l'audio par sécurité.\n\nSolution : Utilisez un serveur local (ex: 'Live Server' sur VSCode) ou hébergez le site.");
+        } else {
+            console.log("Erreur lecture audio (Code " + (err ? err.code : 'N/A') + ")");
+        }
+    };
     currentAudioId = id;
 
+    // Reset UI for others
     document.querySelectorAll('.btn-listen').forEach(b => {
         b.classList.remove('playing');
         if (b.children.length === 0) b.innerText = "Lecture";
     });
     document.querySelectorAll('.def-audio-btn').forEach(b => b.classList.remove('playing'));
+
+    // Play from beginning (User will provide cut files)
+    audioPlayer.currentTime = 0;
 
     audioPlayer.play().catch(e => { console.log("Erreur lecture", e); });
 
@@ -596,18 +612,22 @@ function playAudio(url, start, end, id) {
     }
 }
 
+function resetAudioUI(id) {
+    const isDefBtn = typeof id === 'string' && id.startsWith('def');
+    if (!isDefBtn) {
+        const btn = document.getElementById(`play-${id}`);
+        if (btn) {
+            if (btn.children.length === 0) btn.innerText = "Lecture";
+            btn.classList.remove('playing');
+        }
+    } else {
+        document.getElementById(`play-${id}`).classList.remove('playing');
+    }
+}
+
 audioPlayer.onended = () => {
     if (currentAudioId !== null) {
-        const isDefBtn = typeof currentAudioId === 'string' && currentAudioId.startsWith('def');
-        if (!isDefBtn) {
-            const btn = document.getElementById(`play-${currentAudioId}`);
-            if (btn) {
-                if (btn.children.length === 0) btn.innerText = "Lecture";
-                btn.classList.remove('playing');
-            }
-        } else {
-            document.getElementById(`play-${currentAudioId}`).classList.remove('playing');
-        }
+        resetAudioUI(currentAudioId);
         currentAudioId = null;
     }
 };

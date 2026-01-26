@@ -66,8 +66,8 @@ const RA_TARQIQ_DATA = {
                 </div>
 
                 <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
-                    <button class="btn-audio btn-listen" onclick="playAudio('106002', 2, 4, 'rihla')">🔊 Rihla</button>
-                    <button class="btn-audio btn-listen" onclick="playAudio('004034', 0, 2, 'rijal')">🔊 Rijal</button>
+                    <button class="btn-audio btn-listen" onclick="playAudio('ra_tarqiq_rihla', 2, 4, 'rihla')">🔊 Rihla</button>
+                    <button class="btn-audio btn-listen" onclick="playAudio('ra_tarqiq_rijal', 0, 2, 'rijal')">🔊 Rijal</button>
                 </div>
             </div>`
         },
@@ -142,12 +142,12 @@ const RA_TARQIQ_DATA = {
 
         {
             type: "workshop", prof: `Entraînement <strong>Ra Tarqiq</strong>. ${RA_TAR_HELP_HTML}`, examples: [
-                { type: "Le Sourire (Kasra)", ar: "رِحْلَةَ", url: "106002", start: 2, end: 4, hint: "Bouche étirée 🙂" },
-                { type: "Le Sourire (Kasra)", ar: "ٱلرِّجَالُ", url: "004034", start: 0, end: 2, hint: "Ra Fin" },
-                { type: "Le Miroir (Fir'awn)", ar: "فِرْعَوْنَ", url: "073015", start: 4, end: 6, hint: "Kasra Avant ➡ Fin" },
-                { type: "Le Miroir (Mirya)", ar: "مِرْيَةٍ", url: "011017", start: 4, end: 6, hint: "Kasra Avant ➡ Fin" },
-                { type: "Le Joker (Khayr)", ar: "خَيْرٌ", url: "097003", start: 4, end: 6, hint: "Ya avant l'arrêt ➡ Fin" },
-                { type: "Le Joker (Qadeer)", ar: "قَدِيرٌ", url: "035001", start: 10, end: 12, hint: "Ya avant l'arrêt ➡ Fin" }
+                { type: "Le Sourire (Kasra)", ar: "رِحْلَةَ", url: "ra_tarqiq_lesson_1", start: 2, end: 4, hint: "Bouche étirée 🙂" },
+                { type: "Le Sourire (Kasra)", ar: "ٱلرِّجَالُ", url: "ra_tarqiq_le_sourire_kasra__2", start: 0, end: 2, hint: "Ra Fin" },
+                { type: "Le Miroir (Fir'awn)", ar: "فِرْعَوْنَ", url: "ra_tarqiq_le_miroir_fir_3", start: 4, end: 6, hint: "Kasra Avant ➡ Fin" },
+                { type: "Le Miroir (Mirya)", ar: "مِرْيَةٍ", url: "ra_tarqiq_le_miroir_mirya__4", start: 4, end: 6, hint: "Kasra Avant ➡ Fin" },
+                { type: "Le Joker (Khayr)", ar: "خَيْرٌ", url: "ra_tarqiq_le_joker_khayr__5", start: 4, end: 6, hint: "Ya avant l'arrêt ➡ Fin" },
+                { type: "Le Joker (Qadeer)", ar: "قَدِيرٌ", url: "ra_tarqiq_le_joker_qadeer__6", start: 10, end: 12, hint: "Ya avant l'arrêt ➡ Fin" }
             ]
         },
 

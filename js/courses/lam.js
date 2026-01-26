@@ -30,11 +30,11 @@ const LAM_DATA = {
             Entends-tu le mot "Allah" de la même façon ?
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:15px; margin-bottom:15px;">
                 <div style="text-align:center; background:#fff0e6; padding:10px; border-radius:8px; border:1px solid #fab1a0;">
-                    <button class="mini-play" onclick="playAudio('112001', 0, 3, 'obs-h')" style="width:40px; height:40px;">▶</button>
+                    <button class="mini-play" onclick="playAudio('lam_obs_h', 0, 3, 'obs-h')" style="width:40px; height:40px;">▶</button>
                     <div class="ar-big" style="font-size:1.2rem; color:#d35400; margin-top:5px;">هوَ ٱللَّهُ</div>
                 </div>
                 <div style="text-align:center; background:#e3f2fd; padding:10px; border-radius:8px; border:1px solid #90caf9;">
-                    <button class="mini-play" onclick="playAudio('001001', 0, 3, 'obs-l')" style="width:40px; height:40px;">▶</button>
+                    <button class="mini-play" onclick="playAudio('lam_obs_l', 0, 3, 'obs-l')" style="width:40px; height:40px;">▶</button>
                     <div class="ar-big" style="font-size:1.2rem; color:#0984e3; margin-top:5px;">بِسْمِ ٱللَّهِ</div>
                 </div>
             </div>`,
@@ -161,7 +161,7 @@ const LAM_DATA = {
                         <strong>Huwa-Llah</strong>
                         <div style="font-size:0.8rem;">(Avant: Fatha sur le Wow)</div>
                     </div>
-                    <button class="mini-play" onclick="playAudio('112001', 0, 3, 'huwallah')">▶</button>
+                    <button class="mini-play" onclick="playAudio('lam_huwallah', 0, 3, 'huwallah')">▶</button>
                 </div>
 
                 <div class="audio-row-item">
@@ -170,7 +170,7 @@ const LAM_DATA = {
                         <strong>Nasru-Llah</strong>
                         <div style="font-size:0.8rem;">(Avant: Damma sur le Ra)</div>
                     </div>
-                   <button class="mini-play" onclick="playAudio('110001', 0, 3, 'nasrullah')">▶</button>
+                   <button class="mini-play" onclick="playAudio('lam_nasrullah', 0, 3, 'nasrullah')">▶</button>
                 </div>
 
                 <div class="note-box" style="margin-top:15px; border-left:4px solid #d35400; padding-left:10px;">
@@ -201,7 +201,7 @@ const LAM_DATA = {
                         <strong>Bismi-Llah</strong>
                         <div style="font-size:0.8rem;">(Avant: Kasra sur le Mim)</div>
                     </div>
-                    <button class="mini-play" onclick="playAudio('001001', 0, 3, 'bismillah')">▶</button>
+                    <button class="mini-play" onclick="playAudio('lam_bismillah', 0, 3, 'bismillah')">▶</button>
                 </div>
 
                 <div class="audio-row-item" style="margin-top:10px;">
@@ -210,7 +210,7 @@ const LAM_DATA = {
                         <strong>Quli-Llahumma</strong>
                         <div style="font-size:0.8rem;">(Avant: Kasra sur le Lam)</div>
                     </div>
-                    <button class="mini-play" onclick="playAudio('003026', 0, 3, 'qulillah')">▶</button>
+                    <button class="mini-play" onclick="playAudio('lam_qulillah', 0, 3, 'qulillah')">▶</button>
                 </div>
             </div>`
         },
@@ -231,10 +231,10 @@ const LAM_DATA = {
             type: "workshop",
             prof: "Exerce ton oreille : Lourd vs Fin.",
             examples: [
-                { type: "Lourd (Fatha)", ar: "إِنَّ ٱللَّهَ", url: "002020", start: 8, end: 10 },
-                { type: "Lourd (Damma)", ar: "عَبْدُ ٱللَّهِ", url: "019030", start: 2, end: 4 },
-                { type: "Fin (Kasra)", ar: "بِسْمِ ٱللَّهِ", url: "001001", start: 0, end: 2 },
-                { type: "Fin (Kasra)", ar: "أَعُوذُ بِٱللَّهِ", url: "002067", start: 5, end: 7 }
+                { type: "Lourd (Fatha)", ar: "إِنَّ ٱللَّهَ", url: "lam_lesson_1", start: 8, end: 10 },
+                { type: "Lourd (Damma)", ar: "عَبْدُ ٱللَّهِ", url: "lam_lourd_damma__2", start: 2, end: 4 },
+                { type: "Fin (Kasra)", ar: "بِسْمِ ٱللَّهِ", url: "lam_fin_kasra__3", start: 0, end: 2 },
+                { type: "Fin (Kasra)", ar: "أَعُوذُ بِٱللَّهِ", url: "lam_fin_kasra__4", start: 5, end: 7 }
             ]
         },
 

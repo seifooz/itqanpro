@@ -77,7 +77,7 @@ const RA_JAWAZ_DATA = {
                 <div style="background:#fff3e0; padding:15px; border-radius:10px; border:2px solid #f39c12; text-align:center;">
                     <div style="font-weight:bold; color:#d35400;">Préférence : LOURD 🐘</div>
                     <div style="font-size:0.8rem;">(Tu peux faire Fin, mais Lourd est mieux)</div>
-                    <button class="btn-audio btn-listen" onclick="playAudio('010087', 4, 6, 'misr')" style="margin-top:5px;">🔊 Écoute (Lourd)</button>
+                    <button class="btn-audio btn-listen" onclick="playAudio('ra_jawaz_misr', 4, 6, 'misr')" style="margin-top:5px;">🔊 Écoute (Lourd)</button>
                 </div>
             </div>`
         },

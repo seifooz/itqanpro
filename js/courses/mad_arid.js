@@ -13,7 +13,7 @@ const MAD_ARID_DATA = {
                     <div style="font-size:1.4rem; color:#006064; font-family: 'Scheherazade New', serif; direction:rtl;">
                         ٱلْحَمْدُ لِلَّهِ رَبِّ <span style="color:#d32f2f;">ٱلْعَٰلَمِينَ</span> 🛑 ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
                     </div>
-                     <button class="btn-audio btn-listen" id="play-lid-stop" onclick="playAudio('001002', 0, 100, 'intro-lid-stop')" style="margin-top:10px; width:100%; justify-content:center; background:#e65100; color:white;">
+                     <button class="btn-audio btn-listen" id="play-lid-stop" onclick="playAudio('mad_arid_intro_lid_stop', 0, 100, 'intro-lid-stop')" style="margin-top:10px; width:100%; justify-content:center; background:#e65100; color:white;">
                         <span>▶️</span> Écouter l'Arrêt
                     </button>
                     <div style="font-size:0.85rem; color:#555; margin-top:5px; font-style:italic;">J'ai coupé mon souffle sur "Min".</div>
@@ -119,9 +119,9 @@ const MAD_ARID_DATA = {
             type: "workshop",
             prof: "Faites bien résonner la lettre de prolongation avant de couper le son.",
             examples: [
-                { type: "Arrêt 4 Temps", ar: "ٱلْعَٰلَمِينَ", url: "001002", start: 4, end: 6, id: "arid1" },
-                { type: "Arrêt 4 Temps", ar: "ٱلدِّينِ", url: "001004", start: 3, end: 5, id: "arid2" },
-                { type: "Arrêt 4 Temps", ar: "نَسْتَعِينُ", url: "001005", start: 6, end: 8, id: "arid3" }
+                { type: "Arrêt 4 Temps", ar: "ٱلْعَٰلَمِينَ", url: "mad_arid_quiz_theory_1", start: 4, end: 6, id: "arid1" },
+                { type: "Arrêt 4 Temps", ar: "ٱلدِّينِ", url: "mad_arid_arr_t_4_temps_2", start: 3, end: 5, id: "arid2" },
+                { type: "Arrêt 4 Temps", ar: "نَسْتَعِينُ", url: "mad_arid_arr_t_4_temps_3", start: 6, end: 8, id: "arid3" }
             ]
         },
         {

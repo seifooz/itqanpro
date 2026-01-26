@@ -14,7 +14,7 @@ const MAD_EWAD_DATA = {
                 </div>
                 
                 <div style="margin-bottom:20px;">
-                    <button class="btn-audio btn-listen" id="play-intro-nasr" onclick="playAudio('110002', 0, 100, 'intro-nasr')" style="background:#e0f7fa; color:#006064; border:none; padding:10px 20px; border-radius:30px; font-weight:bold; cursor:pointer; display:inline-flex; align-items:center; gap:8px;">
+                    <button class="btn-audio btn-listen" id="play-intro-nasr" onclick="playAudio('mad_ewad_intro_nasr', 0, 100, 'intro-nasr')" style="background:#e0f7fa; color:#006064; border:none; padding:10px 20px; border-radius:30px; font-weight:bold; cursor:pointer; display:inline-flex; align-items:center; gap:8px;">
                         <span>▶️</span> Écouter la Récitation
                     </button>
                 </div>
@@ -152,10 +152,10 @@ const MAD_EWAD_DATA = {
             type: "workshop",
             prof: "Écoutez et répétez. Notez bien la durée de 2 temps.",
             examples: [
-                { type: "2 Temps", ar: "عَلِيمًا", url: "076030", start: 6, end: 8, id: "aliman" },
-                { type: "2 Temps", ar: "وَكِيلًا", url: "017002", start: 7, end: 9, id: "wakilan" },
-                { type: "2 Temps", ar: "قِيلاً", url: "025024", start: 10, end: 12, id: "qilan" },
-                { type: "Exception", ar: "ٱلْقَارِعَةُ", url: "101001", start: 0, end: 3, id: "qariah" }
+                { type: "2 Temps", ar: "عَلِيمًا", url: "mad_ewad_quiz_theory_1", start: 6, end: 8, id: "aliman" },
+                { type: "2 Temps", ar: "وَكِيلًا", url: "mad_ewad_2_temps_2", start: 7, end: 9, id: "wakilan" },
+                { type: "2 Temps", ar: "قِيلاً", url: "mad_ewad_2_temps_3", start: 10, end: 12, id: "qilan" },
+                { type: "Exception", ar: "ٱلْقَارِعَةُ", url: "mad_ewad_exception_4", start: 0, end: 3, id: "qariah" }
             ]
         },
 

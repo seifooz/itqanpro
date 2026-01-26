@@ -96,9 +96,9 @@ const MAD_MUNFASIL_DATA = {
             type: "workshop",
             prof: "Ne coupez pas le souffle entre les deux mots. Liez le son fluidement.",
             examples: [
-                { type: "Munfasil (Alif)", ar: "وَمَآ أَنزَلْنَا", url: "036028", start: 0, end: 3, id: "munfasil1" },
-                { type: "Munfasil (Ya)", ar: "فِيٓ أَحْسَنِ", url: "095004", start: 5, end: 7, id: "munfasil2" },
-                { type: "Munfasil (Wow)", ar: "تُوبُوٓا۟ إِلَى ٱللَّهِ", url: "066008", start: 6, end: 9, id: "munfasil3" }
+                { type: "Munfasil (Alif)", ar: "وَمَآ أَنزَلْنَا", url: "mad_munfasil_lesson_1", start: 0, end: 3, id: "munfasil1" },
+                { type: "Munfasil (Ya)", ar: "فِيٓ أَحْسَنِ", url: "mad_munfasil_munfasil_ya__2", start: 5, end: 7, id: "munfasil2" },
+                { type: "Munfasil (Wow)", ar: "تُوبُوٓا۟ إِلَى ٱللَّهِ", url: "mad_munfasil_munfasil_wow__3", start: 6, end: 9, id: "munfasil3" }
             ]
         },
 

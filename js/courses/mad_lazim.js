@@ -141,10 +141,10 @@ const MAD_LAZIM_DATA = {
             type: "workshop",
             prof: "Comptez : 1-2-3-4-5-6. C'est long !",
             examples: [
-                { type: "Kilmi Muthaqqal", ar: "ٱلضَّآلِّينَ", url: "001007", start: 6, end: 10, id: "lazim1" },
-                { type: "Kilmi Muthaqqal", ar: "ٱلْحَآقَّةُ", url: "069001", start: 0, end: 3, id: "lazim2" },
-                { type: "Kilmi Mukhaffaf", ar: "ءَآلْـَٔـٰنَ", url: "010051", start: 2, end: 5, id: "lazim3" },
-                { type: "Harfi Mukhaffaf", ar: "قٓ", url: "050001", start: 0, end: 3, id: "lazim4" }
+                { type: "Kilmi Muthaqqal", ar: "ٱلضَّآلِّينَ", url: "mad_lazim_lesson_1", start: 6, end: 10, id: "lazim1" },
+                { type: "Kilmi Muthaqqal", ar: "ٱلْحَآقَّةُ", url: "mad_lazim_kilmi_muthaqqal_2", start: 0, end: 3, id: "lazim2" },
+                { type: "Kilmi Mukhaffaf", ar: "ءَآلْـَٔـٰنَ", url: "mad_lazim_kilmi_mukhaffaf_3", start: 2, end: 5, id: "lazim3" },
+                { type: "Harfi Mukhaffaf", ar: "قٓ", url: "mad_lazim_harfi_mukhaffaf_4", start: 0, end: 3, id: "lazim4" }
             ]
         },
 

@@ -14,7 +14,7 @@ const MAD_LIN_DATA = {
                 </div>
                 
                 <div style="margin-bottom:20px;">
-                    <button class="btn-audio btn-listen" id="play-lin-intro" onclick="playAudio('106001', 0, 100, 'intro-lin')" style="background:#e0f7fa; color:#006064; border:none; padding:10px 20px; border-radius:30px; font-weight:bold; cursor:pointer; display:inline-flex; align-items:center; gap:8px;">
+                    <button class="btn-audio btn-listen" id="play-lin-intro" onclick="playAudio('mad_lin_intro_lin', 0, 100, 'intro-lin')" style="background:#e0f7fa; color:#006064; border:none; padding:10px 20px; border-radius:30px; font-weight:bold; cursor:pointer; display:inline-flex; align-items:center; gap:8px;">
                         <span>▶️</span> Écouter la Récitation
                     </button>
                 </div>
@@ -128,10 +128,10 @@ const MAD_LIN_DATA = {
             type: "workshop",
             prof: "Entraînez-vous à faire un beau 4 temps sur ces mots de Surah Quraysh.",
             examples: [
-                { type: "Arrêt (Ya)", ar: "قُرَيْشٍ", url: "106001", start: 3, end: 6, id: "lin1" },
-                { type: "Arrêt (Ya)", ar: "ٱلصَّيْفِ", url: "106002", start: 6, end: 9, id: "lin2" },
-                { type: "Arrêt (Ya)", ar: "ٱلْبَيْتِ", url: "106003", start: 5, end: 7, id: "lin3" },
-                { type: "Arrêt (Waw)", ar: "خَوْفٍ", url: "106004", start: 6, end: 8, id: "lin4" }
+                { type: "Arrêt (Ya)", ar: "قُرَيْشٍ", url: "mad_lin_quiz_theory_1", start: 3, end: 6, id: "lin1" },
+                { type: "Arrêt (Ya)", ar: "ٱلصَّيْفِ", url: "mad_lin_arr_t_ya__2", start: 6, end: 9, id: "lin2" },
+                { type: "Arrêt (Ya)", ar: "ٱلْبَيْتِ", url: "mad_lin_arr_t_ya__3", start: 5, end: 7, id: "lin3" },
+                { type: "Arrêt (Waw)", ar: "خَوْفٍ", url: "mad_lin_arr_t_waw__4", start: 6, end: 8, id: "lin4" }
             ]
         },
         {

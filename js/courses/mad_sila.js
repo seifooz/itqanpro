@@ -14,7 +14,7 @@ const MAD_SILA_DATA = {
                 </div>
                 
                 <div style="margin-bottom:20px;">
-                    <button class="btn-audio btn-listen" id="play-intro-sila" onclick="playAudio('084013', 0, 100, 'intro-sila')" style="background:#e0f7fa; color:#006064; border:none; padding:10px 20px; border-radius:30px; font-weight:bold; cursor:pointer; display:inline-flex; align-items:center; gap:8px;">
+                    <button class="btn-audio btn-listen" id="play-intro-sila" onclick="playAudio('mad_sila_intro_sila', 0, 100, 'intro-sila')" style="background:#e0f7fa; color:#006064; border:none; padding:10px 20px; border-radius:30px; font-weight:bold; cursor:pointer; display:inline-flex; align-items:center; gap:8px;">
                         <span>▶️</span> Écouter la Récitation
                     </button>
                 </div>
@@ -150,10 +150,10 @@ const MAD_SILA_DATA = {
             type: "workshop",
             prof: "Répétez après le Cheikh. Sughra (2) vs Kubra (4) vs Exception.",
             examples: [
-                { type: "Sila Sughra (2)", ar: "إِنَّهُۥ كَانَ", url: "084013", start: 0, end: 2, id: "sughra1" },
-                { type: "Sila Sughra (2)", ar: "بِهِۦ بَصِيرًا", url: "084015", start: 10, end: 12, id: "sughra2" },
-                { type: "Sila Kubra (4-5)", ar: "أَنَّ مَالَهُۥٓ أَخْلَدَهُۥ", url: "104003", start: 2, end: 5, id: "kubra1" },
-                { type: "Exception (Court)", ar: "يَرْضَهُ لَكُمْ", url: "039007", start: 12, end: 14, id: "exception" }
+                { type: "Sila Sughra (2)", ar: "إِنَّهُۥ كَانَ", url: "mad_sila_quiz_theory_1", start: 0, end: 2, id: "sughra1" },
+                { type: "Sila Sughra (2)", ar: "بِهِۦ بَصِيرًا", url: "mad_sila_sila_sughra_2__2", start: 10, end: 12, id: "sughra2" },
+                { type: "Sila Kubra (4-5)", ar: "أَنَّ مَالَهُۥٓ أَخْلَدَهُۥ", url: "mad_sila_sila_kubra_4_5__3", start: 2, end: 5, id: "kubra1" },
+                { type: "Exception (Court)", ar: "يَرْضَهُ لَكُمْ", url: "mad_sila_exception_court__4", start: 12, end: 14, id: "exception" }
             ]
         },
 

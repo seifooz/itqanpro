@@ -92,10 +92,10 @@ const MAD_MUTTASIL_DATA = {
             type: "workshop",
             prof: "Suivez la vague et assurez-vous de bien prononcer la Hamza à la fin.",
             examples: [
-                { type: "Muttasil (Alif)", ar: "إِذَا جَآءَ", url: "110001", start: 0, end: 3, id: "muttasil1" },
-                { type: "Muttasil (Alif)", ar: "ٱلسَّمَآءُ", url: "082001", start: 0, end: 2, id: "muttasil2" },
-                { type: "Muttasil (Wow)", ar: "يَنُوٓءُ", url: "028076", start: 16, end: 18, id: "muttasil3" },
-                { type: "Muttasil (Ya)", ar: "هَنِيٓـًٔا", url: "004004", start: 10, end: 12, id: "muttasil4" }
+                { type: "Muttasil (Alif)", ar: "إِذَا جَآءَ", url: "mad_muttasil_lesson_1", start: 0, end: 3, id: "muttasil1" },
+                { type: "Muttasil (Alif)", ar: "ٱلسَّمَآءُ", url: "mad_muttasil_muttasil_alif__2", start: 0, end: 2, id: "muttasil2" },
+                { type: "Muttasil (Wow)", ar: "يَنُوٓءُ", url: "mad_muttasil_muttasil_wow__3", start: 16, end: 18, id: "muttasil3" },
+                { type: "Muttasil (Ya)", ar: "هَنِيٓـًٔا", url: "mad_muttasil_muttasil_ya__4", start: 10, end: 12, id: "muttasil4" }
             ]
         },
 

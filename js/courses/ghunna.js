@@ -73,7 +73,7 @@ const GHUNNA_DATA = {
                         <strong>Inna</strong>
                         <div style="font-size:0.8rem;">(Vraiment/Certes)</div>
                     </div>
-                    <button class="mini-play" onclick="playAudio('002020', 8, 10, 'innag')">▶</button>
+                    <button class="mini-play" onclick="playAudio('ghunna_innag', 8, 10, 'innag')">▶</button>
                 </div>
 
                 <div class="audio-row-item">
@@ -82,7 +82,7 @@ const GHUNNA_DATA = {
                         <strong>Thumma</strong>
                         <div style="font-size:0.8rem;">(Ensuite)</div>
                     </div>
-                    <button class="mini-play" onclick="playAudio('080026', 0, 2, 'thummag')">▶</button>
+                    <button class="mini-play" onclick="playAudio('ghunna_thummag', 0, 2, 'thummag')">▶</button>
                 </div>
 
                 <div class="audio-row-item">
@@ -91,7 +91,7 @@ const GHUNNA_DATA = {
                         <strong>'Amma</strong>
                         <div style="font-size:0.8rem;">(Sur quoi)</div>
                     </div>
-                    <button class="mini-play" onclick="playAudio('078001', 0, 2, 'ammag')">▶</button>
+                    <button class="mini-play" onclick="playAudio('ghunna_ammag', 0, 2, 'ammag')">▶</button>
                 </div>
             </div>`
         },
@@ -105,10 +105,10 @@ const GHUNNA_DATA = {
             type: "workshop",
             prof: "Prends ton temps. Fais vibrer le nez !",
             examples: [
-                { type: "Nun Shadda", ar: "إِنَّهُم", url: "002013", start: 6, end: 8 },
-                { type: "Mim Shadda", ar: "أُمِّهِۦ", url: "080035", start: 2, end: 4 },
-                { type: "Nun Shadda", ar: "ٱلنَّاسِ", url: "114001", start: 3, end: 5 },
-                { type: "Mim Shadda", ar: "حَمَّالَةَ", url: "111004", start: 2, end: 4 }
+                { type: "Nun Shadda", ar: "إِنَّهُم", url: "ghunna_lesson_1", start: 6, end: 8 },
+                { type: "Mim Shadda", ar: "أُمِّهِۦ", url: "ghunna_mim_shadda_2", start: 2, end: 4 },
+                { type: "Nun Shadda", ar: "ٱلنَّاسِ", url: "ghunna_nun_shadda_3", start: 3, end: 5 },
+                { type: "Mim Shadda", ar: "حَمَّالَةَ", url: "ghunna_mim_shadda_4", start: 2, end: 4 }
             ]
         },
 

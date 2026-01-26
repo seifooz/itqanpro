@@ -147,7 +147,7 @@ const RA_TAFKHIM_DATA = {
                 </div>
                 
                 <div style="background:#ffebee; padding:15px; border-radius:10px; border:2px solid #ef5350; margin-top:15px;">
-                    <button class="btn-audio btn-listen" onclick="playAudio('089028', 0, 3, 'irjii')" style="width:100%; padding:8px; background:#fff; border:1px solid #ffcdd2;">
+                    <button class="btn-audio btn-listen" onclick="playAudio('ra_tafkhim_irjii', 0, 3, 'irjii')" style="width:100%; padding:8px; background:#fff; border:1px solid #ffcdd2;">
                         🔊 Écoute : Le Ra est GROS (IRr)
                     </button>
                 </div>
@@ -197,11 +197,11 @@ const RA_TAFKHIM_DATA = {
 
         {
             type: "workshop", prof: `Entraînement <strong>Ra Tafkhim</strong>. Fais résonner ta voix ! ${RA_TAF_HELP_HTML}`, examples: [
-                { type: "Le Chef (Fatha)", ar: "رَبِّ ٱلْعَٰلَمِينَ", url: "001002", start: 0, end: 3, hint: "Bouche ouverte haut" },
-                { type: "Le Chef (Damma)", ar: "رُزِقُوا", url: "002025", start: 7, end: 9, hint: "Bouche en avant" },
-                { type: "Le Miroir (Barq)", ar: "بَرْق", url: "002020", start: 2, end: 4, hint: "Copie le Ba (Fatha)" },
-                { type: "Le Piège (Wasl)", ar: "ٱرْجِعِي", url: "089028", start: 0, end: 3, hint: "Malgré le 'i', c'est LOURD !" },
-                { type: "Le Mur (Sad)", ar: "مِرْصَادًا", url: "078021", start: 4, end: 6, hint: "Le Sad rend tout lourd" }
+                { type: "Le Chef (Fatha)", ar: "رَبِّ ٱلْعَٰلَمِينَ", url: "ra_tafkhim_lesson_1", start: 0, end: 3, hint: "Bouche ouverte haut" },
+                { type: "Le Chef (Damma)", ar: "رُزِقُوا", url: "ra_tafkhim_le_chef_damma__2", start: 7, end: 9, hint: "Bouche en avant" },
+                { type: "Le Miroir (Barq)", ar: "بَرْق", url: "ra_tafkhim_le_miroir_barq__3", start: 2, end: 4, hint: "Copie le Ba (Fatha)" },
+                { type: "Le Piège (Wasl)", ar: "ٱرْجِعِي", url: "ra_tafkhim_le_pi_ge_wasl__4", start: 0, end: 3, hint: "Malgré le 'i', c'est LOURD !" },
+                { type: "Le Mur (Sad)", ar: "مِرْصَادًا", url: "ra_tafkhim_le_mur_sad__5", start: 4, end: 6, hint: "Le Sad rend tout lourd" }
             ]
         },
 

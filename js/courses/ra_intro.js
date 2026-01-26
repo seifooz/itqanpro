@@ -13,14 +13,14 @@ const RA_INTRO_DATA = {
                 
                 <div style="display:flex; justify-content:space-around; align-items:flex-start; margin-top:20px; gap:10px;">
                     <div style="text-align:center; flex:1;">
-                        <button class="btn-audio btn-listen" onclick="playAudio('001002', 0, 3, 'ex-rabb')" style="background:#fff3e0; border:1px solid #d35400; padding:15px; border-radius:10px; width:100%; color:#d35400; font-weight:bold; font-size:1.1rem; margin-bottom:10px;">
+                        <button class="btn-audio btn-listen" onclick="playAudio('ra_intro_ex_rabb', 0, 3, 'ex-rabb')" style="background:#fff3e0; border:1px solid #d35400; padding:15px; border-radius:10px; width:100%; color:#d35400; font-weight:bold; font-size:1.1rem; margin-bottom:10px;">
                             <div class="ar-med" style="font-size:1.8rem; margin-bottom:5px;">رَبِّ</div>
                             🔊 "Rabb"
                         </button>
                         <div style="font-size:0.9rem; color:#555;">Son GROS (Grave)</div>
                     </div>
                     <div style="text-align:center; flex:1;">
-                        <button class="btn-audio btn-listen" onclick="playAudio('106002', 2, 4, 'rihla')" style="background:#e3f2fd; border:1px solid #0984e3; padding:15px; border-radius:10px; width:100%; color:#0984e3; font-weight:bold; font-size:1.1rem; margin-bottom:10px;">
+                        <button class="btn-audio btn-listen" onclick="playAudio('ra_intro_rihla', 2, 4, 'rihla')" style="background:#e3f2fd; border:1px solid #0984e3; padding:15px; border-radius:10px; width:100%; color:#0984e3; font-weight:bold; font-size:1.1rem; margin-bottom:10px;">
                             <div class="ar-med" style="font-size:1.8rem; margin-bottom:5px;">رِحْلَةَ</div>
                             🔊 "Rihla"
                         </button>
