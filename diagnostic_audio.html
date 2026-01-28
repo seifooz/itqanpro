@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Audio - Diagnostic</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .test-box {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+        }
+
+        .error {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        #log {
+            background: #1a1a2e;
+            color: #0f0;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🔊 Test Audio - Diagnostic O2Switch</h1>
+
+    <div class="test-box">
+        <h3>Étape 1 : Test du chemin BASE_PATH</h3>
+        <p id="base-path">Chargement...</p>
+    </div>
+
+    <div class="test-box">
+        <h3>Étape 2 : Test Audio M4A</h3>
+        <p>Cliquez pour tester un fichier audio :</p>
+        <button onclick="testAudio('izhar_man_amana')">▶ Test: izhar_man_amana.m4a</button>
+        <button onclick="testAudio('ghunna_ammag')">▶ Test: ghunna_ammag.m4a</button>
+        <button onclick="testAudioDirect()">▶ Test URL directe</button>
+    </div>
+
+    <div class="test-box">
+        <h3>Étape 3 : Vérifier les fichiers (cliquez pour ouvrir dans un nouvel onglet)</h3>
+        <p><a id="audio-link-1" href="#" target="_blank">Lien vers izhar_man_amana.m4a</a></p>
+        <p><a id="audio-link-2" href="#" target="_blank">Lien vers ghunna_ammag.m4a</a></p>
+    </div>
+
+    <h3>📋 Log de Diagnostic</h3>
+    <div id="log"></div>
+
+    <script>
+        const logEl = document.getElementById('log');
+        function log(msg) {
+            const now = new Date().toLocaleTimeString();
+            logEl.textContent += `[${now}] ${msg}\n`;
+            logEl.scrollTop = logEl.scrollHeight;
+        }
+
+        // Detect BASE_PATH
+        const BASE_PATH = (() => {
+            const scripts = document.getElementsByTagName('script');
+            for (let i = 0; i < scripts.length; i++) {
+                const src = scripts[i].src;
+                if (src.includes('js/engine.js')) {
+                    return src.replace(/js\/engine\.js.*$/, '');
+                }
+            }
+            const path = window.location.pathname;
+            const lastSlash = path.lastIndexOf('/');
+            return window.location.origin + path.substring(0, lastSlash + 1);
+        })();
+
+        log('BASE_PATH détecté: ' + BASE_PATH);
+        document.getElementById('base-path').innerHTML = '<strong>' + BASE_PATH + '</strong>';
+
+        // Update links
+        document.getElementById('audio-link-1').href = BASE_PATH + 'audio/izhar_man_amana.m4a';
+        document.getElementById('audio-link-2').href = BASE_PATH + 'audio/ghunna_ammag.m4a';
+
+        function testAudio(name) {
+            const url = BASE_PATH + 'audio/' + name + '.m4a';
+            log('Tentative de lecture: ' + url);
+
+            const audio = new Audio();
+
+            audio.onloadeddata = () => {
+                log('✅ SUCCÈS: Audio chargé correctement!');
+                log('   Durée: ' + audio.duration + ' secondes');
+            };
+
+            audio.oncanplay = () => {
+                log('✅ Audio prêt à jouer');
+                audio.play().then(() => {
+                    log('✅ Lecture en cours...');
+                }).catch(e => {
+                    log('❌ Erreur de lecture: ' + e.message);
+                });
+            };
+
+            audio.onerror = (e) => {
+                const err = audio.error;
+                log('❌ ERREUR Audio:');
+                log('   Code: ' + (err ? err.code : 'N/A'));
+                log('   Message: ' + (err ? err.message : 'N/A'));
+
+                if (err && err.code === 4) {
+                    log('');
+                    log('⚠️ DIAGNOSTIC: Code 4 = Format non supporté');
+                    log('   Causes possibles:');
+                    log('   1. Le fichier n\'existe pas sur le serveur');
+                    log('   2. Le codec audio n\'est pas supporté par ce navigateur');
+                    log('   3. Le fichier est corrompu');
+                    log('');
+                    log('   → Essayez d\'ouvrir le lien directement (Étape 3)');
+                }
+            };
+
+            audio.src = url;
+            audio.load();
+        }
+
+        function testAudioDirect() {
+            const url = prompt('Entrez l\'URL complète du fichier audio:', BASE_PATH + 'audio/izhar_man_amana.m4a');
+            if (url) {
+                log('Test URL directe: ' + url);
+                const audio = new Audio(url);
+                audio.oncanplay = () => {
+                    log('✅ Audio prêt!');
+                    audio.play();
+                };
+                audio.onerror = (e) => {
+                    log('❌ Erreur: ' + (audio.error ? audio.error.message : 'Inconnue'));
+                };
+                audio.load();
+            }
+        }
+
+        // Test de chargement initial
+        log('--- Diagnostic démarré ---');
+        log('User Agent: ' + navigator.userAgent);
+        log('Protocole: ' + window.location.protocol);
+        log('');
+    </script>
+</body>
+
+</html>

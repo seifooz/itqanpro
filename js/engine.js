@@ -2,6 +2,25 @@
  * Itqan Pro Core Engine
  */
 
+// Auto-detect base path for assets (works in subfolders like WordPress installations)
+const BASE_PATH = (() => {
+    // Try to detect from current script location
+    const scripts = document.getElementsByTagName('script');
+    for (let i = 0; i < scripts.length; i++) {
+        const src = scripts[i].src;
+        if (src.includes('js/engine.js')) {
+            // Extract base path (remove "js/engine.js" from the end)
+            return src.replace(/js\/engine\.js.*$/, '');
+        }
+    }
+    // Fallback: use document location
+    const path = window.location.pathname;
+    const lastSlash = path.lastIndexOf('/');
+    return window.location.origin + path.substring(0, lastSlash + 1);
+})();
+
+console.log('[ItqanPro] BASE_PATH:', BASE_PATH);
+
 let currentCourse = null;
 let idx = 0;
 let hasAnswered = false;
@@ -576,13 +595,19 @@ function playAudio(url, start, end, id) {
         return;
     }
 
-    audioPlayer.src = "audio/" + url + ".m4a";
+    const audioUrl = BASE_PATH + "audio/" + url + ".m4a";
+    console.log('[ItqanPro] Loading audio:', audioUrl);
+    audioPlayer.src = audioUrl;
     audioPlayer.onerror = (e) => {
         const err = audioPlayer.error;
-        console.error("Audio Error:", err);
+        console.error("Audio Error:", err, "URL:", audioPlayer.src);
         // Code 4 = MEDIA_ERR_SRC_NOT_SUPPORTED (often due to file:// blocking or missing file)
         if (err && err.code === 4) {
-            alert("⚠️ Erreur Audio : Impossible de lire le fichier.\n\nSi vous ouvrez ce fichier en local (file://), les navigateurs bloquent souvent l'audio par sécurité.\n\nSolution : Utilisez un serveur local (ex: 'Live Server' sur VSCode) ou hébergez le site.");
+            if (window.location.protocol === 'file:') {
+                alert("⚠️ Erreur Audio : Impossible de lire le fichier.\n\nSi vous ouvrez ce fichier en local (file://), les navigateurs bloquent souvent l'audio par sécurité.\n\nSolution : Utilisez un serveur local (ex: 'Live Server' sur VSCode) ou hébergez le site.");
+            } else {
+                alert("⚠️ Erreur Audio : Fichier introuvable.\n\nURL essayée : " + audioPlayer.src + "\n\nVérifiez que le fichier audio existe sur le serveur.");
+            }
         } else {
             console.log("Erreur lecture audio (Code " + (err ? err.code : 'N/A') + ")");
         }
