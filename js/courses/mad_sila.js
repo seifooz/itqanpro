@@ -22,8 +22,9 @@ const MAD_SILA_DATA = {
             questions: [
                 {
                     q: "Après 'Innahu', avez-vous entendu un allongement ?",
-                    opts: ["Non, je prononce 'HU' court sans prolongation (Innahu Kana)", "Oui, je fais une prolongation (Innahuuu Kana)"],
-                    good: 1
+                    opts: ["Sans Mad", "Mad 2 temps"],
+                    good: 1,
+                    exp: "Exact ! Le pronom 'Ha' (هُ) se prolonge de 2 temps. On dit 'Innahuu' avec un allongement naturel."
                 }
             ],
             exp: "Exact ! Bien qu'il n'y ait pas de lettre de Mad écrite, on l'allonge à l'oral. C'est le Mad As-Sila."

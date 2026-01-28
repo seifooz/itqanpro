@@ -5,7 +5,7 @@ const MAD_EWAD_DATA = {
     steps: [
         {
             type: "quiz_theory",
-            prof: "Observez et écoutez ce verset de Surah An-Nasr.<br>Comment l'Imam s'arrête-t-il sur le dernier mot ?",
+            prof: "Observez et écoutez ce verset de Surah An-Nasr.<br>Comment la prof s'arrête-t-elle sur le dernier mot ?",
             html: `
             <div class="concept-card" style="text-align:center;">
                 <h3>Observation Audio</h3>
@@ -150,12 +150,36 @@ const MAD_EWAD_DATA = {
         },
         {
             type: "workshop",
-            prof: "Écoutez et répétez. Notez bien la durée de 2 temps.",
+            prof: "Écoutez et répétez. Notez la transformation du Tanween en 'aa' à l'arrêt (2 temps).",
             examples: [
-                { type: "2 Temps", ar: "عَلِيمًا", url: "mad_ewad_quiz_theory_1", start: 6, end: 8, id: "aliman" },
-                { type: "2 Temps", ar: "وَكِيلًا", url: "mad_ewad_2_temps_2", start: 7, end: 9, id: "wakilan" },
-                { type: "2 Temps", ar: "قِيلاً", url: "mad_ewad_2_temps_3", start: 10, end: 12, id: "qilan" },
-                { type: "Exception", ar: "ٱلْقَارِعَةُ", url: "mad_ewad_exception_4", start: 0, end: 3, id: "qariah" }
+                {
+                    type: "2 Temps",
+                    verse: "وَكَانَ ٱللَّهُ",
+                    ar: "عَلِيمًا",
+                    exp: "À l'arrêt : 'Aliimaan' devient 'Aliimaa' (Le Tanween Fatha est remplacé par Alif)",
+                    url: "mad_ewad_quiz_theory_1", start: 6, end: 8, id: "aliman"
+                },
+                {
+                    type: "2 Temps",
+                    verse: "وَكَفَىٰ بِٱللَّهِ",
+                    ar: "وَكِيلًا",
+                    exp: "À l'arrêt : 'Wakiilaan' devient 'Wakiilaa' (Prolongation de 2 temps)",
+                    url: "mad_ewad_2_temps_2", start: 7, end: 9, id: "wakilan"
+                },
+                {
+                    type: "2 Temps",
+                    verse: "وَكَانَ ٱللَّهُ غَفُورًا",
+                    ar: "رَّحِيمًا",
+                    exp: "À l'arrêt : Rahiimaan ➡️ Rahiimaa (Mad Ewad)",
+                    url: "mad_ewad_2_temps_3", start: 10, end: 12, id: "rahiman"
+                },
+                {
+                    type: "Exception (Ta Marbuta)",
+                    verse: "ٱلْقَارِعَةُ مَا",
+                    ar: "ٱلْقَارِعَةُ",
+                    exp: "⚠️ Exception ! La Ta Marbuta devient 'Ha' sakin : on dit 'Qari'ah' (pas de prolongation)",
+                    url: "mad_ewad_exception_4", start: 0, end: 3, id: "qariah"
+                }
             ]
         },
 

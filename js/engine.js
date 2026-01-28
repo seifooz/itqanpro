@@ -331,10 +331,23 @@ function render() {
             <span><span class="step-n">3</span>Comparer</span>
         </div>`;
         step.examples.forEach((ex, i) => {
+            // Check if example has verse (new format) or just word (legacy)
+            let arabicDisplay = '';
+            if (ex.verse) {
+                // New format: display verse with target word in red
+                arabicDisplay = `
+                    <div class="ac-verse" style="font-size:1.4rem; color:#333; margin-bottom:8px; line-height:1.8;">${ex.verse} <span style="color:#d32f2f; font-weight:bold;">${ex.ar}</span></div>
+                    ${ex.exp ? `<div class="ac-exp" style="font-size:0.85rem; color:#006064; background:#e0f7fa; padding:8px 12px; border-radius:6px; margin-top:8px;">${ex.exp}</div>` : ''}
+                `;
+            } else {
+                // Legacy format: just the word
+                arabicDisplay = `<div class="ac-arabic">${ex.ar}</div>`;
+            }
+
             html += `
             <div class="audio-card">
                 <div class="ac-header"><span class="ac-tag">${ex.type}</span></div>
-                <div class="ac-arabic">${ex.ar}</div>
+                ${arabicDisplay}
                 <div class="ac-controls">
                     <button class="btn-audio btn-listen" id="play-${i}" onclick="playAudio('${ex.url}', ${ex.start || 0}, ${ex.end || 100}, ${i})">Lecture</button>
                     <button class="btn-audio btn-record" id="rec-${i}" onclick="toggleRec(${i})">Enregistrer</button>

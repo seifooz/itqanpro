@@ -5,7 +5,7 @@ const MAD_LIN_DATA = {
     steps: [
         {
             type: "quiz_theory",
-            prof: "Observez et écoutez le premier verset de Surah Quraysh.<br>Comment l'Imam finit-il le mot <strong>Quraysh</strong> ?",
+            prof: "Observez et écoutez le premier verset de Surah Quraysh.<br>Comment la prof finit-elle le mot <strong>Quraysh</strong> ?",
             html: `
             <div class="concept-card" style="text-align:center;">
                 <h3>Observation Audio</h3>
