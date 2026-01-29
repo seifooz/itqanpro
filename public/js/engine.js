@@ -92,45 +92,40 @@ function getCourseMeta(id, title) {
     if (!title) return defaultMeta;
 
     let meta = { ...defaultMeta };
+    // Force Gold for all
+    meta.iconColor = "icon-gold";
 
     if (id === 'nun_sakina_intro') {
         meta.tag = "Essentiel";
-        meta.iconColor = "icon-gold";
         // Arabic Noon letter stylized
         meta.icon = `<svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="url(#goldGrad)" opacity="0.2"/><text x="12" y="17" font-family="'Scheherazade New', serif" font-size="16" fill="currentColor" text-anchor="middle">ن</text><defs><linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#FFD700"/><stop offset="100%" style="stop-color:#FFA500"/></linearGradient></defs></svg>`;
         meta.letter = "ن";
     }
     else if (id === 'izhar') {
         meta.tag = "6 Lettres";
-        meta.iconColor = "icon-green";
         // Eye with clarity symbol
         meta.icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5C5.5 5 2 12 2 12s3.5 7 10 7 10-7 10-7-3.5-7-10-7z"/><circle cx="12" cy="12" r="3" fill="currentColor"/><path d="M12 2v2M12 20v2" stroke-dasharray="2 2"/></svg>`;
         meta.letter = "ظ";
     }
     else if (id.includes('idgham')) {
         meta.tag = id.includes('bila') ? "2 Lettres" : "4 Lettres";
-        meta.iconColor = "icon-blue";
         // Merge/Fusion arrows
         meta.icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 4l5 5-5 5"/><path d="M17 4l-5 5 5 5"/><circle cx="12" cy="17" r="3" fill="currentColor" opacity="0.3"/></svg>`;
         meta.letter = "غ";
     }
     else if (id.includes('iqlab')) {
         meta.tag = "1 Lettre";
-        meta.iconColor = "icon-purple";
         // Transformation arrows
         meta.icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h16"/><path d="M8 8l-4 4 4 4"/><path d="M16 8l4 4-4 4"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>`;
         meta.letter = "ب";
     }
     else if (id.includes('ikhfa')) {
         meta.tag = "15 Lettres";
-        meta.iconColor = "icon-purple";
         // Hidden/veiled symbol
         meta.icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h18" stroke-dasharray="3 3"/><circle cx="12" cy="12" r="6" opacity="0.3" fill="currentColor"/><circle cx="12" cy="12" r="3"/></svg>`;
         meta.letter = "خ";
     }
     else if (id.includes('mad')) {
-        meta.tag = "Prolongation";
-        meta.iconColor = "icon-gold";
         // Wave/elongation
         meta.icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/><path d="M2 16c2-3 4-3 6 0s4 3 6 0 4-3 6 0" opacity="0.5"/></svg>`;
         meta.letter = "ا";
@@ -145,35 +140,30 @@ function getCourseMeta(id, title) {
     }
     else if (id.includes('qalqala')) {
         meta.tag = "5 Lettres";
-        meta.iconColor = "icon-yellow";
         // Vibration/echo
         meta.icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="6" opacity="0.5"/><circle cx="12" cy="12" r="9" opacity="0.25"/></svg>`;
         meta.letter = "ق";
     }
     else if (id.includes('ghunna')) {
         meta.tag = "Nasalisation";
-        meta.iconColor = "icon-blue";
         // Sound wave
         meta.icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h2c1 -4 2 4 3 0s2 -4 3 0 2 4 3 0 2 -4 3 0h2"/><path d="M12 6v2M12 16v2" opacity="0.5"/></svg>`;
         meta.letter = "غ";
     }
     else if (id.includes('ra') || id.includes('lam')) {
         meta.tag = "Lettre Spéciale";
-        meta.iconColor = "icon-green";
         // Letter focus
         meta.icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M2 12h4M18 12h4M12 2v4M12 18v4"/></svg>`;
         meta.letter = id.includes('lam') ? "ل" : "ر";
     }
     else if (id.includes('mim')) {
         meta.tag = "Règle Mim";
-        meta.iconColor = "icon-blue";
         // Mim letter
         meta.icon = `<svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.1"/><text x="12" y="17" font-family="'Scheherazade New', serif" font-size="16" fill="currentColor" text-anchor="middle">م</text></svg>`;
         meta.letter = "م";
     }
     else if (id.includes('review')) {
         meta.tag = "Examen";
-        meta.iconColor = "icon-purple";
         meta.icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4"/><rect x="4" y="4" width="16" height="16" rx="2"/></svg>`;
         meta.letter = "✓";
     }
@@ -184,7 +174,23 @@ function getCourseMeta(id, title) {
 function showPortal() {
     currentCourse = null;
     header.style.display = 'none';
-    footer.style.display = 'none';
+
+    // Aggressively hide footer
+    if (footer) {
+        footer.style.cssText = 'display: none !important';
+    }
+    const navRow = document.querySelector('.nav-row');
+    if (navRow) {
+        navRow.style.display = 'none';
+    }
+
+    // Fallback query if variable issue
+    document.querySelectorAll('.footer').forEach(f => f.style.setProperty('display', 'none', 'important'));
+
+    if (localStorage.getItem('itqan_logged_in') !== 'true') {
+        window.location.href = 'login.html';
+        return;
+    }
 
     const courses = getAllCourses();
 
@@ -292,7 +298,7 @@ function showPortal() {
             ${sectionsHTML}
             
             <div class="portal-footer">
-                © 2024 Itqān Pro • Excellence Tajweed
+                © 2026 Itqān Pro • Nourel Agency
             </div>
         </div>
     </div>
@@ -324,8 +330,14 @@ function startCourse(dataOrId) {
     idx = 0;
     resetStepState();
     header.style.display = 'block';
-    footer.style.display = 'flex';
-    document.querySelector('.nav-row').style.display = 'flex';
+
+    // Reset footer display (clear !important)
+    if (footer) {
+        footer.style.cssText = '';
+        footer.style.display = 'flex';
+    }
+    const navRow = document.querySelector('.nav-row');
+    if (navRow) navRow.style.display = 'flex';
     courseTitleLabel.innerText = courseData.title;
     courseModeLabel.innerText = courseData.mode;
 

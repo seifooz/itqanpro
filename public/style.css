@@ -26,6 +26,15 @@
     --glow: 0 0 20px rgba(59, 130, 246, 0.15);
 }
 
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 /* --- COSMIC BACKGROUND & ANIMATIONS --- */
 .iqan-global-bg {
     position: fixed;
@@ -2820,24 +2829,96 @@ body {
         align-items: flex-start;
     }
 
+    /* Mobile Footer Refinement */
     .footer {
-        padding: 12px 15px !important;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 15px;
+        /* Reduced padding */
     }
 
     .nav-row {
-        gap: 10px;
+        flex-direction: row !important;
+        /* Force row on mobile */
+        width: 100%;
+        gap: 8px;
+        /* Tighter gap */
+        justify-content: space-between;
+    }
+
+    /* Hide text, show icons on mobile */
+    .d-txt {
+        display: none;
+    }
+
+    .d-icon {
+        display: inline-block;
+        font-size: 1.4rem;
+        line-height: 1;
+    }
+
+    /* Button sizing for single line */
+    .btn-nav {
+        width: auto !important;
+        padding: 0 15px !important;
+        min-width: 50px;
+    }
+
+    .btn-main {
+        flex-grow: 1;
+        /* Take remaining space */
+        width: auto !important;
+        padding: 12px 10px !important;
+        font-size: 0.95rem !important;
+    }
+
+    .section-header {
+        text-align: center;
     }
 
     #btn-prev,
     #btn-next {
-        padding: 10px 20px;
-        font-size: 0.85rem;
-        min-width: 100px;
+        /* Reset manual padding from previous step */
+        font-size: 1rem;
     }
 
-    #btn-action {
-        padding: 12px 25px;
-        font-size: 0.9rem;
+    /* Mobile Text & Layout Fixes */
+    @media (max-width: 480px) {
+
+        /* Allow text more room */
+        .dark-card {
+            padding: 12px !important;
+            gap: 10px !important;
+        }
+
+        /* Shrink icon slightly */
+        .dc-icon-box {
+            width: 42px !important;
+            height: 42px !important;
+            min-width: 42px !important;
+        }
+
+        /* Adjust Typography */
+        .dc-title {
+            font-size: 0.95rem !important;
+            line-height: 1.3 !important;
+            margin-bottom: 2px !important;
+        }
+
+        .dc-desc {
+            font-size: 0.8rem !important;
+            line-height: 1.3;
+        }
+
+        /* Ensure grid is full width without overflow */
+        .dark-grid {
+            padding: 0 5px !important;
+            gap: 10px !important;
+        }
+
+        .main-container {
+            padding: 0 10px !important;
+        }
     }
 
     /* Course content */
