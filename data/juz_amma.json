@@ -1,0 +1,1898 @@
+[
+  {
+    "num": 87,
+    "name": "Al-A'la",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ سَبِّحِ ٱسْمَ رَبِّكَ ٱلْأَعْلَى",
+        "trans": "Glorifie le nom de ton Seigneur, le Très Haut,",
+        "phon": "Sabbihisma Rabbikal A'laa"
+      },
+      {
+        "num": 2,
+        "text": "ٱلَّذِى خَلَقَ فَسَوَّىٰ",
+        "trans": "Celui Qui a créé et agencé harmonieusement,",
+        "phon": "Allazee khalaqa fasawwaa"
+      },
+      {
+        "num": 3,
+        "text": "وَٱلَّذِى قَدَّرَ فَهَدَىٰ",
+        "trans": "qui a décrété et guidé,",
+        "phon": "Wallazee qaddara fahadaa"
+      },
+      {
+        "num": 4,
+        "text": "وَٱلَّذِىٓ أَخْرَجَ ٱلْمَرْعَىٰ",
+        "trans": "et qui a fait pousser le pâturage,",
+        "phon": "Wallazeee akhrajal mar'aa"
+      },
+      {
+        "num": 5,
+        "text": "فَجَعَلَهُۥ غُثَآءً أَحْوَىٰ",
+        "trans": "et en a fait ensuite un foin sombre.",
+        "phon": "Faja'alahoo ghusaaa'an ahwaa"
+      },
+      {
+        "num": 6,
+        "text": "سَنُقْرِئُكَ فَلَا تَنسَىٰٓ",
+        "trans": "Nous te ferons réciter (le Coran), de sorte que tu n'oublieras",
+        "phon": "Sanuqri'uka falaa tansaaa"
+      },
+      {
+        "num": 7,
+        "text": "إِلَّا مَا شَآءَ ٱللَّهُ ۚ إِنَّهُۥ يَعْلَمُ ٱلْجَهْرَ وَمَا يَخْفَىٰ",
+        "trans": "que ce qu'Allah veut. Car, Il connaît ce qui paraît au grand jour ainsi que ce qui est caché.",
+        "phon": "Illaa maa shaaa'al laah; innahoo ya'lamul jahra wa maa yakhfaa"
+      },
+      {
+        "num": 8,
+        "text": "وَنُيَسِّرُكَ لِلْيُسْرَىٰ",
+        "trans": "Nous te mettrons sur la voie la plus facile.",
+        "phon": "Wa nu-yassiruka lilyusraa"
+      },
+      {
+        "num": 9,
+        "text": "فَذَكِّرْ إِن نَّفَعَتِ ٱلذِّكْرَىٰ",
+        "trans": "Rappelle, donc, où le Rappel doit être utile.",
+        "phon": "Fazakkir in nafa'atizzikraa"
+      },
+      {
+        "num": 10,
+        "text": "سَيَذَّكَّرُ مَن يَخْشَىٰ",
+        "trans": "Quiconque craint (Allah) s'[en] rappellera,",
+        "phon": "Sa yazzakkaru maiyakhshaa"
+      },
+      {
+        "num": 11,
+        "text": "وَيَتَجَنَّبُهَا ٱلْأَشْقَى",
+        "trans": "et s'en écartera le grand malheureux,",
+        "phon": "Wa yatajannabuhal ashqaa"
+      },
+      {
+        "num": 12,
+        "text": "ٱلَّذِى يَصْلَى ٱلنَّارَ ٱلْكُبْرَىٰ",
+        "trans": "qui brûlera dans le plus grand Feu,",
+        "phon": "Allazee yaslan Naaral kubraa"
+      },
+      {
+        "num": 13,
+        "text": "ثُمَّ لَا يَمُوتُ فِيهَا وَلَا يَحْيَىٰ",
+        "trans": "où il ne mourra ni ne vivra.",
+        "phon": "Summa laa yamootu feehaa wa laa yahyaa"
+      },
+      {
+        "num": 14,
+        "text": "قَدْ أَفْلَحَ مَن تَزَكَّىٰ",
+        "trans": "Réussit, certes, celui qui se purifie,",
+        "phon": "Qad aflaha man tazakkaa"
+      },
+      {
+        "num": 15,
+        "text": "وَذَكَرَ ٱسْمَ رَبِّهِۦ فَصَلَّىٰ",
+        "trans": "et se rappelle le nom de son Seigneur, puis célèbre la Salât.",
+        "phon": "Wa zakaras ma Rabbihee fasallaa"
+      },
+      {
+        "num": 16,
+        "text": "بَلْ تُؤْثِرُونَ ٱلْحَيَوٰةَ ٱلدُّنْيَا",
+        "trans": "Mais, vous préférez plutôt la vie présente,",
+        "phon": "Bal tu'siroonal hayaatad dunyaa"
+      },
+      {
+        "num": 17,
+        "text": "وَٱلْءَاخِرَةُ خَيْرٌۭ وَأَبْقَىٰٓ",
+        "trans": "alors que l'au-delà est meilleur et plus durable.",
+        "phon": "Wal Aakhiratu khairunw wa abqaa"
+      },
+      {
+        "num": 18,
+        "text": "إِنَّ هَٰذَا لَفِى ٱلصُّحُفِ ٱلْأُولَىٰ",
+        "trans": "Ceci se trouve, certes, dans les Feuilles anciennes,",
+        "phon": "Inna haazaa lafis suhu fil oolaa"
+      },
+      {
+        "num": 19,
+        "text": "صُحُفِ إِبْرَٰهِيمَ وَمُوسَىٰ",
+        "trans": "les Feuilles d'Abraham et de Moïse.",
+        "phon": "Suhufi Ibraaheema wa Moosaa"
+      }
+    ]
+  },
+  {
+    "num": 88,
+    "name": "Al-Ghashiyah",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ هَلْ أَتَىٰكَ حَدِيثُ ٱلْغَٰشِيَةِ",
+        "trans": "T'est-il parvenu le récit de l'enveloppante?",
+        "phon": "Hal ataaka hadeesul ghaashiyah"
+      },
+      {
+        "num": 2,
+        "text": "وُجُوهٌۭ يَوْمَئِذٍ خَٰشِعَةٌ",
+        "trans": "Ce jour-là, il y aura des visages humiliés,",
+        "phon": "Wujoohuny yawma 'izin khaashi'ah"
+      },
+      {
+        "num": 3,
+        "text": "عَامِلَةٌۭ نَّاصِبَةٌۭ",
+        "trans": "préoccupés, harassés.",
+        "phon": "'Aamilatun naasibah"
+      },
+      {
+        "num": 4,
+        "text": "تَصْلَىٰ نَارًا حَامِيَةًۭ",
+        "trans": "Ils brûleront dans un Feu ardent,",
+        "phon": "Taslaa naaran haamiyah"
+      },
+      {
+        "num": 5,
+        "text": "تُسْقَىٰ مِنْ عَيْنٍ ءَانِيَةٍۢ",
+        "trans": "et seront abreuvés d'une source bouillante.",
+        "phon": "Tusqaa min 'aynin aaniyah"
+      },
+      {
+        "num": 6,
+        "text": "لَّيْسَ لَهُمْ طَعَامٌ إِلَّا مِن ضَرِيعٍۢ",
+        "trans": "Il n'y aura pour eux d'autre nourriture que des plantes épineuses [darî'],",
+        "phon": "Laisa lahum ta'aamun illaa min daree'"
+      },
+      {
+        "num": 7,
+        "text": "لَّا يُسْمِنُ وَلَا يُغْنِى مِن جُوعٍۢ",
+        "trans": "qui n'engraisse, ni n'apaise la faim.",
+        "phon": "Laa yusminu wa laa yughnee min joo'"
+      },
+      {
+        "num": 8,
+        "text": "وُجُوهٌۭ يَوْمَئِذٍۢ نَّاعِمَةٌۭ",
+        "trans": "Ce jour-là, il y aura des visages épanouis,",
+        "phon": "Wujoohuny yawma 'izin naa'imah"
+      },
+      {
+        "num": 9,
+        "text": "لِّسَعْيِهَا رَاضِيَةٌۭ",
+        "trans": "contents de leurs efforts,",
+        "phon": "Lisa'yihaa raadiyah"
+      },
+      {
+        "num": 10,
+        "text": "فِى جَنَّةٍ عَالِيَةٍۢ",
+        "trans": "dans un haut Jardin,",
+        "phon": "Fee jannatin 'aaliyah"
+      },
+      {
+        "num": 11,
+        "text": "لَّا تَسْمَعُ فِيهَا لَٰغِيَةًۭ",
+        "trans": "où ils n'entendent aucune futilité.",
+        "phon": "Laa tasma'u feehaa laaghiyah"
+      },
+      {
+        "num": 12,
+        "text": "فِيهَا عَيْنٌۭ جَارِيَةٌۭ",
+        "trans": "Là, il y aura une source coulante.",
+        "phon": "Feehaa 'aynun jaariyah"
+      },
+      {
+        "num": 13,
+        "text": "فِيهَا سُرُرٌۭ مَّرْفُوعَةٌۭ",
+        "trans": "Là, des divans élevés",
+        "phon": "Feehaa sururum marfoo'ah"
+      },
+      {
+        "num": 14,
+        "text": "وَأَكْوَابٌۭ مَّوْضُوعَةٌۭ",
+        "trans": "et des coupes posées",
+        "phon": "Wa akwaabum mawdoo 'ah"
+      },
+      {
+        "num": 15,
+        "text": "وَنَمَارِقُ مَصْفُوفَةٌۭ",
+        "trans": "et des coussins rangés",
+        "phon": "Wa namaariqu masfoofah"
+      },
+      {
+        "num": 16,
+        "text": "وَزَرَابِىُّ مَبْثُوثَةٌ",
+        "trans": "et des tapis étalés.",
+        "phon": "Wa zaraabiyyu mabsoosah"
+      },
+      {
+        "num": 17,
+        "text": "أَفَلَا يَنظُرُونَ إِلَى ٱلْإِبِلِ كَيْفَ خُلِقَتْ",
+        "trans": "Ne considèrent-ils donc pas les chameaux, comment ils ont été créés,",
+        "phon": "Afalaa yanzuroona ilalibili kaifa khuliqat"
+      },
+      {
+        "num": 18,
+        "text": "وَإِلَى ٱلسَّمَآءِ كَيْفَ رُفِعَتْ",
+        "trans": "et le ciel comment il est élevé,",
+        "phon": "Wa ilas samaaa'i kaifa rufi'at"
+      },
+      {
+        "num": 19,
+        "text": "وَإِلَى ٱلْجِبَالِ كَيْفَ نُصِبَتْ",
+        "trans": "et les montagnes comment elles sont dressées",
+        "phon": "Wa ilal jibaali kaifa nusibat"
+      },
+      {
+        "num": 20,
+        "text": "وَإِلَى ٱلْأَرْضِ كَيْفَ سُطِحَتْ",
+        "trans": "et la terre comment elle est nivelée?",
+        "phon": "Wa ilal ardi kaifa sutihat"
+      },
+      {
+        "num": 21,
+        "text": "فَذَكِّرْ إِنَّمَآ أَنتَ مُذَكِّرٌۭ",
+        "trans": "Eh bien, rappelle! Tu n'es qu'un rappeleur,",
+        "phon": "Fazakkir innama anta Muzakkir"
+      },
+      {
+        "num": 22,
+        "text": "لَّسْتَ عَلَيْهِم بِمُصَيْطِرٍ",
+        "trans": "et tu n'es pas un dominateur sur eux.",
+        "phon": "Lasta 'alaihim bimusaitir"
+      },
+      {
+        "num": 23,
+        "text": "إِلَّا مَن تَوَلَّىٰ وَكَفَرَ",
+        "trans": "Sauf celui qui tourne le dos et ne croit pas,",
+        "phon": "Illaa man tawallaa wa kafar"
+      },
+      {
+        "num": 24,
+        "text": "فَيُعَذِّبُهُ ٱللَّهُ ٱلْعَذَابَ ٱلْأَكْبَرَ",
+        "trans": "alors Allah le châtiera du plus grand châtiment.",
+        "phon": "Fa yu'azzibuhul laahul 'azaabal akbar"
+      },
+      {
+        "num": 25,
+        "text": "إِنَّ إِلَيْنَآ إِيَابَهُمْ",
+        "trans": "Vers Nous est leur retour.",
+        "phon": "Innaa ilainaaa iyaabahum"
+      },
+      {
+        "num": 26,
+        "text": "ثُمَّ إِنَّ عَلَيْنَا حِسَابَهُم",
+        "trans": "Ensuite, c'est à Nous de leur demander compte.",
+        "phon": "Summa inna 'alainaa hisaabahum"
+      }
+    ]
+  },
+  {
+    "num": 89,
+    "name": "Al-Fajr",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَٱلْفَجْرِ",
+        "trans": "Par l'Aube!",
+        "phon": "Wal-Fajr"
+      },
+      {
+        "num": 2,
+        "text": "وَلَيَالٍ عَشْرٍۢ",
+        "trans": "Et par les dix nuits!",
+        "phon": "Wa layaalin 'ashr"
+      },
+      {
+        "num": 3,
+        "text": "وَٱلشَّفْعِ وَٱلْوَتْرِ",
+        "trans": "Par le pair et l'impair!",
+        "phon": "Wash shaf'i wal watr"
+      },
+      {
+        "num": 4,
+        "text": "وَٱلَّيْلِ إِذَا يَسْرِ",
+        "trans": "Et par la nuit quand elle s'écoule!",
+        "phon": "Wallaili izaa yasr"
+      },
+      {
+        "num": 5,
+        "text": "هَلْ فِى ذَٰلِكَ قَسَمٌۭ لِّذِى حِجْرٍ",
+        "trans": "N'est-ce pas là un serment, pour un doué d'intelligence?",
+        "phon": "Hal fee zaalika qasamul lizee hijr"
+      },
+      {
+        "num": 6,
+        "text": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِعَادٍ",
+        "trans": "N'as-tu pas vu comment ton Seigneur a agi avec les 'Aad",
+        "phon": "Alam tara kaifa fa'ala rabbuka bi'aad"
+      },
+      {
+        "num": 7,
+        "text": "إِرَمَ ذَاتِ ٱلْعِمَادِ",
+        "trans": "[avec] Iram, [la cité] à la colonne remarquable,",
+        "phon": "Iramaa zaatil 'imaad"
+      },
+      {
+        "num": 8,
+        "text": "ٱلَّتِى لَمْ يُخْلَقْ مِثْلُهَا فِى ٱلْبِلَٰدِ",
+        "trans": "dont jamais pareille ne fut construite parmi les villes?",
+        "phon": "Allatee lam yukhlaq misluhaa fil bilaad"
+      },
+      {
+        "num": 9,
+        "text": "وَثَمُودَ ٱلَّذِينَ جَابُوا۟ ٱلصَّخْرَ بِٱلْوَادِ",
+        "trans": "et avec les Thamûd qui taillaient le rocher dans la vallée?",
+        "phon": "Wa samoodal lazeena jaabus sakhra bil waad"
+      },
+      {
+        "num": 10,
+        "text": "وَفِرْعَوْنَ ذِى ٱلْأَوْتَادِ",
+        "trans": "ainsi qu'avec Pharaon, l'homme aux épieux?",
+        "phon": "Wa fir'awna zil awtaad"
+      },
+      {
+        "num": 11,
+        "text": "ٱلَّذِينَ طَغَوْا۟ فِى ٱلْبِلَٰدِ",
+        "trans": "Tous, étaient des gens qui transgressaient dans [leurs] pays,",
+        "phon": "Allazeena taghaw fil bilaad"
+      },
+      {
+        "num": 12,
+        "text": "فَأَكْثَرُوا۟ فِيهَا ٱلْفَسَادَ",
+        "trans": "et y avaient commis beaucoup de désordre.",
+        "phon": "Fa aksaroo feehal fasaad"
+      },
+      {
+        "num": 13,
+        "text": "فَصَبَّ عَلَيْهِمْ رَبُّكَ سَوْطَ عَذَابٍ",
+        "trans": "Donc, ton Seigneur déversa sur eux un fouet du châtiment.",
+        "phon": "Fasabba 'alaihim Rabbuka sawta 'azaab"
+      },
+      {
+        "num": 14,
+        "text": "إِنَّ رَبَّكَ لَبِٱلْمِرْصَادِ",
+        "trans": "Car ton Seigneur demeure aux aguets.",
+        "phon": "Inna Rabbaka labil mirsaad"
+      },
+      {
+        "num": 15,
+        "text": "فَأَمَّا ٱلْإِنسَٰنُ إِذَا مَا ٱبْتَلَىٰهُ رَبُّهُۥ فَأَكْرَمَهُۥ وَنَعَّمَهُۥ فَيَقُولُ رَبِّىٓ أَكْرَمَنِ",
+        "trans": "Quant à l'homme, lorsque son Seigneur l'éprouve en l'honorant et en le comblant de bienfaits, il dit: «Mon Seigneur m'a honoré».",
+        "phon": "Fa ammal insaanu izaa mab talaahu Rabbuhoo fa akramahoo wa na' 'amahoo fa yaqoolu Rabbeee akraman"
+      },
+      {
+        "num": 16,
+        "text": "وَأَمَّآ إِذَا مَا ٱبْتَلَىٰهُ فَقَدَرَ عَلَيْهِ رِزْقَهُۥ فَيَقُولُ رَبِّىٓ أَهَٰنَنِ",
+        "trans": "Mais par contre, quand Il l'éprouve en lui restreignant sa subsistance, il dit: «Mon Seigneur m'a avili».",
+        "phon": "Wa ammaaa izaa mabtalaahu faqadara 'alaihi rizqahoo fa yaqoolu Rabbeee ahaanan"
+      },
+      {
+        "num": 17,
+        "text": "كَلَّا ۖ بَل لَّا تُكْرِمُونَ ٱلْيَتِيمَ",
+        "trans": "Mais non! C'est vous plutôt, qui n'êtes pas généreux envers les orphelins;",
+        "phon": "Kalla bal laa tukrimooo nal yateem"
+      },
+      {
+        "num": 18,
+        "text": "وَلَا تَحَٰٓضُّونَ عَلَىٰ طَعَامِ ٱلْمِسْكِينِ",
+        "trans": "qui ne vous incitez pas mutuellement à nourrir le pauvre,",
+        "phon": "Wa laa tahaaaddoona 'alaata'aamil miskeen"
+      },
+      {
+        "num": 19,
+        "text": "وَتَأْكُلُونَ ٱلتُّرَاثَ أَكْلًۭا لَّمًّۭا",
+        "trans": "qui dévorez l'héritage avec une avidité vorace,",
+        "phon": "Wa taakuloonat turaasa aklal lammaa"
+      },
+      {
+        "num": 20,
+        "text": "وَتُحِبُّونَ ٱلْمَالَ حُبًّۭا جَمًّۭا",
+        "trans": "et aimez les richesses d'un amour sans bornes.",
+        "phon": "Wa tuhibboonal maala hubban jammaa"
+      },
+      {
+        "num": 21,
+        "text": "كَلَّآ إِذَا دُكَّتِ ٱلْأَرْضُ دَكًّۭا دَكًّۭا",
+        "trans": "Prenez garde! Quand la terre sera complètement pulvérisée,",
+        "phon": "Kallaaa izaaa dukkatil ardu dakkan dakka"
+      },
+      {
+        "num": 22,
+        "text": "وَجَآءَ رَبُّكَ وَٱلْمَلَكُ صَفًّۭا صَفًّۭا",
+        "trans": "et que ton Seigneur viendra ainsi que les Anges, rang par rang,",
+        "phon": "Wa jaaa'a Rabbuka wal malaku saffan saffaa"
+      },
+      {
+        "num": 23,
+        "text": "وَجِا۟ىٓءَ يَوْمَئِذٍۭ بِجَهَنَّمَ ۚ يَوْمَئِذٍۢ يَتَذَكَّرُ ٱلْإِنسَٰنُ وَأَنَّىٰ لَهُ ٱلذِّكْرَىٰ",
+        "trans": "et que ce jour-là, on amènera l'Enfer; ce jour-là, l'homme se rappellera. Mais à quoi lui servira de se souvenir?",
+        "phon": "Wa jeee'a yawma'izim bi jahannnam; Yawma 'iziny yatazakkarul insaanu wa annaa lahuz zikraa"
+      },
+      {
+        "num": 24,
+        "text": "يَقُولُ يَٰلَيْتَنِى قَدَّمْتُ لِحَيَاتِى",
+        "trans": "Il dira: «Hélas! Que n'ai-je fait du bien pour ma vie future!",
+        "phon": "Yaqoolu yaa laitanee qaddamtu lihayaatee"
+      },
+      {
+        "num": 25,
+        "text": "فَيَوْمَئِذٍۢ لَّا يُعَذِّبُ عَذَابَهُۥٓ أَحَدٌۭ",
+        "trans": "Ce jour-là donc, nul ne saura châtier comme Lui châtie,",
+        "phon": "Fa Yawma izil laa yu'azzibu 'azaabahooo ahad"
+      },
+      {
+        "num": 26,
+        "text": "وَلَا يُوثِقُ وَثَاقَهُۥٓ أَحَدٌۭ",
+        "trans": "et nul ne saura garrotter comme Lui garrotte.",
+        "phon": "Wa laa yoosiqu wasaaqa hooo ahad"
+      },
+      {
+        "num": 27,
+        "text": "يَٰٓأَيَّتُهَا ٱلنَّفْسُ ٱلْمُطْمَئِنَّةُ",
+        "trans": "«O toi, âme apaisée,",
+        "phon": "Yaaa ayyatuhan nafsul mutma 'innah"
+      },
+      {
+        "num": 28,
+        "text": "ٱرْجِعِىٓ إِلَىٰ رَبِّكِ رَاضِيَةًۭ مَّرْضِيَّةًۭ",
+        "trans": "retourne vers ton Seigneur, satisfaite et agréée;",
+        "phon": "Irji'eee ilaa Rabbiki raadiyatam mardiyyah"
+      },
+      {
+        "num": 29,
+        "text": "فَٱدْخُلِى فِى عِبَٰدِى",
+        "trans": "entre donc parmi Mes serviteurs,",
+        "phon": "Fadkhulee fee 'ibaadee"
+      },
+      {
+        "num": 30,
+        "text": "وَٱدْخُلِى جَنَّتِى",
+        "trans": "et entre dans Mon Paradis».",
+        "phon": "Wadkhulee jannatee"
+      }
+    ]
+  },
+  {
+    "num": 90,
+    "name": "Al-Balad",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ لَآ أُقْسِمُ بِهَٰذَا ٱلْبَلَدِ",
+        "trans": "Non!... Je jure par cette Cité!",
+        "phon": "Laaa uqsimu bihaazal balad"
+      },
+      {
+        "num": 2,
+        "text": "وَأَنتَ حِلٌّۢ بِهَٰذَا ٱلْبَلَدِ",
+        "trans": "et toi, tu es un résident dans cette cité -",
+        "phon": "Wa anta hillum bihaazal balad"
+      },
+      {
+        "num": 3,
+        "text": "وَوَالِدٍۢ وَمَا وَلَدَ",
+        "trans": "Et par le père et ce qu'il engendre!",
+        "phon": "Wa waalidinw wa maa walad"
+      },
+      {
+        "num": 4,
+        "text": "لَقَدْ خَلَقْنَا ٱلْإِنسَٰنَ فِى كَبَدٍ",
+        "trans": "Nous avons, certes, créé l'homme pour une vie de lutte.",
+        "phon": "Laqad khalaqnal insaana fee kabad"
+      },
+      {
+        "num": 5,
+        "text": "أَيَحْسَبُ أَن لَّن يَقْدِرَ عَلَيْهِ أَحَدٌۭ",
+        "trans": "Pense-t-il que personne ne pourra rien contre lui?",
+        "phon": "Ayahsabu al-lai yaqdira 'alaihi ahad"
+      },
+      {
+        "num": 6,
+        "text": "يَقُولُ أَهْلَكْتُ مَالًۭا لُّبَدًا",
+        "trans": "Il dit: «J'ai gaspillé beaucoup de biens».",
+        "phon": "Yaqoolu ahlaktu maalal lubadaa"
+      },
+      {
+        "num": 7,
+        "text": "أَيَحْسَبُ أَن لَّمْ يَرَهُۥٓ أَحَدٌ",
+        "trans": "Pense-t-il que nul ne l'a vu?",
+        "phon": "Ayahsabu al lam yarahooo ahad"
+      },
+      {
+        "num": 8,
+        "text": "أَلَمْ نَجْعَل لَّهُۥ عَيْنَيْنِ",
+        "trans": "Ne lui avons Nous pas assigné deux yeux,",
+        "phon": "Alam naj'al lahoo 'aynayn"
+      },
+      {
+        "num": 9,
+        "text": "وَلِسَانًۭا وَشَفَتَيْنِ",
+        "trans": "et une langue et deux lèvres?",
+        "phon": "Wa lisaananw wa shafatayn"
+      },
+      {
+        "num": 10,
+        "text": "وَهَدَيْنَٰهُ ٱلنَّجْدَيْنِ",
+        "trans": "Ne l'avons-Nous pas guidé aux deux voies.",
+        "phon": "Wa hadaynaahun najdayn"
+      },
+      {
+        "num": 11,
+        "text": "فَلَا ٱقْتَحَمَ ٱلْعَقَبَةَ",
+        "trans": "Or, il ne s'engage pas dans la voie difficile!",
+        "phon": "Falaq tahamal-'aqabah"
+      },
+      {
+        "num": 12,
+        "text": "وَمَآ أَدْرَىٰكَ مَا ٱلْعَقَبَةُ",
+        "trans": "Et qui te dira ce qu'est la voie difficile?",
+        "phon": "Wa maaa adraaka mal'aqabah"
+      },
+      {
+        "num": 13,
+        "text": "فَكُّ رَقَبَةٍ",
+        "trans": "C'est délier un joug [affranchir un esclave],",
+        "phon": "Fakku raqabah"
+      },
+      {
+        "num": 14,
+        "text": "أَوْ إِطْعَٰمٌۭ فِى يَوْمٍۢ ذِى مَسْغَبَةٍۢ",
+        "trans": "ou nourrir, en un jour de famine,",
+        "phon": "Aw it'aamun fee yawmin zee masghabah"
+      },
+      {
+        "num": 15,
+        "text": "يَتِيمًۭا ذَا مَقْرَبَةٍ",
+        "trans": "un orphelin proche parent",
+        "phon": "Yateeman zaa maqrabah"
+      },
+      {
+        "num": 16,
+        "text": "أَوْ مِسْكِينًۭا ذَا مَتْرَبَةٍۢ",
+        "trans": "ou un pauvre dans le dénuement.",
+        "phon": "Aw miskeenan zaa matrabah"
+      },
+      {
+        "num": 17,
+        "text": "ثُمَّ كَانَ مِنَ ٱلَّذِينَ ءَامَنُوا۟ وَتَوَاصَوْا۟ بِٱلصَّبْرِ وَتَوَاصَوْا۟ بِٱلْمَرْحَمَةِ",
+        "trans": "Et c'est être, en outre, de ceux qui croient et s'enjoignent mutuellement l'endurance, et s'enjoignent mutuellement la miséricorde.",
+        "phon": "Summa kaana minal lazeena aamanoo wa tawaasaw bissabri wa tawaasaw bilmarhamah"
+      },
+      {
+        "num": 18,
+        "text": "أُو۟لَٰٓئِكَ أَصْحَٰبُ ٱلْمَيْمَنَةِ",
+        "trans": "Ceux-là sont les gens de la droite;",
+        "phon": "Ulaaa'ika As-haabul maimanah"
+      },
+      {
+        "num": 19,
+        "text": "وَٱلَّذِينَ كَفَرُوا۟ بِـَٔايَٰتِنَا هُمْ أَصْحَٰبُ ٱلْمَشْـَٔمَةِ",
+        "trans": "alors que ceux qui ne croient pas en Nos versets sont les gens de la gauche.",
+        "phon": "Wallazeena kafaroo bi aayaatinaa hum as-haabul Mash'amah"
+      },
+      {
+        "num": 20,
+        "text": "عَلَيْهِمْ نَارٌۭ مُّؤْصَدَةٌۢ",
+        "trans": "Le Feu se refermera sur eux.",
+        "phon": "Alaihim naarum mu'sadah"
+      }
+    ]
+  },
+  {
+    "num": 91,
+    "name": "Ash-Shams",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَٱلشَّمْسِ وَضُحَىٰهَا",
+        "trans": "Par le soleil et par sa clarté!",
+        "phon": "Wash shamsi wa duhaa haa"
+      },
+      {
+        "num": 2,
+        "text": "وَٱلْقَمَرِ إِذَا تَلَىٰهَا",
+        "trans": "Et par la lune quand elle le suit!",
+        "phon": "Wal qamari izaa talaa haa"
+      },
+      {
+        "num": 3,
+        "text": "وَٱلنَّهَارِ إِذَا جَلَّىٰهَا",
+        "trans": "Et par le jour quand il l'éclaire!",
+        "phon": "Wannahaari izaa jallaa haa"
+      },
+      {
+        "num": 4,
+        "text": "وَٱلَّيْلِ إِذَا يَغْشَىٰهَا",
+        "trans": "Et par la nuit quand elle l'enveloppe!",
+        "phon": "Wallaili izaa yaghshaa haa"
+      },
+      {
+        "num": 5,
+        "text": "وَٱلسَّمَآءِ وَمَا بَنَىٰهَا",
+        "trans": "Et par le ciel et Celui qui l'a construit!",
+        "phon": "Wassamaaa'i wa maa banaahaa"
+      },
+      {
+        "num": 6,
+        "text": "وَٱلْأَرْضِ وَمَا طَحَىٰهَا",
+        "trans": "Et par la terre et Celui qui l'a étendue!",
+        "phon": "Wal ardi wa maa tahaahaa"
+      },
+      {
+        "num": 7,
+        "text": "وَنَفْسٍۢ وَمَا سَوَّىٰهَا",
+        "trans": "Et par l'âme et Celui qui l'a harmonieusement façonnée;",
+        "phon": "Wa nafsinw wa maa sawwaahaa"
+      },
+      {
+        "num": 8,
+        "text": "فَأَلْهَمَهَا فُجُورَهَا وَتَقْوَىٰهَا",
+        "trans": "et lui a alors inspiré son immoralité, de même que sa piété!",
+        "phon": "Fa-alhamahaa fujoorahaa wa taqwaahaa"
+      },
+      {
+        "num": 9,
+        "text": "قَدْ أَفْلَحَ مَن زَكَّىٰهَا",
+        "trans": "A réussi, certes, celui qui la purifie.",
+        "phon": "Qad aflaha man zakkaahaa"
+      },
+      {
+        "num": 10,
+        "text": "وَقَدْ خَابَ مَن دَسَّىٰهَا",
+        "trans": "Et est perdu, certes, celui qui la corrompt.",
+        "phon": "Wa qad khaaba man dassaahaa"
+      },
+      {
+        "num": 11,
+        "text": "كَذَّبَتْ ثَمُودُ بِطَغْوَىٰهَآ",
+        "trans": "Les Thamûd, par leur transgression, ont crié au mensonge,",
+        "phon": "Kazzabat Samoodu bi taghwaahaaa"
+      },
+      {
+        "num": 12,
+        "text": "إِذِ ٱنۢبَعَثَ أَشْقَىٰهَا",
+        "trans": "lorsque le plus misérable d'entre eux se leva (pour tuer la chamelle)",
+        "phon": "Izim ba'asa ashqaahaa"
+      },
+      {
+        "num": 13,
+        "text": "فَقَالَ لَهُمْ رَسُولُ ٱللَّهِ نَاقَةَ ٱللَّهِ وَسُقْيَٰهَا",
+        "trans": "Le Messager d'Allah leur avait dit: «La chamelle d'Allah! Laissez-la boire.",
+        "phon": "Faqaala lahum Rasoolul laahi naaqatal laahi wa suqiyaahaa"
+      },
+      {
+        "num": 14,
+        "text": "فَكَذَّبُوهُ فَعَقَرُوهَا فَدَمْدَمَ عَلَيْهِمْ رَبُّهُم بِذَنۢبِهِمْ فَسَوَّىٰهَا",
+        "trans": "Mais, ils le traitèrent de menteur, et la tuèrent. Leur Seigneur les détruisit donc, pour leur péché et étendit Son châtiment sur tous.",
+        "phon": "Fakazzaboohu fa'aqaroohaa fadamdama 'alaihim Rabbuhum bizambihim fasaw waahaa"
+      },
+      {
+        "num": 15,
+        "text": "وَلَا يَخَافُ عُقْبَٰهَا",
+        "trans": "Et Allah n'a aucune crainte des conséquences.",
+        "phon": "Wa laa yakhaafu'uqbaahaa"
+      }
+    ]
+  },
+  {
+    "num": 92,
+    "name": "Al-Layl",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَٱلَّيْلِ إِذَا يَغْشَىٰ",
+        "trans": "Par la nuit quand elle enveloppe tout!",
+        "phon": "Wallaili izaa yaghshaa"
+      },
+      {
+        "num": 2,
+        "text": "وَٱلنَّهَارِ إِذَا تَجَلَّىٰ",
+        "trans": "Par le jour quand il éclaire!",
+        "phon": "Wannahaari izaa tajalla"
+      },
+      {
+        "num": 3,
+        "text": "وَمَا خَلَقَ ٱلذَّكَرَ وَٱلْأُنثَىٰٓ",
+        "trans": "Et par ce qu'Il a créé, mâle et femelle!",
+        "phon": "Wa maa khalaqaz zakara wal unthaa"
+      },
+      {
+        "num": 4,
+        "text": "إِنَّ سَعْيَكُمْ لَشَتَّىٰ",
+        "trans": "Vos efforts sont divergents.",
+        "phon": "Inna sa'yakum lashattaa"
+      },
+      {
+        "num": 5,
+        "text": "فَأَمَّا مَنْ أَعْطَىٰ وَٱتَّقَىٰ",
+        "trans": "Celui qui donne et craint (Allah)",
+        "phon": "Fa ammaa man a'taa wattaqaa"
+      },
+      {
+        "num": 6,
+        "text": "وَصَدَّقَ بِٱلْحُسْنَىٰ",
+        "trans": "et déclare véridique la plus belle récompense",
+        "phon": "Wa saddaqa bil husnaa"
+      },
+      {
+        "num": 7,
+        "text": "فَسَنُيَسِّرُهُۥ لِلْيُسْرَىٰ",
+        "trans": "Nous lui faciliterons la voie au plus grand bonheur.",
+        "phon": "Fasanu yassiruhoo lilyusraa"
+      },
+      {
+        "num": 8,
+        "text": "وَأَمَّا مَنۢ بَخِلَ وَٱسْتَغْنَىٰ",
+        "trans": "Et quant à celui qui est avare, se dispense (de l'adoration d'Allah),",
+        "phon": "Wa ammaa mam bakhila wastaghnaa"
+      },
+      {
+        "num": 9,
+        "text": "وَكَذَّبَ بِٱلْحُسْنَىٰ",
+        "trans": "et traite de mensonge la plus belle récompense,",
+        "phon": "Wa kazzaba bil husnaa"
+      },
+      {
+        "num": 10,
+        "text": "فَسَنُيَسِّرُهُۥ لِلْعُسْرَىٰ",
+        "trans": "Nous lui faciliterons la voie à la plus grande difficulté,",
+        "phon": "Fasanu yassiruhoo lil'usraa"
+      },
+      {
+        "num": 11,
+        "text": "وَمَا يُغْنِى عَنْهُ مَالُهُۥٓ إِذَا تَرَدَّىٰٓ",
+        "trans": "et à rien ne lui serviront ses richesses quand il sera jeté (au Feu).",
+        "phon": "Wa maa yughnee 'anhu maaluhooo izaa taraddaa"
+      },
+      {
+        "num": 12,
+        "text": "إِنَّ عَلَيْنَا لَلْهُدَىٰ",
+        "trans": "C'est à Nous, certes, de guider;",
+        "phon": "Inna 'alainaa lal hudaa"
+      },
+      {
+        "num": 13,
+        "text": "وَإِنَّ لَنَا لَلْءَاخِرَةَ وَٱلْأُولَىٰ",
+        "trans": "à Nous appartient, certes, la vie dernière et la vie présente.",
+        "phon": "Wa inna lanaa lal Aakhirata wal oolaa"
+      },
+      {
+        "num": 14,
+        "text": "فَأَنذَرْتُكُمْ نَارًۭا تَلَظَّىٰ",
+        "trans": "Je vous ai donc avertis d'un Feu qui flambe",
+        "phon": "Fa anzartukum naaran talazzaa"
+      },
+      {
+        "num": 15,
+        "text": "لَا يَصْلَىٰهَآ إِلَّا ٱلْأَشْقَى",
+        "trans": "où ne brûlera que le damné,",
+        "phon": "Laa yaslaahaaa illal ashqaa"
+      },
+      {
+        "num": 16,
+        "text": "ٱلَّذِى كَذَّبَ وَتَوَلَّىٰ",
+        "trans": "qui dément et tourne le dos;",
+        "phon": "Allazee kazzaba wa tawallaa"
+      },
+      {
+        "num": 17,
+        "text": "وَسَيُجَنَّبُهَا ٱلْأَتْقَى",
+        "trans": "alors qu'en sera écarté le pieux,",
+        "phon": "Wa sa yujannnabuhal atqaa"
+      },
+      {
+        "num": 18,
+        "text": "ٱلَّذِى يُؤْتِى مَالَهُۥ يَتَزَكَّىٰ",
+        "trans": "qui donne ses biens pour se purifier",
+        "phon": "Allazee yu'tee maalahoo yatazakkaa"
+      },
+      {
+        "num": 19,
+        "text": "وَمَا لِأَحَدٍ عِندَهُۥ مِن نِّعْمَةٍۢ تُجْزَىٰٓ",
+        "trans": "et auprès de qui personne ne profite d'un bienfait intéressé,",
+        "phon": "Wa maa li ahadin 'indahoo min ni'matin tujzaaa"
+      },
+      {
+        "num": 20,
+        "text": "إِلَّا ٱبْتِغَآءَ وَجْهِ رَبِّهِ ٱلْأَعْلَىٰ",
+        "trans": "mais seulement pour la recherche de La Face de son Seigneur le Très Haut.",
+        "phon": "Illab tighaaa'a wajhi rabbihil a 'laa"
+      },
+      {
+        "num": 21,
+        "text": "وَلَسَوْفَ يَرْضَىٰ",
+        "trans": "Et certes, il sera bientôt satisfait!",
+        "phon": "Wa lasawfa yardaa"
+      }
+    ]
+  },
+  {
+    "num": 93,
+    "name": "Ad-Duha",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَٱلضُّحَىٰ",
+        "trans": "Par le Jour Montant!",
+        "phon": "Wad duhaa"
+      },
+      {
+        "num": 2,
+        "text": "وَٱلَّيْلِ إِذَا سَجَىٰ",
+        "trans": "Et par la nuit quand elle couvre tout!",
+        "phon": "Wal laili iza sajaa"
+      },
+      {
+        "num": 3,
+        "text": "مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ",
+        "trans": "Ton Seigneur ne t'a ni abandonné, ni détesté.",
+        "phon": "Ma wad da'aka rabbuka wa ma qalaa"
+      },
+      {
+        "num": 4,
+        "text": "وَلَلْءَاخِرَةُ خَيْرٌۭ لَّكَ مِنَ ٱلْأُولَىٰ",
+        "trans": "La vie dernière t'est, certes, meilleure que la vie présente.",
+        "phon": "Walal-aakhiratu khairul laka minal-oola"
+      },
+      {
+        "num": 5,
+        "text": "وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰٓ",
+        "trans": "Ton Seigneur t'accordera certes [Ses faveurs], et alors tu seras satisfait.",
+        "phon": "Wa la sawfa y'uteeka rabbuka fatarda"
+      },
+      {
+        "num": 6,
+        "text": "أَلَمْ يَجِدْكَ يَتِيمًۭا فَـَٔاوَىٰ",
+        "trans": "Ne t'a-t-Il pas trouvé orphelin? Alors Il t'a accueilli!",
+        "phon": "Alam ya jidka yateeman fa aawaa"
+      },
+      {
+        "num": 7,
+        "text": "وَوَجَدَكَ ضَآلًّۭا فَهَدَىٰ",
+        "trans": "Ne t'a-t-Il pas trouvé égaré? Alors Il t'a guidé.",
+        "phon": "Wa wa jadaka daal lan fahada"
+      },
+      {
+        "num": 8,
+        "text": "وَوَجَدَكَ عَآئِلًۭا فَأَغْنَىٰ",
+        "trans": "Ne t'a-t-Il pas trouvé pauvre? Alors Il t'a enrichi.",
+        "phon": "Wa wa jadaka 'aa-ilan fa aghnaa"
+      },
+      {
+        "num": 9,
+        "text": "فَأَمَّا ٱلْيَتِيمَ فَلَا تَقْهَرْ",
+        "trans": "Quant à l'orphelin, donc, ne le maltraite pas.",
+        "phon": "Fa am mal yateema fala taqhar"
+      },
+      {
+        "num": 10,
+        "text": "وَأَمَّا ٱلسَّآئِلَ فَلَا تَنْهَرْ",
+        "trans": "Quant au demandeur, ne le repousse pas.",
+        "phon": "Wa am mas saa-ila fala tanhar"
+      },
+      {
+        "num": 11,
+        "text": "وَأَمَّا بِنِعْمَةِ رَبِّكَ فَحَدِّثْ",
+        "trans": "Et quant au bienfait de ton Seigneur, proclame-le.",
+        "phon": "Wa amma bi ni'mati rabbika fahad dith"
+      }
+    ]
+  },
+  {
+    "num": 94,
+    "name": "Ash-Sharh",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ",
+        "trans": "N'avons-Nous pas ouvert pour toi ta poitrine?",
+        "phon": "Alam nashrah laka sadrak"
+      },
+      {
+        "num": 2,
+        "text": "وَوَضَعْنَا عَنكَ وِزْرَكَ",
+        "trans": "Et ne t'avons-Nous pas déchargé du fardeau",
+        "phon": "Wa wa d'ana 'anka wizrak"
+      },
+      {
+        "num": 3,
+        "text": "ٱلَّذِىٓ أَنقَضَ ظَهْرَكَ",
+        "trans": "qui accablait ton dos?",
+        "phon": "Allazee anqada zahrak"
+      },
+      {
+        "num": 4,
+        "text": "وَرَفَعْنَا لَكَ ذِكْرَكَ",
+        "trans": "Et exalté pour toi ta renommée?",
+        "phon": "Wa raf 'ana laka zikrak"
+      },
+      {
+        "num": 5,
+        "text": "فَإِنَّ مَعَ ٱلْعُسْرِ يُسْرًا",
+        "trans": "A côté de la difficulté est, certes, une facilité!",
+        "phon": "Fa inna ma'al usri yusra"
+      },
+      {
+        "num": 6,
+        "text": "إِنَّ مَعَ ٱلْعُسْرِ يُسْرًۭا",
+        "trans": "A côté de la difficulté est, certes, une facilité!",
+        "phon": "Inna ma'al 'usri yusra"
+      },
+      {
+        "num": 7,
+        "text": "فَإِذَا فَرَغْتَ فَٱنصَبْ",
+        "trans": "Quand tu te libères, donc, lève-toi,",
+        "phon": "Fa iza faragh ta fansab"
+      },
+      {
+        "num": 8,
+        "text": "وَإِلَىٰ رَبِّكَ فَٱرْغَب",
+        "trans": "et à ton Seigneur aspire.",
+        "phon": "Wa ilaa rabbika far ghab"
+      }
+    ]
+  },
+  {
+    "num": 95,
+    "name": "At-Tin",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِّسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَٱلتِّينِ وَٱلزَّيْتُونِ",
+        "trans": "Par le figuier et l'olivier!",
+        "phon": "Wat teeni waz zaitoon"
+      },
+      {
+        "num": 2,
+        "text": "وَطُورِ سِينِينَ",
+        "trans": "Et par le Mont Sînîn!",
+        "phon": "Wa toori sineen"
+      },
+      {
+        "num": 3,
+        "text": "وَهَٰذَا ٱلْبَلَدِ ٱلْأَمِينِ",
+        "trans": "Et par cette Cité sûre!",
+        "phon": "Wa haazal balad-il ameen"
+      },
+      {
+        "num": 4,
+        "text": "لَقَدْ خَلَقْنَا ٱلْإِنسَٰنَ فِىٓ أَحْسَنِ تَقْوِيمٍۢ",
+        "trans": "Nous avons certes créé l'homme dans la forme la plus parfaite.",
+        "phon": "Laqad khalaqnal insaana fee ahsani taqweem"
+      },
+      {
+        "num": 5,
+        "text": "ثُمَّ رَدَدْنَٰهُ أَسْفَلَ سَٰفِلِينَ",
+        "trans": "Ensuite, Nous l'avons ramené au niveau le plus bas,",
+        "phon": "Thumma ra dad naahu asfala saafileen"
+      },
+      {
+        "num": 6,
+        "text": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّٰلِحَٰتِ فَلَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍۢ",
+        "trans": "sauf ceux qui croient et accomplissent les bonnes œuvres: ceux-là auront une récompense jamais interrompue.",
+        "phon": "Ill-lal lazeena aamanoo wa 'amilus saalihaati; falahum ajrun ghairu mamnoon"
+      },
+      {
+        "num": 7,
+        "text": "فَمَا يُكَذِّبُكَ بَعْدُ بِٱلدِّينِ",
+        "trans": "Après cela, qu'est-ce qui te fait traiter la rétribution de mensonge?",
+        "phon": "Fama yu kaz zibuka b'adu bid deen"
+      },
+      {
+        "num": 8,
+        "text": "أَلَيْسَ ٱللَّهُ بِأَحْكَمِ ٱلْحَٰكِمِينَ",
+        "trans": "Allah n'est-Il pas le plus sage des Juges?",
+        "phon": "Alai sal laahu bi-ahkamil haakimeen"
+      }
+    ]
+  },
+  {
+    "num": 96,
+    "name": "Al-Alaq",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ ٱقْرَأْ بِٱسْمِ رَبِّكَ ٱلَّذِى خَلَقَ",
+        "trans": "Lis, au nom de ton Seigneur qui a créé,",
+        "phon": "Iqra bismi rab bikal lazee khalaq"
+      },
+      {
+        "num": 2,
+        "text": "خَلَقَ ٱلْإِنسَٰنَ مِنْ عَلَقٍ",
+        "trans": "qui a créé l'homme d'une adhérence.",
+        "phon": "Khalaqal insaana min 'alaq"
+      },
+      {
+        "num": 3,
+        "text": "ٱقْرَأْ وَرَبُّكَ ٱلْأَكْرَمُ",
+        "trans": "Lis! Ton Seigneur est le Très Noble,",
+        "phon": "Iqra wa rab bukal akram"
+      },
+      {
+        "num": 4,
+        "text": "ٱلَّذِى عَلَّمَ بِٱلْقَلَمِ",
+        "trans": "qui a enseigné par la plume [le calame],",
+        "phon": "Al lazee 'allama bil qalam"
+      },
+      {
+        "num": 5,
+        "text": "عَلَّمَ ٱلْإِنسَٰنَ مَا لَمْ يَعْلَمْ",
+        "trans": "a enseigné à l'homme ce qu'il ne savait pas.",
+        "phon": "'Al lamal insaana ma lam y'alam"
+      },
+      {
+        "num": 6,
+        "text": "كَلَّآ إِنَّ ٱلْإِنسَٰنَ لَيَطْغَىٰٓ",
+        "trans": "Prenez-garde! Vraiment l'homme devient rebelle,",
+        "phon": "Kallaa innal insaana layatghaa"
+      },
+      {
+        "num": 7,
+        "text": "أَن رَّءَاهُ ٱسْتَغْنَىٰٓ",
+        "trans": "dès qu'il estime qu'il peut se suffire à lui-même (à cause de sa richesse).",
+        "phon": "Ar-ra aahus taghnaa"
+      },
+      {
+        "num": 8,
+        "text": "إِنَّ إِلَىٰ رَبِّكَ ٱلرُّجْعَىٰٓ",
+        "trans": "Mais, c'est vers ton Seigneur qu'est le retour.",
+        "phon": "Innna ilaa rabbikar ruj'aa"
+      },
+      {
+        "num": 9,
+        "text": "أَرَءَيْتَ ٱلَّذِى يَنْهَىٰ",
+        "trans": "As-tu vu celui qui interdit",
+        "phon": "Ara-aital lazee yanhaa"
+      },
+      {
+        "num": 10,
+        "text": "عَبْدًا إِذَا صَلَّىٰٓ",
+        "trans": "à un serviteur d'Allah [Muhammad] de célébrer la Salât?",
+        "phon": "'Abdan iza sallaa"
+      },
+      {
+        "num": 11,
+        "text": "أَرَءَيْتَ إِن كَانَ عَلَى ٱلْهُدَىٰٓ",
+        "trans": "Vois-tu s'il est sur la bonne voie,",
+        "phon": "Ara-aita in kana 'alal hudaa"
+      },
+      {
+        "num": 12,
+        "text": "أَوْ أَمَرَ بِٱلتَّقْوَىٰٓ",
+        "trans": "ou s'il ordonne la piété?",
+        "phon": "Au amara bit taqwaa"
+      },
+      {
+        "num": 13,
+        "text": "أَرَءَيْتَ إِن كَذَّبَ وَتَوَلَّىٰٓ",
+        "trans": "Vois-tu s'il dément et tourne le dos?",
+        "phon": "Ara-aita in kaz zaba wa ta walla"
+      },
+      {
+        "num": 14,
+        "text": "أَلَمْ يَعْلَم بِأَنَّ ٱللَّهَ يَرَىٰ",
+        "trans": "Ne sait-il pas que vraiment Allah voit?",
+        "phon": "Alam y'alam bi-an nal lahaa yaraa"
+      },
+      {
+        "num": 15,
+        "text": "كَلَّا لَئِن لَّمْ يَنتَهِ لَنَسْفَعًۢا بِٱلنَّاصِيَةِ",
+        "trans": "Mais non! S'il ne cesse pas, Nous le saisirons certes, par le toupet,",
+        "phon": "Kalla la illam yantahi la nasfa'am bin nasiyah"
+      },
+      {
+        "num": 16,
+        "text": "نَاصِيَةٍۢ كَٰذِبَةٍ خَاطِئَةٍۢ",
+        "trans": "le toupet d'un menteur, d'un pécheur.",
+        "phon": "Nasiyatin kazi batin khaatiyah"
+      },
+      {
+        "num": 17,
+        "text": "فَلْيَدْعُ نَادِيَهُۥ",
+        "trans": "Qu'il appelle donc son assemblée.",
+        "phon": "Fal yad'u naadiyah"
+      },
+      {
+        "num": 18,
+        "text": "سَنَدْعُ ٱلزَّبَانِيَةَ",
+        "trans": "Nous appellerons les gardiens [de l'Enfer].",
+        "phon": "Sanad 'uz zabaaniyah"
+      },
+      {
+        "num": 19,
+        "text": "كَلَّا لَا تُطِعْهُ وَٱسْجُدْ وَٱقْتَرِب ۩",
+        "trans": "Non! Ne lui obéis pas; mais prosterne-toi et rapproche-toi.",
+        "phon": "Kalla; la tuti'hu wasjud waqtarib"
+      }
+    ]
+  },
+  {
+    "num": 97,
+    "name": "Al-Qadr",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِّسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ إِنَّآ أَنزَلْنَٰهُ فِى لَيْلَةِ ٱلْقَدْرِ",
+        "trans": "Nous l'avons certes, fait descendre (le Coran) pendant la nuit d'Al-Qadr.",
+        "phon": "Innaa anzalnaahu fee lailatil qadr"
+      },
+      {
+        "num": 2,
+        "text": "وَمَآ أَدْرَىٰكَ مَا لَيْلَةُ ٱلْقَدْرِ",
+        "trans": "Et qui te dira ce qu'est la nuit d'Al-Qadr?",
+        "phon": "Wa maa adraaka ma lailatul qadr"
+      },
+      {
+        "num": 3,
+        "text": "لَيْلَةُ ٱلْقَدْرِ خَيْرٌۭ مِّنْ أَلْفِ شَهْرٍۢ",
+        "trans": "La nuit d'Al-Qadr est meilleure que mille mois.",
+        "phon": "Lailatul qadri khairum min alfee shahr"
+      },
+      {
+        "num": 4,
+        "text": "تَنَزَّلُ ٱلْمَلَٰٓئِكَةُ وَٱلرُّوحُ فِيهَا بِإِذْنِ رَبِّهِم مِّن كُلِّ أَمْرٍۢ",
+        "trans": "Durant celle-ci descendent les Anges ainsi que l'Esprit, par permission de leur Seigneur pour tout ordre.",
+        "phon": "Tanaz zalul malaa-ikatu war roohu feeha bi izni-rab bihim min kulli amr"
+      },
+      {
+        "num": 5,
+        "text": "سَلَٰمٌ هِىَ حَتَّىٰ مَطْلَعِ ٱلْفَجْرِ",
+        "trans": "Elle est paix et salut jusqu'à l'apparition de l'aube.",
+        "phon": "Salaamun hiya hattaa mat la'il fajr"
+      }
+    ]
+  },
+  {
+    "num": 98,
+    "name": "Al-Bayyina",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ لَمْ يَكُنِ ٱلَّذِينَ كَفَرُوا۟ مِنْ أَهْلِ ٱلْكِتَٰبِ وَٱلْمُشْرِكِينَ مُنفَكِّينَ حَتَّىٰ تَأْتِيَهُمُ ٱلْبَيِّنَةُ",
+        "trans": "Les infidèles parmi les gens du Livre, ainsi que les Associateurs, ne cesseront pas de mécroire jusqu'à ce que leur vienne la Preuve évidente:",
+        "phon": "Lam ya kunil lazeena kafaru min ahlil kitaabi wal mushri keena mun fak keena hattaa ta-tiya humul bayyinah"
+      },
+      {
+        "num": 2,
+        "text": "رَسُولٌۭ مِّنَ ٱللَّهِ يَتْلُوا۟ صُحُفًۭا مُّطَهَّرَةًۭ",
+        "trans": "un Messager, de la part d'Allah, qui leur récite des feuilles purifiées,",
+        "phon": "Rasoolum minal laahi yatlu suhufam mutahharah"
+      },
+      {
+        "num": 3,
+        "text": "فِيهَا كُتُبٌۭ قَيِّمَةٌۭ",
+        "trans": "dans lesquelles se trouvent des prescriptions d'une rectitude parfaite.",
+        "phon": "Feeha kutubun qaiyimah"
+      },
+      {
+        "num": 4,
+        "text": "وَمَا تَفَرَّقَ ٱلَّذِينَ أُوتُوا۟ ٱلْكِتَٰبَ إِلَّا مِنۢ بَعْدِ مَا جَآءَتْهُمُ ٱلْبَيِّنَةُ",
+        "trans": "Et ceux à qui le Livre a été donné ne se sont divisés qu'après que la preuve leur fut venue.",
+        "phon": "Wa maa tafarraqal lazeena ootul kitaaba il-la mim b'adi ma jaa-at humul baiyyinah"
+      },
+      {
+        "num": 5,
+        "text": "وَمَآ أُمِرُوٓا۟ إِلَّا لِيَعْبُدُوا۟ ٱللَّهَ مُخْلِصِينَ لَهُ ٱلدِّينَ حُنَفَآءَ وَيُقِيمُوا۟ ٱلصَّلَوٰةَ وَيُؤْتُوا۟ ٱلزَّكَوٰةَ ۚ وَذَٰلِكَ دِينُ ٱلْقَيِّمَةِ",
+        "trans": "Il ne leur a été commandé, cependant, que d'adorer Allah, Lui vouant un culte exclusif, d'accomplir la Salât et d'acquitter la Zakât. Et voilà la religion de droiture.",
+        "phon": "Wa maa umiroo il-la liy'abu dul laaha mukhliseena lahud-deena huna faa-a wa yuqeemus salaahta wa yu-tuz zakaata; wa zaalika deenul qaiyimah"
+      },
+      {
+        "num": 6,
+        "text": "إِنَّ ٱلَّذِينَ كَفَرُوا۟ مِنْ أَهْلِ ٱلْكِتَٰبِ وَٱلْمُشْرِكِينَ فِى نَارِ جَهَنَّمَ خَٰلِدِينَ فِيهَآ ۚ أُو۟لَٰٓئِكَ هُمْ شَرُّ ٱلْبَرِيَّةِ",
+        "trans": "Les infidèles parmi les gens du Livre, ainsi que les Associateurs iront au feu de l'Enfer, pour y demeurer éternellement. De toute la création, ce sont eux les pires.",
+        "phon": "Innal lazeena kafaru min ahlil kitaabi wal mushri keena fee nari jahan nama khaali deena feeha; ulaa-ika hum shar rul ba reeyah"
+      },
+      {
+        "num": 7,
+        "text": "إِنَّ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّٰلِحَٰتِ أُو۟لَٰٓئِكَ هُمْ خَيْرُ ٱلْبَرِيَّةِ",
+        "trans": "Quant à ceux qui croient et accomplissent les bonnes œuvres, ce sont les meilleurs de toute la création.",
+        "phon": "Innal lazeena aamanu wa 'amilus saalihaati ula-ika hum khairul bareey yah"
+      },
+      {
+        "num": 8,
+        "text": "جَزَآؤُهُمْ عِندَ رَبِّهِمْ جَنَّٰتُ عَدْنٍۢ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَٰرُ خَٰلِدِينَ فِيهَآ أَبَدًۭا ۖ رَّضِىَ ٱللَّهُ عَنْهُمْ وَرَضُوا۟ عَنْهُ ۚ ذَٰلِكَ لِمَنْ خَشِىَ رَبَّهُۥ",
+        "trans": "Leur récompense auprès d'Allah sera les Jardins de séjour, sous lesquels coulent les ruisseaux, pour y demeurer éternellement. Allah les agrée et ils L'agréent. Telle sera [la récompense] de celui qui craint son Seigneur.",
+        "phon": "Jazaa-uhum inda rabbihim jan naatu 'adnin tajree min tahtihal an haaru khalideena feeha abada; radiy-yallaahu 'anhum wa ra du 'an zaalika liman khashiya rabbah."
+      }
+    ]
+  },
+  {
+    "num": 99,
+    "name": "Az-Zalzalah",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ إِذَا زُلْزِلَتِ ٱلْأَرْضُ زِلْزَالَهَا",
+        "trans": "Quand la terre tremblera d'un violent tremblement,",
+        "phon": "Izaa zul zilatil ardu zil zaalaha"
+      },
+      {
+        "num": 2,
+        "text": "وَأَخْرَجَتِ ٱلْأَرْضُ أَثْقَالَهَا",
+        "trans": "et que la terre fera sortir ses fardeaux,",
+        "phon": "Wa akh rajatil ardu athqaalaha"
+      },
+      {
+        "num": 3,
+        "text": "وَقَالَ ٱلْإِنسَٰنُ مَا لَهَا",
+        "trans": "et que l'homme dira: «Qu'a-t-elle?»",
+        "phon": "Wa qaalal insaanu ma laha"
+      },
+      {
+        "num": 4,
+        "text": "يَوْمَئِذٍۢ تُحَدِّثُ أَخْبَارَهَا",
+        "trans": "ce jour-là, elle contera son histoire,",
+        "phon": "Yawmaa izin tuhad dithu akhbaaraha"
+      },
+      {
+        "num": 5,
+        "text": "بِأَنَّ رَبَّكَ أَوْحَىٰ لَهَا",
+        "trans": "selon ce que ton Seigneur lui aura révélé [ordonné].",
+        "phon": "Bi-anna rabbaka awhaa laha"
+      },
+      {
+        "num": 6,
+        "text": "يَوْمَئِذٍۢ يَصْدُرُ ٱلنَّاسُ أَشْتَاتًۭا لِّيُرَوْا۟ أَعْمَٰلَهُمْ",
+        "trans": "Ce jour-là, les gens sortiront séparément pour que leur soient montrées leurs œuvres.",
+        "phon": "Yawma iziy yas durun naasu ash tatal liyuraw a'maalahum"
+      },
+      {
+        "num": 7,
+        "text": "فَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًۭا يَرَهُۥ",
+        "trans": "Quiconque fait un bien fût-ce du poids d'un atome, le verra,",
+        "phon": "Famaiy ya'mal mithqala zarratin khai raiy-yarah"
+      },
+      {
+        "num": 8,
+        "text": "وَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍۢ شَرًّۭا يَرَهُۥ",
+        "trans": "et quiconque fait un mal fût-ce du poids d'un atome, le verra.",
+        "phon": "Wa maiy-y'amal mithqala zarratin sharraiy-yarah"
+      }
+    ]
+  },
+  {
+    "num": 100,
+    "name": "Al-Adiyat",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَٱلْعَٰدِيَٰتِ ضَبْحًۭا",
+        "trans": "Par les coursiers qui halètent,",
+        "phon": "Wal'aadi yaati dabha"
+      },
+      {
+        "num": 2,
+        "text": "فَٱلْمُورِيَٰتِ قَدْحًۭا",
+        "trans": "qui font jaillir des étincelles,",
+        "phon": "Fal moori yaati qadha"
+      },
+      {
+        "num": 3,
+        "text": "فَٱلْمُغِيرَٰتِ صُبْحًۭا",
+        "trans": "qui attaquent au matin,",
+        "phon": "Fal mugheeraati subha"
+      },
+      {
+        "num": 4,
+        "text": "فَأَثَرْنَ بِهِۦ نَقْعًۭا",
+        "trans": "et font ainsi voler la poussière,",
+        "phon": "Fa atharna bihee naq'a"
+      },
+      {
+        "num": 5,
+        "text": "فَوَسَطْنَ بِهِۦ جَمْعًا",
+        "trans": "et pénètrent au centre de la troupe ennemie.",
+        "phon": "Fawa satna bihee jam'a"
+      },
+      {
+        "num": 6,
+        "text": "إِنَّ ٱلْإِنسَٰنَ لِرَبِّهِۦ لَكَنُودٌۭ",
+        "trans": "L'homme est, certes, ingrat envers son Seigneur;",
+        "phon": "Innal-insana lirabbihee lakanood"
+      },
+      {
+        "num": 7,
+        "text": "وَإِنَّهُۥ عَلَىٰ ذَٰلِكَ لَشَهِيدٌۭ",
+        "trans": "et pourtant, il est certes, témoin de cela;",
+        "phon": "Wa innahu 'alaa zaalika la shaheed"
+      },
+      {
+        "num": 8,
+        "text": "وَإِنَّهُۥ لِحُبِّ ٱلْخَيْرِ لَشَدِيدٌ",
+        "trans": "et pour l'amour des richesses il est certes ardent.",
+        "phon": "Wa innahu lihubbil khairi la shadeed"
+      },
+      {
+        "num": 9,
+        "text": "۞ أَفَلَا يَعْلَمُ إِذَا بُعْثِرَ مَا فِى ٱلْقُبُورِ",
+        "trans": "Ne sait-il donc pas que lorsque ce qui est dans les tombes sera bouleversé,",
+        "phon": "Afala ya'lamu iza b'uthira ma filquboor"
+      },
+      {
+        "num": 10,
+        "text": "وَحُصِّلَ مَا فِى ٱلصُّدُورِ",
+        "trans": "et que sera dévoilé ce qui est dans les poitrines,",
+        "phon": "Wa hussila maa fis sudoor"
+      },
+      {
+        "num": 11,
+        "text": "إِنَّ رَبَّهُم بِهِمْ يَوْمَئِذٍۢ لَّخَبِيرٌۢ",
+        "trans": "ce jour-là, certes, leur Seigneur sera Parfaitement Connaisseur d'eux?",
+        "phon": "Inna rabbahum bihim yauma 'izil la khabeer"
+      }
+    ]
+  },
+  {
+    "num": 101,
+    "name": "Al-Qariah",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ ٱلْقَارِعَةُ",
+        "trans": "Le fracas!",
+        "phon": "Al qaari'ah"
+      },
+      {
+        "num": 2,
+        "text": "مَا ٱلْقَارِعَةُ",
+        "trans": "Qu'est-ce que le fracas?",
+        "phon": "Mal qaariah"
+      },
+      {
+        "num": 3,
+        "text": "وَمَآ أَدْرَىٰكَ مَا ٱلْقَارِعَةُ",
+        "trans": "Et qui te dira ce qu'est le fracas?",
+        "phon": "Wa maa adraaka mal qaari'ah"
+      },
+      {
+        "num": 4,
+        "text": "يَوْمَ يَكُونُ ٱلنَّاسُ كَٱلْفَرَاشِ ٱلْمَبْثُوثِ",
+        "trans": "C'est le jour où les gens seront comme des papillons éparpillés,",
+        "phon": "Yauma ya koonun naasu kal farashil mabthooth"
+      },
+      {
+        "num": 5,
+        "text": "وَتَكُونُ ٱلْجِبَالُ كَٱلْعِهْنِ ٱلْمَنفُوشِ",
+        "trans": "et les montagnes comme de la laine cardée;",
+        "phon": "Wa ta koonul jibalu kal 'ihnil manfoosh"
+      },
+      {
+        "num": 6,
+        "text": "فَأَمَّا مَن ثَقُلَتْ مَوَٰزِينُهُۥ",
+        "trans": "quant à celui dont la balance sera lourde",
+        "phon": "Fa-amma man thaqulat mawa zeenuh"
+      },
+      {
+        "num": 7,
+        "text": "فَهُوَ فِى عِيشَةٍۢ رَّاضِيَةٍۢ",
+        "trans": "il sera dans une vie agréable;",
+        "phon": "Fahuwa fee 'ishatir raadiyah"
+      },
+      {
+        "num": 8,
+        "text": "وَأَمَّا مَنْ خَفَّتْ مَوَٰزِينُهُۥ",
+        "trans": "et quant à celui dont la balance sera légère,",
+        "phon": "Wa amma man khaffat mawa zeenuh"
+      },
+      {
+        "num": 9,
+        "text": "فَأُمُّهُۥ هَاوِيَةٌۭ",
+        "trans": "sa mère [destination] est un abîme très profond.",
+        "phon": "Fa-ummuhu haawiyah"
+      },
+      {
+        "num": 10,
+        "text": "وَمَآ أَدْرَىٰكَ مَا هِيَهْ",
+        "trans": "Et qui te dira ce que c'est?",
+        "phon": "Wa maa adraaka maa hiyah"
+      },
+      {
+        "num": 11,
+        "text": "نَارٌ حَامِيَةٌۢ",
+        "trans": "C'est un Feu ardent.",
+        "phon": "Naarun hamiyah"
+      }
+    ]
+  },
+  {
+    "num": 102,
+    "name": "At-Takathur",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ أَلْهَىٰكُمُ ٱلتَّكَاثُرُ",
+        "trans": "La course aux richesses vous distrait,",
+        "phon": "Al haaku mut takathur"
+      },
+      {
+        "num": 2,
+        "text": "حَتَّىٰ زُرْتُمُ ٱلْمَقَابِرَ",
+        "trans": "jusqu'à ce que vous visitiez les tombes.",
+        "phon": "Hatta zurtumul-maqaabir"
+      },
+      {
+        "num": 3,
+        "text": "كَلَّا سَوْفَ تَعْلَمُونَ",
+        "trans": "Mais non! Vous saurez bientôt!",
+        "phon": "Kalla sawfa ta'lamoon"
+      },
+      {
+        "num": 4,
+        "text": "ثُمَّ كَلَّا سَوْفَ تَعْلَمُونَ",
+        "trans": "(Encore une fois)! Vous saurez bientôt!",
+        "phon": "Thumma kalla sawfa ta'lamoon"
+      },
+      {
+        "num": 5,
+        "text": "كَلَّا لَوْ تَعْلَمُونَ عِلْمَ ٱلْيَقِينِ",
+        "trans": "Sûrement! Si vous saviez de science certaine.",
+        "phon": "Kalla law ta'lamoona 'ilmal yaqeen"
+      },
+      {
+        "num": 6,
+        "text": "لَتَرَوُنَّ ٱلْجَحِيمَ",
+        "trans": "Vous verrez, certes, la Fournaise.",
+        "phon": "Latara-wun nal jaheem"
+      },
+      {
+        "num": 7,
+        "text": "ثُمَّ لَتَرَوُنَّهَا عَيْنَ ٱلْيَقِينِ",
+        "trans": "Puis, vous la verrez certes, avec l'œil de la certitude.",
+        "phon": "Thumma latara wunnaha 'ainal yaqeen"
+      },
+      {
+        "num": 8,
+        "text": "ثُمَّ لَتُسْـَٔلُنَّ يَوْمَئِذٍ عَنِ ٱلنَّعِيمِ",
+        "trans": "Puis, assurément, vous serez interrogés, ce jour-là, sur les délices.",
+        "phon": "Thumma latus alunna yauma-izin 'anin na'eem"
+      }
+    ]
+  },
+  {
+    "num": 103,
+    "name": "Al-Asr",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَٱلْعَصْرِ",
+        "trans": "Par le Temps!",
+        "phon": "Wal' asr"
+      },
+      {
+        "num": 2,
+        "text": "إِنَّ ٱلْإِنسَٰنَ لَفِى خُسْرٍ",
+        "trans": "L'homme est certes, en perdition,",
+        "phon": "Innal insaana lafee khusr"
+      },
+      {
+        "num": 3,
+        "text": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّٰلِحَٰتِ وَتَوَاصَوْا۟ بِٱلْحَقِّ وَتَوَاصَوْا۟ بِٱلصَّبْرِ",
+        "trans": "sauf ceux qui croient et accomplissent les bonnes œuvres, s'enjoignent mutuellement la vérité et s'enjoignent mutuellement l'endurance.",
+        "phon": "Il lal lazeena aamanu wa 'amilus saali haati wa tawa saw bil haqqi wa tawa saw bis sabr"
+      }
+    ]
+  },
+  {
+    "num": 104,
+    "name": "Al-Humazah",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَيْلٌۭ لِّكُلِّ هُمَزَةٍۢ لُّمَزَةٍ",
+        "trans": "Malheur à tout calomniateur diffamateur,",
+        "phon": "Wai lul-li kulli hu mazatil-lumaza"
+      },
+      {
+        "num": 2,
+        "text": "ٱلَّذِى جَمَعَ مَالًۭا وَعَدَّدَهُۥ",
+        "trans": "qui amasse une fortune et la compte,",
+        "phon": "Al-lazi jama'a maalaw wa'addadah"
+      },
+      {
+        "num": 3,
+        "text": "يَحْسَبُ أَنَّ مَالَهُۥٓ أَخْلَدَهُۥ",
+        "trans": "pensant que sa fortune l'immortalisera.",
+        "phon": "Yahsabu anna maalahu akhladah"
+      },
+      {
+        "num": 4,
+        "text": "كَلَّا ۖ لَيُنۢبَذَنَّ فِى ٱلْحُطَمَةِ",
+        "trans": "Mais non! Il sera certes, jeté dans la Hutamah.",
+        "phon": "Kalla layum ba zanna fil hutamah"
+      },
+      {
+        "num": 5,
+        "text": "وَمَآ أَدْرَىٰكَ مَا ٱلْحُطَمَةُ",
+        "trans": "Et qui te dira ce qu'est la Hutamah?",
+        "phon": "Wa maa adraaka mal-hutamah"
+      },
+      {
+        "num": 6,
+        "text": "نَارُ ٱللَّهِ ٱلْمُوقَدَةُ",
+        "trans": "Le Feu attisé d'Allah",
+        "phon": "Narul laahil-mooqada"
+      },
+      {
+        "num": 7,
+        "text": "ٱلَّتِى تَطَّلِعُ عَلَى ٱلْأَفْـِٔدَةِ",
+        "trans": "qui monte jusqu'aux cœurs.",
+        "phon": "Al latee tat tali'u 'alalafidah"
+      },
+      {
+        "num": 8,
+        "text": "إِنَّهَا عَلَيْهِم مُّؤْصَدَةٌۭ",
+        "trans": "Il se refermera sur eux,",
+        "phon": "Innaha 'alaihim moosada"
+      },
+      {
+        "num": 9,
+        "text": "فِى عَمَدٍۢ مُّمَدَّدَةٍۭ",
+        "trans": "en colonnes (de flammes) étendues.",
+        "phon": "Fee 'amadim-mu mad dadah"
+      }
+    ]
+  },
+  {
+    "num": 105,
+    "name": "Al-Fil",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَٰبِ ٱلْفِيلِ",
+        "trans": "N'as-tu pas vu comment ton Seigneur a agi envers les gens de l'Eléphant?",
+        "phon": "Alam tara kaifa fa'ala rabbuka bi ashaabil feel"
+      },
+      {
+        "num": 2,
+        "text": "أَلَمْ يَجْعَلْ كَيْدَهُمْ فِى تَضْلِيلٍۢ",
+        "trans": "N'a-t-Il pas rendu leur ruse complètement vaine?",
+        "phon": "Alam yaj'al kai dahum fee tad leel"
+      },
+      {
+        "num": 3,
+        "text": "وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ",
+        "trans": "et envoyé sur eux des oiseaux par volées",
+        "phon": "Wa arsala 'alaihim tairan abaabeel"
+      },
+      {
+        "num": 4,
+        "text": "تَرْمِيهِم بِحِجَارَةٍۢ مِّن سِجِّيلٍۢ",
+        "trans": "qui leur lançaient des pierres d'argile?",
+        "phon": "Tar meehim bi hi jaaratim min sij jeel"
+      },
+      {
+        "num": 5,
+        "text": "فَجَعَلَهُمْ كَعَصْفٍۢ مَّأْكُولٍۭ",
+        "trans": "Et Il les a rendus semblables à une paille mâchée.",
+        "phon": "Faja 'alahum ka'asfim m'akool"
+      }
+    ]
+  },
+  {
+    "num": 106,
+    "name": "Quraysh",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ لِإِيلَٰفِ قُرَيْشٍ",
+        "trans": "A cause du pacte des Coraïch,",
+        "phon": "Li-ilaafi quraish"
+      },
+      {
+        "num": 2,
+        "text": "إِۦلَٰفِهِمْ رِحْلَةَ ٱلشِّتَآءِ وَٱلصَّيْفِ",
+        "trans": "De leur pacte [concernant] les voyages d'hiver et d'été.",
+        "phon": "Elaafihim rihlatash shitaa-i wass saif"
+      },
+      {
+        "num": 3,
+        "text": "فَلْيَعْبُدُوا۟ رَبَّ هَٰذَا ٱلْبَيْتِ",
+        "trans": "Qu'ils adorent donc le Seigneur de cette Maison [la Ka'ba],",
+        "phon": "Fal y'abudu rabba haazal-bait"
+      },
+      {
+        "num": 4,
+        "text": "ٱلَّذِىٓ أَطْعَمَهُم مِّن جُوعٍۢ وَءَامَنَهُم مِّنْ خَوْفٍۭ",
+        "trans": "qui les a nourris contre la faim et rassurés de la crainte!",
+        "phon": "Allazi at'amahum min ju'inw-wa-aamana hum min khawf"
+      }
+    ]
+  },
+  {
+    "num": 107,
+    "name": "Al-Ma'un",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ أَرَءَيْتَ ٱلَّذِى يُكَذِّبُ بِٱلدِّينِ",
+        "trans": "Vois-tu celui qui traite de mensonge la Rétribution?",
+        "phon": "Ara-aital lazee yu kazzibu bid deen"
+      },
+      {
+        "num": 2,
+        "text": "فَذَٰلِكَ ٱلَّذِى يَدُعُّ ٱلْيَتِيمَ",
+        "trans": "C'est bien lui qui repousse l'orphelin,",
+        "phon": "Fa zaalikal lazi yadu'ul-yateem"
+      },
+      {
+        "num": 3,
+        "text": "وَلَا يَحُضُّ عَلَىٰ طَعَامِ ٱلْمِسْكِينِ",
+        "trans": "et qui n'encourage point à nourrir le pauvre.",
+        "phon": "Wa la ya huddu 'alaa ta'amil miskeen"
+      },
+      {
+        "num": 4,
+        "text": "فَوَيْلٌۭ لِّلْمُصَلِّينَ",
+        "trans": "Malheur donc, à ceux qui prient",
+        "phon": "Fa wai lul-lil mu salleen"
+      },
+      {
+        "num": 5,
+        "text": "ٱلَّذِينَ هُمْ عَن صَلَاتِهِمْ سَاهُونَ",
+        "trans": "tout en négligeant (et retardant) leur Salât,",
+        "phon": "Al lazeena hum 'an salaatihim sahoon"
+      },
+      {
+        "num": 6,
+        "text": "ٱلَّذِينَ هُمْ يُرَآءُونَ",
+        "trans": "qui sont pleins d'ostentation,",
+        "phon": "Al lazeena hum yuraa-oon"
+      },
+      {
+        "num": 7,
+        "text": "وَيَمْنَعُونَ ٱلْمَاعُونَ",
+        "trans": "et refusent l'ustensile (à celui qui en a besoin).",
+        "phon": "Wa yamna'oonal ma'oon"
+      }
+    ]
+  },
+  {
+    "num": 108,
+    "name": "Al-Kawthar",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ إِنَّآ أَعْطَيْنَٰكَ ٱلْكَوْثَرَ",
+        "trans": "Nous t'avons certes, accordé l'Abondance.",
+        "phon": "Innaa a'taina kal kauthar"
+      },
+      {
+        "num": 2,
+        "text": "فَصَلِّ لِرَبِّكَ وَٱنْحَرْ",
+        "trans": "Accomplis la Salât pour ton Seigneur et sacrifie.",
+        "phon": "Fa salli li rabbika wanhar"
+      },
+      {
+        "num": 3,
+        "text": "إِنَّ شَانِئَكَ هُوَ ٱلْأَبْتَرُ",
+        "trans": "Celui qui te hait sera certes, sans postérité.",
+        "phon": "Inna shani-aka huwal abtar"
+      }
+    ]
+  },
+  {
+    "num": 109,
+    "name": "Al-Kafirun",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ قُلْ يَٰٓأَيُّهَا ٱلْكَٰفِرُونَ",
+        "trans": "Dis: «O vous les infidèles!",
+        "phon": "Qul yaa-ai yuhal kaafiroon"
+      },
+      {
+        "num": 2,
+        "text": "لَآ أَعْبُدُ مَا تَعْبُدُونَ",
+        "trans": "Je n'adore pas ce que vous adorez.",
+        "phon": "Laa a'budu ma t'abudoon"
+      },
+      {
+        "num": 3,
+        "text": "وَلَآ أَنتُمْ عَٰبِدُونَ مَآ أَعْبُدُ",
+        "trans": "Et vous n'êtes pas adorateurs de ce que j'adore.",
+        "phon": "Wa laa antum 'aabidoona maa a'bud"
+      },
+      {
+        "num": 4,
+        "text": "وَلَآ أَنَا۠ عَابِدٌۭ مَّا عَبَدتُّمْ",
+        "trans": "Je ne suis pas adorateur de ce que vous adorez.",
+        "phon": "Wa laa ana 'abidum maa 'abattum"
+      },
+      {
+        "num": 5,
+        "text": "وَلَآ أَنتُمْ عَٰبِدُونَ مَآ أَعْبُدُ",
+        "trans": "Et vous n'êtes pas adorateurs de ce que j'adore.",
+        "phon": "Wa laa antum 'aabidoona ma a'bud"
+      },
+      {
+        "num": 6,
+        "text": "لَكُمْ دِينُكُمْ وَلِىَ دِينِ",
+        "trans": "A vous votre religion, et à moi ma religion».",
+        "phon": "Lakum deenukum wa liya deen."
+      }
+    ]
+  },
+  {
+    "num": 110,
+    "name": "An-Nasr",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ إِذَا جَآءَ نَصْرُ ٱللَّهِ وَٱلْفَتْحُ",
+        "trans": "Lorsque vient le secours d'Allah ainsi que la victoire,",
+        "phon": "Iza jaa-a nas rullahi walfath"
+      },
+      {
+        "num": 2,
+        "text": "وَرَأَيْتَ ٱلنَّاسَ يَدْخُلُونَ فِى دِينِ ٱللَّهِ أَفْوَاجًۭا",
+        "trans": "et que tu vois les gens entrer en foule dans la religion d'Allah,",
+        "phon": "Wa ra-aitan naasa yadkhuloona fee deenil laahi afwajah"
+      },
+      {
+        "num": 3,
+        "text": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَٱسْتَغْفِرْهُ ۚ إِنَّهُۥ كَانَ تَوَّابًۢا",
+        "trans": "alors, par la louange, célèbre la gloire de ton Seigneur et implore Son pardon. Car c'est Lui le grand Accueillant au repentir.",
+        "phon": "Fa sab bih bihamdi rabbika was taghfir, innahu kaana tawwaaba"
+      }
+    ]
+  },
+  {
+    "num": 111,
+    "name": "Al-Masad",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ تَبَّتْ يَدَآ أَبِى لَهَبٍۢ وَتَبَّ",
+        "trans": "Que périssent les deux mains d'Abû-Lahab et que lui-même périsse.",
+        "phon": "Tab bat yadaa abee Lahabinw-wa tabb"
+      },
+      {
+        "num": 2,
+        "text": "مَآ أَغْنَىٰ عَنْهُ مَالُهُۥ وَمَا كَسَبَ",
+        "trans": "Sa fortune ne lui sert à rien, ni ce qu'il a acquis.",
+        "phon": "Maa aghna 'anhu maaluhu wa ma kasab"
+      },
+      {
+        "num": 3,
+        "text": "سَيَصْلَىٰ نَارًۭا ذَاتَ لَهَبٍۢ",
+        "trans": "Il sera brûlé dans un Feu plein de flammes,",
+        "phon": "Sa yas laa naran zaata lahab"
+      },
+      {
+        "num": 4,
+        "text": "وَٱمْرَأَتُهُۥ حَمَّالَةَ ٱلْحَطَبِ",
+        "trans": "de même sa femme, la porteuse de bois,",
+        "phon": "Wam ra-atuh hamma latal-hatab"
+      },
+      {
+        "num": 5,
+        "text": "فِى جِيدِهَا حَبْلٌۭ مِّن مَّسَدٍۭ",
+        "trans": "à son cou, une corde de fibres.",
+        "phon": "Fee jeediha hab lum mim-masad"
+      }
+    ]
+  },
+  {
+    "num": 112,
+    "name": "Al-Ikhlas",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ قُلْ هُوَ ٱللَّهُ أَحَدٌ",
+        "trans": "Dis: «Il est Allah, Unique.",
+        "phon": "Qul huwal laahu ahad"
+      },
+      {
+        "num": 2,
+        "text": "ٱللَّهُ ٱلصَّمَدُ",
+        "trans": "Allah, Le Seul à être imploré pour ce que nous désirons.",
+        "phon": "Allah hus-samad"
+      },
+      {
+        "num": 3,
+        "text": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+        "trans": "Il n'a jamais engendré, n'a pas été engendré non plus.",
+        "phon": "Lam yalid wa lam yoolad"
+      },
+      {
+        "num": 4,
+        "text": "وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ",
+        "trans": "Et nul n'est égal à Lui».",
+        "phon": "Wa lam yakul-lahu kufuwan ahad"
+      }
+    ]
+  },
+  {
+    "num": 113,
+    "name": "Al-Falaq",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ",
+        "trans": "Dis: «Je cherche protection auprès du Seigneur de l'aube naissante,",
+        "phon": "Qul a'uzoo bi rabbil-falaq"
+      },
+      {
+        "num": 2,
+        "text": "مِن شَرِّ مَا خَلَقَ",
+        "trans": "contre le mal des êtres qu'Il a créés,",
+        "phon": "Min sharri ma khalaq"
+      },
+      {
+        "num": 3,
+        "text": "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ",
+        "trans": "contre le mal de l'obscurité quand elle s'approfondit,",
+        "phon": "Wa min sharri ghasiqin iza waqab"
+      },
+      {
+        "num": 4,
+        "text": "وَمِن شَرِّ ٱلنَّفَّٰثَٰتِ فِى ٱلْعُقَدِ",
+        "trans": "contre le mal de celles qui soufflent [les sorcières] sur les nœuds,",
+        "phon": "Wa min sharrin-naffaa-thaati fil 'uqad"
+      },
+      {
+        "num": 5,
+        "text": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+        "trans": "et contre le mal de l'envieux quand il envie».",
+        "phon": "Wa min shar ri haasidin iza hasad"
+      }
+    ]
+  },
+  {
+    "num": 114,
+    "name": "An-Nas",
+    "ayahs": [
+      {
+        "num": 1,
+        "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ",
+        "trans": "Dis: «Je cherche protection auprès du Seigneur des hommes.",
+        "phon": "Qul a'uzu birabbin naas"
+      },
+      {
+        "num": 2,
+        "text": "مَلِكِ ٱلنَّاسِ",
+        "trans": "Le Souverain des hommes,",
+        "phon": "Malikin naas"
+      },
+      {
+        "num": 3,
+        "text": "إِلَٰهِ ٱلنَّاسِ",
+        "trans": "Dieu des hommes,",
+        "phon": "Ilaahin naas"
+      },
+      {
+        "num": 4,
+        "text": "مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ",
+        "trans": "contre le mal du mauvais conseiller, furtif,",
+        "phon": "Min sharril was waasil khannaas"
+      },
+      {
+        "num": 5,
+        "text": "ٱلَّذِى يُوَسْوِسُ فِى صُدُورِ ٱلنَّاسِ",
+        "trans": "qui souffle le mal dans les poitrines des hommes,",
+        "phon": "Al lazee yuwas wisu fee sudoorin naas"
+      },
+      {
+        "num": 6,
+        "text": "مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ",
+        "trans": "qu'il (le conseiller) soit un djinn, ou un être humain».",
+        "phon": "Minal jinnati wan naas"
+      }
+    ]
+  }
+]

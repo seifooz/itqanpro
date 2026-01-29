@@ -218,7 +218,7 @@
 
         // Check if already logged in
         if (localStorage.getItem('itqan_logged_in') === 'true') {
-            window.location.href = 'index.html';
+            window.location.href = 'home.html';
         }
 
         function handleLogin(event) {
@@ -231,7 +231,7 @@
             if (VALID_PASSWORDS.includes(password)) {
                 // Success! Store in localStorage and redirect
                 localStorage.setItem('itqan_logged_in', 'true');
-                window.location.href = 'index.html';
+                window.location.href = 'home.html';
             } else {
                 // Wrong password
                 passwordInput.classList.add('error');
