@@ -613,7 +613,17 @@ function playAudio(url, start, end, id) {
     audioPlayer.src = audioUrl;
     audioPlayer.onerror = (e) => {
         const err = audioPlayer.error;
-        console.error("Audio Error:", err, "URL:", audioPlayer.src);
+        const currentSrc = audioPlayer.src;
+        console.error("Audio Error:", err, "URL:", currentSrc);
+
+        // FALLBACK: If MP3 fails, try M4A
+        if (currentSrc.endsWith('.mp3')) {
+            console.log("MP3 failed, trying M4A fallback...");
+            audioPlayer.src = currentSrc.replace('.mp3', '.m4a');
+            audioPlayer.play().catch(err => console.log("Auto-play fallback error", err));
+            return;
+        }
+
         // Code 4 = MEDIA_ERR_SRC_NOT_SUPPORTED (often due to file:// blocking or missing file)
         if (err && err.code === 4) {
             if (window.location.protocol === 'file:') {
