@@ -7,142 +7,129 @@
     <title>Itqān Pro - Accueil</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Amiri:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Scheherazade+New:wght@400;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
-        :root {
-            --primary: #0F52BA;
-            --primary-dark: #0a3d8f;
-            --secondary: #D4AF37;
-            --tajwid-color: #00b894;
-            --hafiz-color: #0984e3;
-            --bg: #0a1628;
-            --card: #ffffff;
-            --text: #2c3e50;
-            --text-light: #7f8c8d;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Inter', system-ui, sans-serif;
-            background: linear-gradient(135deg, #0a1628 0%, #1a237e 50%, #0d47a1 100%);
+        /* Home Page Specific Styles */
+        .home-shell {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            padding: 30px 20px;
             position: relative;
-            overflow: hidden;
         }
 
-        /* Animated background */
-        body::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.03) 0%, transparent 50%);
-            animation: rotate 30s linear infinite;
-        }
-
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        .container {
-            position: relative;
-            z-index: 10;
+        .home-hero-glass {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
+            padding: 50px 40px;
             text-align: center;
+            max-width: 700px;
             width: 100%;
-            max-width: 800px;
-        }
-
-        .logo {
-            margin-bottom: 20px;
-        }
-
-        .logo h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: #fff;
-            letter-spacing: -2px;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .logo h1 span {
-            color: var(--secondary);
-        }
-
-        .logo p {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 1.1rem;
-            margin-top: 8px;
-            font-weight: 500;
-        }
-
-        .welcome-text {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.95rem;
             margin-bottom: 40px;
+            box-shadow:
+                0 25px 50px -12px rgba(0, 0, 0, 0.5),
+                inset 0 1px 1px rgba(255, 255, 255, 0.1);
+            animation: floatIn 0.6s ease-out;
         }
 
-        .cards-container {
+        .home-brand {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .home-brand .brand-itqan {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: -1px;
+        }
+
+        .home-brand .brand-pro {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .home-subtitle {
+            font-family: 'Scheherazade New', serif;
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 10px;
+        }
+
+        .home-tagline {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 0;
+        }
+
+        .modules-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 24px;
             width: 100%;
+            max-width: 800px;
+            animation: floatIn 0.8s ease-out;
         }
 
-        .card {
-            background: rgba(255, 255, 255, 0.95);
+        .module-glass-card {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 20px;
-            padding: 40px 30px;
+            padding: 35px 25px;
+            text-align: center;
+            text-decoration: none;
             cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
-            text-decoration: none;
-            display: block;
         }
 
-        .card::before {
+        .module-glass-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 5px;
+            right: 0;
+            height: 4px;
+            background: var(--gradient);
         }
 
-        .card.tajwid::before {
-            background: linear-gradient(90deg, var(--tajwid-color), #55efc4);
+        .module-glass-card.tajwid {
+            --gradient: linear-gradient(90deg, #00b894, #55efc4);
+            --accent: #00b894;
         }
 
-        .card.hafiz::before {
-            background: linear-gradient(90deg, var(--hafiz-color), #74b9ff);
+        .module-glass-card.hafiz {
+            --gradient: linear-gradient(90deg, #0984e3, #74b9ff);
+            --accent: #0984e3;
         }
 
-        .card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+        .module-glass-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
         }
 
-        .card-icon {
+        .module-icon {
             width: 80px;
             height: 80px;
             border-radius: 20px;
@@ -151,112 +138,159 @@
             justify-content: center;
             margin: 0 auto 20px;
             font-size: 2.5rem;
+            background: var(--gradient);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
-        .card.tajwid .card-icon {
-            background: linear-gradient(135deg, var(--tajwid-color), #55efc4);
-        }
-
-        .card.hafiz .card-icon {
-            background: linear-gradient(135deg, var(--hafiz-color), #74b9ff);
-        }
-
-        .card-title {
-            font-size: 1.6rem;
+        .module-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
             font-weight: 700;
-            color: var(--text);
-            margin-bottom: 10px;
+            color: #ffffff;
+            margin-bottom: 5px;
         }
 
-        .card-title span {
-            font-family: 'Amiri', serif;
-            font-size: 1.3rem;
-            opacity: 0.7;
-            display: block;
-            margin-top: 5px;
+        .module-arabic {
+            font-family: 'Scheherazade New', serif;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 15px;
         }
 
-        .card-desc {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            line-height: 1.5;
+        .module-desc {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
             margin-bottom: 20px;
         }
 
-        .card-btn {
+        .module-btn {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 12px 24px;
-            border-radius: 30px;
+            padding: 12px 28px;
+            border-radius: 50px;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: white;
-            transition: all 0.2s;
+            background: var(--gradient);
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .card.tajwid .card-btn {
-            background: var(--tajwid-color);
-        }
-
-        .card.hafiz .card-btn {
-            background: var(--hafiz-color);
-        }
-
-        .card:hover .card-btn {
+        .module-glass-card:hover .module-btn {
             transform: translateX(5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
 
-        .logout-btn {
+        .logout-btn-glass {
             position: fixed;
             top: 20px;
             right: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             color: rgba(255, 255, 255, 0.7);
             padding: 10px 20px;
-            border-radius: 8px;
+            border-radius: 10px;
             font-size: 0.85rem;
             cursor: pointer;
-            font-family: inherit;
-            transition: all 0.2s;
+            font-family: 'Outfit', sans-serif;
+            transition: all 0.3s;
             z-index: 100;
+            backdrop-filter: blur(10px);
         }
 
-        .logout-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
+        .logout-btn-glass:hover {
+            background: rgba(255, 255, 255, 0.15);
             color: white;
+            border-color: rgba(255, 255, 255, 0.3);
         }
 
-        .footer {
+        .home-footer {
             margin-top: 50px;
             color: rgba(255, 255, 255, 0.4);
-            font-size: 0.8rem;
+            font-size: 0.85rem;
+            text-align: center;
         }
 
-        @media (max-width: 600px) {
-            .logo h1 {
-                font-size: 2.5rem;
+        /* Responsive */
+        @media (max-width: 700px) {
+            .modules-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
             }
 
-            .cards-container {
-                gap: 16px;
+            .home-hero-glass {
+                padding: 35px 25px;
             }
 
-            .card {
+            .home-brand .brand-itqan,
+            .home-brand .brand-pro {
+                font-size: 2.2rem;
+            }
+
+            .home-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .module-glass-card {
                 padding: 30px 20px;
             }
 
-            .card-icon {
-                width: 60px;
-                height: 60px;
+            .module-icon {
+                width: 65px;
+                height: 65px;
+                font-size: 2rem;
+            }
+
+            .module-title {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .home-shell {
+                padding: 20px 15px;
+            }
+
+            .home-brand .brand-itqan,
+            .home-brand .brand-pro {
                 font-size: 1.8rem;
+            }
+
+            .module-desc {
+                font-size: 0.85rem;
+            }
+
+            .logout-btn-glass {
+                padding: 8px 15px;
+                font-size: 0.8rem;
+            }
+        }
+
+        @keyframes floatIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
 </head>
 
 <body>
+    <!-- Cosmic Background -->
+    <div class="iqan-global-bg">
+        <div class="iqan-orb orb-gold"></div>
+        <div class="iqan-orb orb-blue"></div>
+        <div class="iqan-shape shape-hex"></div>
+        <div class="iqan-shape shape-square"></div>
+        <div class="iqan-shape shape-circle"></div>
+    </div>
 
     <!-- Auth Check -->
     <script>
@@ -265,37 +299,43 @@
         }
     </script>
 
-    <button class="logout-btn" onclick="logout()">Déconnexion</button>
+    <button class="logout-btn-glass" onclick="logout()">Déconnexion</button>
 
-    <div class="container">
-        <div class="logo">
-            <h1>Itqān<span>Pro</span></h1>
-            <p>Excellence dans la Récitation du Coran</p>
+    <div class="home-shell">
+        <!-- Hero Glass Card -->
+        <div class="home-hero-glass">
+            <div class="home-brand">
+                <span class="brand-itqan">Itqān</span>
+                <span class="brand-pro">Pro</span>
+            </div>
+            <p class="home-subtitle">إتقان القرآن الكريم</p>
+            <p class="home-tagline">Excellence dans la Récitation et la Mémorisation du Coran</p>
         </div>
 
-        <p class="welcome-text">Choisissez votre parcours d'apprentissage</p>
-
-        <div class="cards-container">
+        <!-- Module Cards -->
+        <div class="modules-container">
             <!-- TAJWID Card -->
-            <a href="tajwid.html" class="card tajwid">
-                <div class="card-icon">📖</div>
-                <h2 class="card-title">Itqān Tajwid<span>إتقان التجويد</span></h2>
-                <p class="card-desc">Maîtrisez les règles de récitation du Coran avec des cours interactifs et des
+            <a href="tajwid.html" class="module-glass-card tajwid">
+                <div class="module-icon">📖</div>
+                <h2 class="module-title">Itqān Tajwid</h2>
+                <p class="module-arabic">إتقان التجويد</p>
+                <p class="module-desc">Maîtrisez les règles de récitation du Coran avec des cours interactifs et des
                     exercices pratiques.</p>
-                <div class="card-btn">Commencer ➜</div>
+                <div class="module-btn">Commencer <span>➜</span></div>
             </a>
 
             <!-- HAFIZ Card -->
-            <a href="hifd.html" class="card hafiz">
-                <div class="card-icon">📚</div>
-                <h2 class="card-title">Itqān Hafiz<span>إتقان الحفظ</span></h2>
-                <p class="card-desc">Mémorisez le Coran efficacement avec un cahier de suivi gamifié et des outils de
+            <a href="hifd.html" class="module-glass-card hafiz">
+                <div class="module-icon">📚</div>
+                <h2 class="module-title">Itqān Hafiz</h2>
+                <p class="module-arabic">إتقان الحفظ</p>
+                <p class="module-desc">Mémorisez le Coran efficacement avec un cahier de suivi gamifié et des outils de
                     révision.</p>
-                <div class="card-btn">Commencer ➜</div>
+                <div class="module-btn">Commencer <span>➜</span></div>
             </a>
         </div>
 
-        <p class="footer">© 2024 Itqān Pro. Tous droits réservés.</p>
+        <p class="home-footer">© 2024 Itqān Pro • Excellence Coranique</p>
     </div>
 
     <script>

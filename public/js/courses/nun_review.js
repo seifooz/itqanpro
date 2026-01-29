@@ -8,12 +8,56 @@ const NUN_REVIEW_DATA = {
             html: `
             <div class="intro-box">
                 <div class="intro-icon">💎</div>
-                <h3>Grand Test Final</h3>
+                <h3>Grand Test Final : Noun Sakina</h3>
                 <p>Identifiez : Izhar, Idgham (Ghunna/Bila-Ghunna), Iqlab, et Ikhfaa.</p>
-                <div class="review-features">
-                    <div class="rf-item"><span class="rf-icon">👁️</span><span>Analyse Visuelle</span></div>
-                    <div class="rf-item"><span class="rf-icon">👆</span><span>Interactive</span></div>
-                    <div class="rf-item"><span class="rf-icon">✅</span><span>Correction Immédiate</span></div>
+            </div>`
+        },
+        {
+            type: "lesson",
+            prof: "Rappel Visuel.<br>Voici les 4 règles en un coup d'œil.",
+            html: `
+            <div class="concept-card">
+                <h3>Carte Mémoire : Noun Sakina & Tanween</h3>
+                
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; text-align:left;">
+                    <div style="background:#e8f5e9; padding:10px; border-radius:8px; border-top:3px solid #4caf50;">
+                        <div style="color:#2e7d32; font-weight:bold;">1. IZHAR (Clarté)</div>
+                        <div style="font-size:0.8rem;">Lettres de Gorge (ء هـ ع ح غ خ)</div>
+                    </div>
+                    <div style="background:#e3f2fd; padding:10px; border-radius:8px; border-top:3px solid #2196f3;">
+                        <div style="color:#1565c0; font-weight:bold;">2. IDGHAM (Fusion)</div>
+                        <div style="font-size:0.8rem;">Y A R M L W (يَرْمَلُون)</div>
+                        <div style="font-size:0.75rem; color:#666;">Ghunna: YNM W | Bila: L R</div>
+                    </div>
+                    <div style="background:#fff3e0; padding:10px; border-radius:8px; border-top:3px solid #ff9800;">
+                        <div style="color:#e65100; font-weight:bold;">3. IQLAB (Change)</div>
+                        <div style="font-size:0.8rem;">Lettre Ba (ب)</div>
+                        <div style="font-size:0.75rem; color:#666;">Change N en M</div>
+                    </div>
+                    <div style="background:#fce4ec; padding:10px; border-radius:8px; border-top:3px solid #e91e63;">
+                        <div style="color:#c2185b; font-weight:bold;">4. IKHFAA (Cache)</div>
+                        <div style="font-size:0.8rem;">Reste (15 lettres)</div>
+                    </div>
+                </div>
+            </div>`
+        },
+        {
+            type: "lesson",
+            prof: "L'Algorithme de Décision.<br>Suivez ce chemin mental.",
+            html: `
+            <div class="concept-card">
+                <h3>Algorithme Mental</h3>
+                <div class="flow-chart">
+                    <div class="flow-step">1. Je vois Noun/Tanween</div>
+                    <div class="flow-arrow">▼</div>
+                    <div class="flow-step">2. Je regarde la LETTRE APRÈS</div>
+                    <div class="flow-arrow">▼</div>
+                    <div style="display:flex; flex-direction:column; gap:8px;">
+                        <div class="flow-step" style="border-left:4px solid #4caf50;">Gorge ? ➡ <strong>IZHAR</strong></div>
+                        <div class="flow-step" style="border-left:4px solid #2196f3;">YARMLW ? ➡ <strong>IDGHAM</strong></div>
+                        <div class="flow-step" style="border-left:4px solid #ff9800;">Ba (ب) ? ➡ <strong>IQLAB</strong></div>
+                        <div class="flow-step" style="border-left:4px solid #e91e63;">Autre ? ➡ <strong>IKHFAA</strong></div>
+                    </div>
                 </div>
             </div>`
         },

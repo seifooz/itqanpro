@@ -24,21 +24,21 @@ const IZHAR_DATA = {
             html: `
             <div class="concept-card">
                 <h3>Champ d'Application</h3>
-                <p style="font-size:1rem; color:#2c3e50; margin-bottom:20px;">
+                <p style="font-size:1rem; color:#e0e0e0; margin-bottom:20px;">
                     La règle de l'Izhar s'applique spécifiquement à deux choses :
                 </p>
                 
                 <div style="display:flex; justify-content:center; gap:20px; text-align:center;">
                     <div style="background:#e3f2fd; padding:15px 25px; border-radius:10px; border:1px solid #bbdefb;">
                         <div class="ar-big" style="color:#2196f3;">نْ</div>
-                        <div style="font-weight:bold; font-size:0.9rem; margin-top:5px;">Le Noun Sakina</div>
+                        <div style="font-weight:bold; font-size:0.9rem; margin-top:5px; color:#1565C0;">Le Noun Sakina</div>
                     </div>
                     <div style="background:#fff3e0; padding:15px 25px; border-radius:10px; border:1px solid #ffe0b2;">
                         <div class="ar-big" style="color:#ff9800;">ــً</div>
-                        <div style="font-weight:bold; font-size:0.9rem; margin-top:5px;">Le Tanween</div>
+                        <div style="font-weight:bold; font-size:0.9rem; margin-top:5px; color:#EF6C00;">Le Tanween</div>
                     </div>
                 </div>
-                <div style="margin-top:20px; font-size:0.9rem; color:#555;">
+                <div style="margin-top:20px; font-size:0.9rem; color:#e0e0e0;">
                     À chaque fois que vous rencontrez l'un de ces deux signes, vous devez vérifier s'il faut appliquer l'Izhar.
                 </div>
             </div>`
@@ -54,8 +54,8 @@ const IZHAR_DATA = {
                 <!-- SENS LINGUISTIQUE -->
                 <div style="margin-bottom:25px;">
                     <h4 style="color:#6c5ce7; margin-bottom:10px;">1. Sens Linguistique (La Langue)</h4>
-                    <div style="font-size:1.1rem; font-weight:bold; color:#2d3436; margin-bottom:5px;">"Al-Bayan" (البيان)</div>
-                    <p style="font-size:0.95rem; color:#666; margin:0;">
+                    <div style="font-size:1.1rem; font-weight:bold; color:#7C4DFF; margin-bottom:5px;">"Al-Bayan" (البيان)</div>
+                    <p style="font-size:0.95rem; color:#e0e0e0; margin:0;">
                         Cela signifie : <strong>La Clarté</strong> (quelque chose de clair et d'évident).
                     </p>
                 </div>
@@ -63,10 +63,10 @@ const IZHAR_DATA = {
                 <!-- SENS TECHNIQUE -->
                 <div style="background:#f9fbe7; padding:20px; border-radius:12px; border-left:5px solid #8bc34a; text-align:left;">
                     <h4 style="color:#2e7d32; margin-top:0; margin-bottom:10px;">2. Sens Technique (Tajweed)</h4>
-                    <p style="font-size:1.1rem; line-height:1.6; color:#2c3e50; font-weight:600;">
+                    <p style="font-size:1.1rem; line-height:1.6; color:#2E7D32; font-weight:600;">
                         "C'est sortir la lettre de son Makhraj sans faire de Ghunna."
                     </p>
-                    <p style="font-size:0.85rem; color:#555; margin-top:10px; font-style:italic;">
+                    <p style="font-size:0.85rem; color:#4E7D32; margin-top:10px; font-style:italic;">
                         Note : On prononce le 'N' distinctement, sans le faire vibrer dans le nez plus que nécessaire.
                     </p>
                 </div>
@@ -77,7 +77,7 @@ const IZHAR_DATA = {
                     
                     <!-- Ex 1 : Noun Sakina -->
                     <div style="background:#fff; border:1px solid #eee; padding:15px; border-radius:10px;">
-                        <div style="font-size:0.9rem; color:#666; margin-bottom:5px;">Exemple 1 : Noun Sakina (نْ)</div>
+                        <div style="font-size:0.9rem; color:#2d3436; font-weight:600; margin-bottom:5px;">Exemple 1 : Noun Sakina (نْ)</div>
                         <div class="ar-med" style="font-size:1.6rem; margin-bottom:10px;">مَنْ ءَامَنَ</div>
                         
                         <div style="display:flex; gap:10px;">
@@ -96,7 +96,7 @@ const IZHAR_DATA = {
 
                     <!-- Ex 2 : Tanween -->
                     <div style="background:#fff; border:1px solid #eee; padding:15px; border-radius:10px;">
-                        <div style="font-size:0.9rem; color:#666; margin-bottom:5px;">Exemple 2 : Tanween (ــً)</div>
+                        <div style="font-size:0.9rem; color:#2d3436; font-weight:600; margin-bottom:5px;">Exemple 2 : Tanween (ــً)</div>
                         <div class="ar-med" style="font-size:1.6rem; margin-bottom:10px;">عَلِيمٌ حَكِيمٌ</div>
                         
                         <div style="display:flex; gap:10px;">
@@ -115,7 +115,7 @@ const IZHAR_DATA = {
 
                     <!-- Ex 3 : Dans 1 seul mot (Spécial) -->
                     <div style="background:#fff; border:1px solid #eee; padding:15px; border-radius:10px;">
-                        <div style="font-size:0.9rem; color:#666; margin-bottom:5px;">Exemple 3 : Dans 1 seul mot (Exceptionnel)</div>
+                        <div style="font-size:0.9rem; color:#2d3436; font-weight:600; margin-bottom:5px;">Exemple 3 : Dans 1 seul mot (Exceptionnel)</div>
                         <div class="ar-med" style="font-size:1.6rem; margin-bottom:10px;">أَنْعَمْتَ</div>
                         
                         <div style="display:flex; gap:10px;">
@@ -142,13 +142,13 @@ const IZHAR_DATA = {
             html: `<div class="concept-card">
                 <div style="background:#ffebee; padding:15px; border-radius:10px; border-left:5px solid #d63031; margin-bottom:20px;">
                     <h4 style="margin:0; color:#d63031;">La Règle :</h4>
-                    <p style="font-weight:bold; font-size:1.1rem; margin-top:5px;">
+                    <p style="font-weight:bold; font-size:1.1rem; margin-top:5px; color:#2d3436;">
                         Si le Noun Sakina ou le Tanween est suivi d'une<br>
                         <span style="color:#d63031; text-decoration:underline;">Lettre de Gorge</span>.
                     </p>
                 </div>
                 
-                <div style="color:#555; font-size:0.9rem; margin-bottom:10px;">Il y a 6 Lettres de Gorge (Al-Halq) :</div>
+                <div style="color:#e0e0e0; font-size:0.9rem; margin-bottom:10px; font-weight:600;">Il y a 6 Lettres de Gorge (Al-Halq) :</div>
                 <div class="letters-grid">
                     <div class="l-card"><div class="l-ar">ء</div></div>
                     <div class="l-card"><div class="l-ar">هـ</div></div>

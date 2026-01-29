@@ -24,6 +24,9 @@ const MAD_ARID_DATA = {
                     <div style="font-size:1.4rem; color:#006064; font-family: 'Scheherazade New', serif; direction:rtl;">
                         ٱلْحَمْدُ لِلَّهِ رَبِّ <span style="color:#2e7d32;">ٱلْعَٰلَمِينَ</span> ➡️ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
                     </div>
+                     <button class="btn-audio btn-listen" id="play-lid-cont" onclick="playAudio('mad_arid_intro_lid_continue', 0, 100, 'intro-lid-cont')" style="margin-top:10px; width:100%; justify-content:center; background:#2e7d32; color:white;">
+                        <span>▶️</span> Écouter la Liaison
+                    </button>
                     <div style="font-size:0.85rem; color:#555; margin-top:5px; font-style:italic;">Je ne m'arrête pas, je lie les deux versets.</div>
                 </div>
 
@@ -119,15 +122,43 @@ const MAD_ARID_DATA = {
             type: "workshop",
             prof: "Faites bien résonner la lettre de prolongation avant de couper le son.",
             examples: [
-                { type: "Arrêt 4 Temps", ar: "ٱلْعَٰلَمِينَ", url: "mad_arid_quiz_theory_1", start: 4, end: 6, id: "arid1" },
-                { type: "Arrêt 4 Temps", ar: "ٱلدِّينِ", url: "mad_arid_arr_t_4_temps_2", start: 3, end: 5, id: "arid2" },
-                { type: "Arrêt 4 Temps", ar: "نَسْتَعِينُ", url: "mad_arid_arr_t_4_temps_3", start: 6, end: 8, id: "arid3" }
+                {
+                    type: "Arrêt 4 Temps",
+                    verse: "ٱلْحَمْدُ لِلَّهِ رَبِّ",
+                    ar: "ٱلْعَٰلَمِينَ",
+                    url: "mad_arid_quiz_theory_1",
+                    start: 4,
+                    end: 6,
+                    id: "arid1",
+                    exp: "Il y a une Fatha sur le Noun (Na), mais si on s'arrête, on met un Sukun et on allonge le Ya : Al-Alamiin."
+                },
+                {
+                    type: "Arrêt 4 Temps",
+                    verse: "مَٰلِكِ يَوْمِ",
+                    ar: "ٱلدِّينِ",
+                    url: "mad_arid_arr_t_4_temps_2",
+                    start: 3,
+                    end: 5,
+                    id: "arid2",
+                    exp: "La Kasra sous le Noun (Ni) devient un Sukun à l'arrêt. Le Ya s'allonge 2, 4 ou 6 temps."
+                },
+                {
+                    type: "Arrêt 4 Temps",
+                    verse: "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ",
+                    ar: "نَسْتَعِينُ",
+                    url: "mad_arid_arr_t_4_temps_3",
+                    start: 6,
+                    end: 8,
+                    id: "arid3",
+                    exp: "On s'arrête sur le Noun avec un Sukun, donc le Ya précédent devient un Mad Arid."
+                }
             ]
         },
         {
             type: "immersion",
             prof: "🔍 <strong>Immersion Coranique</strong><br>Sourate Al-Fatihah (1). Chaque arrêt crée un Mad Arid.",
             instruction: "Cliquez sur les derniers mots pour valider le Mad.",
+            targetName: "un Mad Arid",
             surah: 1,
             words: [
                 { t: "بِسْمِ", ok: false }, { t: "ٱللَّهِ", ok: false }, { t: "ٱلرَّحْمَٰنِ", ok: false }, { t: "ٱلرَّحِيمِ", ok: true, reason: "Mad Arid : Arrêt sur la fin du verset (Ar-Rahiim)." }, { t: "١", endVerse: true },

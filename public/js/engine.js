@@ -25,6 +25,8 @@ let currentCourse = null;
 let idx = 0;
 let hasAnswered = false;
 let currentAudioId = null;
+let activeRecorders = {};
+let recordingBlobs = {};
 let immersionSelection = [];
 let immersionChoices = {};
 let currentImmersionWordIndex = null;
@@ -72,7 +74,9 @@ function getAllCourses() {
         'mim_idgham': typeof MIM_IDGHAM_DATA !== 'undefined' ? MIM_IDGHAM_DATA : null,
         'mim_ikhfaa': typeof MIM_IKHFAA_DATA !== 'undefined' ? MIM_IKHFAA_DATA : null,
         'mim_izhar': typeof MIM_IZHAR_DATA !== 'undefined' ? MIM_IZHAR_DATA : null,
-        'nun_review': typeof NUN_REVIEW_DATA !== 'undefined' ? NUN_REVIEW_DATA : null
+        'nun_review': typeof NUN_REVIEW_DATA !== 'undefined' ? NUN_REVIEW_DATA : null,
+        'mim_review': typeof MIM_REVIEW_DATA !== 'undefined' ? MIM_REVIEW_DATA : null,
+        'ra_lam_review': typeof RA_LAM_REVIEW_DATA !== 'undefined' ? RA_LAM_REVIEW_DATA : null
     };
 }
 
@@ -81,7 +85,7 @@ function getCourseMeta(id, title) {
     const defaultMeta = {
         tag: "Module",
         iconColor: "icon-yellow",
-        icon: "📖",
+        icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>`,
         letter: "A"
     };
 
@@ -91,41 +95,87 @@ function getCourseMeta(id, title) {
 
     if (id === 'nun_sakina_intro') {
         meta.tag = "Essentiel";
-        meta.iconColor = "icon-yellow";
-        meta.icon = "🚪";
-        meta.letter = "م"; // Intro
+        meta.iconColor = "icon-gold";
+        // Arabic Noon letter stylized
+        meta.icon = `<svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="url(#goldGrad)" opacity="0.2"/><text x="12" y="17" font-family="'Scheherazade New', serif" font-size="16" fill="currentColor" text-anchor="middle">ن</text><defs><linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#FFD700"/><stop offset="100%" style="stop-color:#FFA500"/></linearGradient></defs></svg>`;
+        meta.letter = "ن";
     }
     else if (id === 'izhar') {
         meta.tag = "6 Lettres";
         meta.iconColor = "icon-green";
-        meta.icon = "🎤";
+        // Eye with clarity symbol
+        meta.icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5C5.5 5 2 12 2 12s3.5 7 10 7 10-7 10-7-3.5-7-10-7z"/><circle cx="12" cy="12" r="3" fill="currentColor"/><path d="M12 2v2M12 20v2" stroke-dasharray="2 2"/></svg>`;
         meta.letter = "ظ";
     }
     else if (id.includes('idgham')) {
-        meta.tag = "4 Lettres";
+        meta.tag = id.includes('bila') ? "2 Lettres" : "4 Lettres";
         meta.iconColor = "icon-blue";
-        meta.icon = "⚡";
+        // Merge/Fusion arrows
+        meta.icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 4l5 5-5 5"/><path d="M17 4l-5 5 5 5"/><circle cx="12" cy="17" r="3" fill="currentColor" opacity="0.3"/></svg>`;
         meta.letter = "غ";
     }
     else if (id.includes('iqlab')) {
         meta.tag = "1 Lettre";
         meta.iconColor = "icon-purple";
-        meta.icon = "🔄";
+        // Transformation arrows
+        meta.icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h16"/><path d="M8 8l-4 4 4 4"/><path d="M16 8l4 4-4 4"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>`;
         meta.letter = "ب";
     }
     else if (id.includes('ikhfa')) {
         meta.tag = "15 Lettres";
         meta.iconColor = "icon-purple";
-        meta.icon = "🌫️";
+        // Hidden/veiled symbol
+        meta.icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h18" stroke-dasharray="3 3"/><circle cx="12" cy="12" r="6" opacity="0.3" fill="currentColor"/><circle cx="12" cy="12" r="3"/></svg>`;
         meta.letter = "خ";
     }
     else if (id.includes('mad')) {
         meta.tag = "Prolongation";
+        meta.iconColor = "icon-gold";
+        // Wave/elongation
+        meta.icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/><path d="M2 16c2-3 4-3 6 0s4 3 6 0 4-3 6 0" opacity="0.5"/></svg>`;
+        meta.letter = "ا";
+        if (id === 'mad_intro') {
+            meta.tag = "Concept";
+            meta.icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>`;
+        }
+        if (id.includes('review')) {
+            meta.tag = "Bilan";
+            meta.icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>`;
+        }
+    }
+    else if (id.includes('qalqala')) {
+        meta.tag = "5 Lettres";
         meta.iconColor = "icon-yellow";
-        meta.icon = "🌊";
+        // Vibration/echo
+        meta.icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="6" opacity="0.5"/><circle cx="12" cy="12" r="9" opacity="0.25"/></svg>`;
+        meta.letter = "ق";
+    }
+    else if (id.includes('ghunna')) {
+        meta.tag = "Nasalisation";
+        meta.iconColor = "icon-blue";
+        // Sound wave
+        meta.icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h2c1 -4 2 4 3 0s2 -4 3 0 2 4 3 0 2 -4 3 0h2"/><path d="M12 6v2M12 16v2" opacity="0.5"/></svg>`;
+        meta.letter = "غ";
+    }
+    else if (id.includes('ra') || id.includes('lam')) {
+        meta.tag = "Lettre Spéciale";
+        meta.iconColor = "icon-green";
+        // Letter focus
+        meta.icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M2 12h4M18 12h4M12 2v4M12 18v4"/></svg>`;
+        meta.letter = id.includes('lam') ? "ل" : "ر";
+    }
+    else if (id.includes('mim')) {
+        meta.tag = "Règle Mim";
+        meta.iconColor = "icon-blue";
+        // Mim letter
+        meta.icon = `<svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.1"/><text x="12" y="17" font-family="'Scheherazade New', serif" font-size="16" fill="currentColor" text-anchor="middle">م</text></svg>`;
         meta.letter = "م";
-        if (id === 'mad_intro') { meta.tag = "Concept"; meta.icon = "🗝️"; }
-        if (id === 'mad_review') { meta.tag = "Bilan"; meta.icon = "🎓"; }
+    }
+    else if (id.includes('review')) {
+        meta.tag = "Examen";
+        meta.iconColor = "icon-purple";
+        meta.icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4"/><rect x="4" y="4" width="16" height="16" rx="2"/></svg>`;
+        meta.letter = "✓";
     }
 
     return meta;
@@ -138,43 +188,48 @@ function showPortal() {
 
     const courses = getAllCourses();
 
-    // Define Sections - ALL COURSES
+    // NEW ORDER
     const sections = [
         {
-            title: "Ahkam Noun Sakina & Tanwin",
+            title: "Ahkam Noun Sakina & Tanween",
             subtitle: "Règles de base",
             ids: ['nun_sakina_intro', 'izhar', 'idgham_ghunnah', 'idgham_bila_ghunnah', 'iqlab', 'ikhfaa']
         },
         {
-            title: "Al-Moudoud (Prolongations)",
-            subtitle: "9 types de Mad",
-            ids: ['mad_intro', 'mad_tabii', 'mad_badal', 'mad_ewad', 'mad_sila', 'mad_muttasil', 'mad_munfasil', 'mad_arid', 'mad_lin', 'mad_lazim', 'mad_review']
-        },
-        {
-            title: "Autres Règles",
-            subtitle: "Qalqala, Ra, Lam, Ghunna",
-            ids: ['qalqala', 'ra_intro', 'ra_tafkhim', 'ra_tarqiq', 'ra_jawaz', 'lam', 'ghunna']
-        },
-        {
             title: "Ahkam Mim Sakina",
-            subtitle: "3 règles du Mim",
+            subtitle: "Règles du Mim",
             ids: ['mim_idgham', 'mim_ikhfaa', 'mim_izhar']
         },
         {
-            title: "Révisions",
-            subtitle: "Tests complets",
-            ids: ['nun_review']
+            title: "Al-Moudoud (Prolongations)",
+            subtitle: "Types de Mad",
+            ids: ['mad_intro', 'mad_tabii', 'mad_badal', 'mad_ewad', 'mad_sila', 'mad_muttasil', 'mad_munfasil', 'mad_arid', 'mad_lin', 'mad_lazim']
+        },
+        {
+            title: "Ahkam Ra & Lam",
+            subtitle: "Lettres Spéciales",
+            ids: ['ra_intro', 'ra_tafkhim', 'ra_tarqiq', 'ra_jawaz', 'lam']
+        },
+        {
+            title: "Autres Règles",
+            subtitle: "Compléments",
+            ids: ['qalqala', 'ghunna']
         }
     ];
 
     let sectionsHTML = '';
+    // Build Navigation Dropdown Options
+    let navOptions = '<option value="">-- Choisir un cours --</option>';
 
     sections.forEach(sec => {
         let cards = '';
+        navOptions += `<optgroup label="${sec.title}">`;
+
         sec.ids.forEach(id => {
             const c = courses[id];
             if (c) {
                 const meta = getCourseMeta(id, c.title);
+                navOptions += `<option value="${id}">${c.title}</option>`;
                 cards += `
                 <div class="dark-card" data-letter="${meta.letter}" onclick="startCourse('${id}')">
                     <div class="dc-icon-box ${meta.iconColor}">
@@ -191,6 +246,7 @@ function showPortal() {
                 </div>`;
             }
         });
+        navOptions += `</optgroup>`;
 
         if (cards) {
             sectionsHTML += `
@@ -205,28 +261,37 @@ function showPortal() {
     });
 
     viewport.innerHTML = `
-    <div class="dashboard-shell">
-        <nav class="top-nav">
-            <div class="brand-logo">Itqān <span>Pro</span></div>
-            <div class="user-greet">Bienvenue, Étudiant</div>
-        </nav>
-
-        <div class="main-container">
-            
-            <!-- HERO HERO HERO -->
-            <div class="hero-card">
-                <div class="hero-text">
-                    <h1>Bismillāh, continuez votre apprentissage</h1>
-                    <p>Le module "Introduction" est recommandé pour commencer.</p>
-                </div>
-                <button class="btn-hero" onclick="startCourse('nun_sakina_intro')">
-                    Reprendre le cours ➜
-                </button>
+    <div class="dashboard-shell portal-dark-mode">
+        <!-- GLASS HERO SECTION -->
+        <div class="portal-hero-glass">
+            <a href="home.html" class="home-link-btn" title="Retour à l'accueil">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                <span>Accueil</span>
+            </a>
+            <div class="hero-brand">
+                <span class="brand-itqan">Itqān</span>
+                <span class="brand-pro">Pro</span>
             </div>
+            <h1 class="hero-title">Maîtrisez le <span class="gold-text">Tajweed</span></h1>
+            <p class="hero-subtitle">Bienvenue dans votre espace d'apprentissage interactif. Progressez étape par étape vers l'excellence.</p>
+            <div class="hero-badge">
+                <span class="badge-icon">📜</span>
+                <span>Selon Riwayat Hafs 'an Asim</span>
+            </div>
+            <div class="hero-nav">
+                <select class="nav-select-glass" onchange="if(this.value) startCourse(this.value)">
+                    ${navOptions}
+                </select>
+            </div>
+        </div>
 
+        <div class="main-container" style="padding-top:30px;">
             ${sectionsHTML}
-
-             <div style="margin-top:60px; text-align:center; padding-top:20px; border-top:1px solid rgba(255,255,255,0.05); color:#475569; font-size:0.85rem;">
+            
+            <div class="portal-footer">
                 © 2024 Itqān Pro • Excellence Tajweed
             </div>
         </div>
@@ -280,6 +345,10 @@ function render() {
 
     if (!currentCourse) return showPortal();
 
+    // Fix: Scroll to top of viewport on step change
+    const vp = document.getElementById('game-area');
+    if (vp) vp.scrollTop = 0;
+
     if (idx >= currentCourse.steps.length) {
         viewport.innerHTML = `
             <div class="concept-card" style="margin-top:40px; padding:40px 20px;">
@@ -290,7 +359,6 @@ function render() {
                 <p style="color:var(--text-light); margin-bottom:30px;">Vous avez terminé <b>${currentCourse.title}</b> avec succès.</p>
                 <div style="display:flex; flex-direction:column; gap:12px; max-width:200px; margin:0 auto;">
                     <button class="btn-main" onclick="showPortal()">Retour au Menu</button>
-                    <button class="btn-nav" style="width:100%; border:none; background:transparent; color:var(--text-light); font-size:0.9rem;" onclick="idx=0;resetStepState();render()">Recommencer</button>
                 </div>
             </div>`;
         document.querySelector('.nav-row').style.display = 'none';
@@ -351,7 +419,10 @@ function render() {
                 <div class="ac-controls">
                     <button class="btn-audio btn-listen" id="play-${i}" onclick="playAudio('${ex.url}', ${ex.start || 0}, ${ex.end || 100}, ${i})">Lecture</button>
                     <button class="btn-audio btn-record" id="rec-${i}" onclick="toggleRec(${i})">Enregistrer</button>
-                    <button class="btn-audio btn-self" id="self-${i}" onclick="playSelf(${i})">Mon Audio</button>
+                    <div style="display:flex; gap:5px; align-items:center;">
+                         <button class="btn-audio btn-self" id="self-${i}" onclick="playSelf(${i})">Mon Audio</button>
+                         <button class="btn-audio btn-delete" id="del-${i}" onclick="deleteRec(${i})" style="display:none; background:#ffebee; color:#c0392b; border-color:#ffcdd2; padding:5px 12px; min-width:auto;" title="Supprimer">🗑️</button>
+                    </div>
                 </div>
             </div>`;
         });
@@ -680,31 +751,120 @@ audioPlayer.onended = () => {
     }
 };
 
-function toggleRec(id) {
+async function toggleRec(id) {
     const btn = document.getElementById(`rec-${id}`);
     const btnSelf = document.getElementById(`self-${id}`);
+
     if (btn.classList.contains('recording')) {
+        // STOP RECORDING
+        if (activeRecorders[id]) {
+            activeRecorders[id].stop();
+            // Note: onstop callback in start block will handle storage
+        }
         btn.classList.remove('recording');
         btn.innerText = "Enregistrer";
-        btnSelf.style.display = "flex";
-    } else {
-        document.querySelectorAll('.btn-record').forEach(b => { b.classList.remove('recording'); b.innerText = "Enregistrer"; });
+        // btnSelf.style.display = "flex"; // Ensure visible
+        return;
+    }
+
+    // START RECORDING
+    // Optional: Stop other recordings?
+    // document.querySelectorAll('.btn-record').forEach(b => { if(b !== btn && b.classList.contains('recording')) b.click(); });
+
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        const mediaRecorder = new MediaRecorder(stream);
+        const audioChunks = [];
+
+        activeRecorders[id] = mediaRecorder;
+
+        mediaRecorder.ondataavailable = event => {
+            if (event.data.size > 0) audioChunks.push(event.data);
+        };
+
+        mediaRecorder.onstop = () => {
+            const blob = new Blob(audioChunks, { type: 'audio/mp3' });
+            recordingBlobs[id] = URL.createObjectURL(blob);
+
+            // Clean up stream tracks
+            stream.getTracks().forEach(track => track.stop());
+            delete activeRecorders[id];
+
+            // UI Update
+            btnSelf.style.display = "inline-flex"; // FORCE DISPLAY
+            btnSelf.innerText = "Mon Audio (Ecouter)";
+            btnSelf.classList.add('has-record');
+
+            // Show Delete Button
+            const btnDel = document.getElementById(`del-${id}`);
+            if (btnDel) btnDel.style.display = "inline-flex";
+        };
+
+        mediaRecorder.start();
         btn.classList.add('recording');
         btn.innerText = "Arrêter";
+        btnSelf.style.display = "none"; // Hide play button while recording
+        const btnDel = document.getElementById(`del-${id}`);
+        if (btnDel) btnDel.style.display = "none";
+
+    } catch (e) {
+        console.error("Recording error:", e);
+        alert("Impossible d'accéder au microphone. Vérifiez les permissions.");
+    }
+}
+
+function deleteRec(id) {
+    if (confirm("Supprimer votre enregistrement ?")) {
+        // Stop audio if playing
+        const btnSelf = document.getElementById(`self-${id}`);
+        if (btnSelf.classList.contains('playing')) {
+            // Basic stop
+            btnSelf.classList.remove('playing');
+            btnSelf.innerText = "Mon Audio (Ecouter)";
+        }
+
+        // Revoke URL to free memory
+        if (recordingBlobs[id]) {
+            URL.revokeObjectURL(recordingBlobs[id]);
+            delete recordingBlobs[id];
+        }
+
+        // Reset UI
         btnSelf.style.display = "none";
+        btnSelf.classList.remove('has-record');
+
+        const btnDel = document.getElementById(`del-${id}`);
+        if (btnDel) btnDel.style.display = "none";
     }
 }
 
 function playSelf(id) {
     const btnSelf = document.getElementById(`self-${id}`);
-    if (btnSelf.innerText === "Mon Audio") {
-        btnSelf.innerText = "Lecture...";
-        btnSelf.classList.add('playing');
-        setTimeout(() => {
-            btnSelf.innerText = "Mon Audio";
-            btnSelf.classList.remove('playing');
-        }, 2000);
+
+    if (!recordingBlobs[id]) {
+        alert("Veuillez d'abord vous enregistrer !");
+        return;
     }
+
+    if (btnSelf.classList.contains('playing')) {
+        // Stop (not fully implemented due to Audio object scope, but we can prevent double play)
+        return;
+    }
+
+    const audio = new Audio(recordingBlobs[id]);
+    btnSelf.innerText = "Lecture...";
+    btnSelf.classList.add('playing');
+
+    audio.play().catch(e => {
+        alert("Erreur de lecture: " + e.message);
+        btnSelf.classList.remove('playing');
+        btnSelf.innerText = "Mon Audio (Ecouter)";
+    });
+
+    audio.onended = () => {
+        btnSelf.innerText = "Mon Audio (Ecouter)";
+        btnSelf.classList.remove('playing');
+    };
 }
 
 // QUIZ EXAM
@@ -929,7 +1089,20 @@ function validateImmersion() {
                 el.classList.add('val-wrong');
                 mistakes = true;
                 allFound = false;
-                const targetName = step.targetName || "un Mad";
+                const targetName = step.targetName || (() => {
+                    const cid = currentCourse.id || "";
+                    if (cid.includes("izhar")) return "un Izhar";
+                    if (cid.includes("idgham")) return "un Idgham";
+                    if (cid.includes("ikhfa")) return "un Ikhfa";
+                    if (cid.includes("iqlab")) return "un Iqlab";
+                    if (cid.includes("qalqala")) return "une Qalqala";
+                    if (cid.includes("ghunna")) return "une Ghunna";
+                    if (cid.includes("ra_")) return "une Règle du Ra";
+                    if (cid.includes("lam")) return "une Règle du Lam";
+                    if (cid.includes("mim_")) return "une Règle du Mim";
+                    if (cid.includes("mad")) return "un Mad";
+                    return "la règle recherchée";
+                })();
                 explanationHTML += `<div class="if-item"><span class="if-ar">${w.t}</span><span class="if-expl">❌ Ce n'est pas ${targetName} ici.</span></div>`;
             }
         }

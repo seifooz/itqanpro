@@ -13,6 +13,13 @@
 </head>
 
 <body>
+    <!-- COSMIC UNIVERSE BACKGROUND -->
+    <div class="iqan-global-bg"></div>
+    <div class="iqan-orb orb-gold"></div>
+    <div class="iqan-orb orb-blue"></div>
+    <div class="iqan-shape shape-hex"></div>
+    <div class="iqan-shape shape-square"></div>
+    <div class="iqan-shape shape-circle"></div>
 
     <!-- Auth Check: Redirect to login if not authenticated -->
     <script>
@@ -23,16 +30,20 @@
 
     <audio id="audioPlayer"></audio>
 
-    <div class="header" style="display:none;">
-        <div style="display:flex; justify-content:space-between; align-items:center; font-weight:700; color:#333;">
-            <div style="display:flex; align-items:center; gap:15px;">
-                <button class="home-btn" onclick="window.location.href='home.html'"
-                    title="Retour à l'accueil">🏠</button>
-                <button class="home-btn" onclick="showPortal()">MENU</button>
-                <span id="course-title" style="letter-spacing:-0.5px; font-weight:600;">CHARGEMENT...</span>
+    <div class="header course-header" style="display:none;">
+        <div class="header-top">
+            <div class="header-left">
+                <button class="header-btn menu-btn" onclick="showPortal()" title="Retour au menu">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <span>Menu</span>
+                </button>
+                <span id="course-title" class="header-title">CHARGEMENT...</span>
             </div>
-            <span id="course-mode"
-                style="color:var(--primary); font-size:0.75rem; background:#e0f2fe; padding:4px 10px; border-radius:12px; font-weight:600; letter-spacing:0.5px;">PRO</span>
+            <span id="course-mode" class="header-mode">PRO</span>
         </div>
         <div class="progress-track">
             <div class="progress-fill" id="prog-bar"></div>
@@ -82,6 +93,8 @@
     <script src="js/courses/mim_idgham.js"></script>
     <script src="js/courses/mim_ikhfaa.js"></script>
     <script src="js/courses/mim_izhar.js"></script>
+    <script src="js/courses/mim_review.js"></script>
+    <script src="js/courses/ra_lam_review.js"></script>
 
     <script>
         window.onload = () => {

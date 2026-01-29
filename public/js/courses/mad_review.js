@@ -10,9 +10,91 @@ const MAD_REVIEW_DATA = {
             <div class="concept-card">
                 <h3>Instruction</h3>
                 <p>Certains mots contiennent <strong>PLUSIEURS</strong> Mads. Vous devrez tous les identifier.</p>
-                <div class="tip-box">
-                    <strong>10 Sourates à analyser :</strong><br>
-                    Al-Fatiha, An-Nas, Al-Falaq, Al-Ikhlas, Al-Masad, An-Nasr, Al-Kafirun, Al-Kawthar, Al-Ma'un, Quraish.
+            </div>`
+        },
+        {
+            type: "lesson",
+            prof: "Rappel : Les 9 Mads.<br>Une carte mémoire pour ne rien oublier.",
+            html: `
+            <div class="concept-card">
+                <h3>Carte Mémoire : Al-Moudoud</h3>
+                <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; text-align:center; font-size:0.8rem;">
+                    <!-- NATUREL -->
+                    <div style="grid-column: span 3; background:#e3f2fd; padding:8px; font-weight:bold; color:#1565c0;">BASE : MAD TABI'I (2 temps)</div>
+                    
+                    <!-- HAMZA -->
+                    <div style="background:#fff3e0; padding:8px; border-radius:6px; border:1px solid #ffe0b2;">
+                        <span style="display:block; font-weight:bold; color:#e65100;">MUTTASIL</span>
+                        Hamza collée<br>4-5 temps
+                    </div>
+                    <div style="background:#fff3e0; padding:8px; border-radius:6px; border:1px solid #ffe0b2;">
+                        <span style="display:block; font-weight:bold; color:#e65100;">MUNFASIL</span>
+                        Hamza séparée<br>4-5 temps
+                    </div>
+                    <div style="background:#fff3e0; padding:8px; border-radius:6px; border:1px solid #ffe0b2;">
+                        <span style="display:block; font-weight:bold; color:#e65100;">BADAL</span>
+                        Hamza avant<br>2 temps
+                    </div>
+
+                    <!-- SUKOON -->
+                    <div style="background:#fce4ec; padding:8px; border-radius:6px; border:1px solid #f8bbd0;">
+                        <span style="display:block; font-weight:bold; color:#c2185b;">LAZIM</span>
+                        Sukun fixé<br>6 temps
+                    </div>
+                    <div style="background:#fce4ec; padding:8px; border-radius:6px; border:1px solid #f8bbd0;">
+                        <span style="display:block; font-weight:bold; color:#c2185b;">ARID</span>
+                        Sukun d'arrêt<br>2-4-6
+                    </div>
+                    <div style="background:#fce4ec; padding:8px; border-radius:6px; border:1px solid #f8bbd0;">
+                        <span style="display:block; font-weight:bold; color:#c2185b;">LIN</span>
+                        W/Y Sakin<br>2-4-6 (Arrêt)
+                    </div>
+
+                    <!-- AUTRES -->
+                    <div style="grid-column: span 1; background:#f3e5f5; padding:8px; border:1px solid #e1bee7;">
+                        <span style="font-weight:bold; color:#7b1fa2;">EWAD</span><br>Arrêt Tanwin
+                    </div>
+                    <div style="grid-column: span 2; background:#f3e5f5; padding:8px; border:1px solid #e1bee7;">
+                        <span style="font-weight:bold; color:#7b1fa2;">SILA</span><br>Haa Pronom (Sughra/Kubra)
+                    </div>
+                </div>
+            </div>`
+        },
+        {
+            type: "lesson",
+            prof: "Algorithme Mental.<br>La question clé : 'Qu'est-ce qu'il y a APRÈS ?'",
+            html: `
+            <div class="concept-card">
+                <h3>Algorithme des Mads</h3>
+                <div class="flow-chart">
+                    <div class="flow-step">1. Je vois une lettre de Mad (ا و ي)</div>
+                    <div class="flow-arrow">▼</div>
+                    <div class="flow-step">2. Je regarde <strong>APRÈS</strong></div>
+                    <div class="flow-arrow">▼</div>
+                    
+                    <div style="display:flex; gap:5px;">
+                        <div style="flex:1;">
+                            <div class="flow-step warning">RIEN (Normal)</div>
+                            <div class="flow-arrow">⬇</div>
+                            <div class="flow-step flow-final">TABI'I<br>(2 tps)</div>
+                        </div>
+                        <div style="flex:1;">
+                            <div class="flow-step warning">HAMZA (ء)</div>
+                            <div class="flow-arrow">⬇</div>
+                            <div style="font-size:0.7rem; text-align:left;">
+                                • Même mot: <strong>Muttasil</strong><br>
+                                • Mot suivant: <strong>Munfasil</strong>
+                            </div>
+                        </div>
+                        <div style="flex:1;">
+                            <div class="flow-step warning">SUKUN / SHADDA</div>
+                            <div class="flow-arrow">⬇</div>
+                            <div style="font-size:0.7rem; text-align:left;">
+                                • Stop: <strong>Arid</strong><br>
+                                • Toujours: <strong>Lazim</strong>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>`
         },
