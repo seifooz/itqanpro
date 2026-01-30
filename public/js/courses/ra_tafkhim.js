@@ -95,6 +95,7 @@ const RA_TAFKHIM_DATA = {
                 <h3>Il copie son voisin de gauche ! ⬅️</h3>
                 <p>Quand le Ra a un <strong>Soukoun</strong> (ou quand tu t'arrêtes dessus), il devient un miroir. Il reflète la lettre <strong>AVANT</strong> lui.</p>
                 
+                <!-- CAS 1 : FATHA AVANT -->
                 <div class="mz-container">
                     <div class="mz-phrase">بَرْق</div>
                     <div class="mz-analysis">
@@ -111,12 +112,25 @@ const RA_TAFKHIM_DATA = {
                     <div class="ex-logic">Avant, il y a une Fatha.<br>Donc le Ra devient <strong>LOURD</strong>.</div>
                 </div>
 
-                <div style="margin-top:15px; background:#fff3e0; padding:10px; border-radius:8px;">
-                    <div class="ar-med" style="text-align:center; margin-bottom:5px;">بَرْق</div>
-                    <div style="font-size:0.9rem; text-align:center;">
-                        Ba (Fatha) ➡ Ra (LOURD)<br>
-                        <strong>"Barq"</strong>
+                <!-- CAS 2 : DAMMA AVANT -->
+                <div class="mz-container" style="margin-top:15px;">
+                    <div class="mz-phrase">قُرْءَان</div>
+                    <div class="mz-analysis">
+                        <div class="mz-group">
+                            <div class="mz-box mz-green" style="border-color:#e67e22; color:#d35400;">قُ</div>
+                            <div class="mz-label" style="color:#d35400;">Avec Damma</div>
+                        </div>
+                        <div class="mz-icon">⮕</div>
+                        <div class="mz-group">
+                            <div class="mz-box mz-blue">رْ</div>
+                            <div class="mz-label blue">Ra Muet (Miroir)</div>
+                        </div>
                     </div>
+                    <div class="ex-logic">Avant, il y a une Damma.<br>Donc le Ra devient <strong>LOURD</strong>.</div>
+                </div>
+
+                <div class="tip-box" style="margin-top:15px;">
+                    💡 <strong>Résumé :</strong> Ra Muet + Fatha ou Damma avant = <strong>LOURD</strong>
                 </div>
             </div>`
         },

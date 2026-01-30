@@ -34,8 +34,12 @@ const MAD_LIN_DATA = {
             html: `
             <div class="concept-card">
                 <h3>Définition Technique</h3>
-                <p>Le <strong>Mad Lin</strong> survient lorsque l'on s'arrête sur une lettre précédée d'une lettre de <strong>Lin</strong> (Douceur).</p>
-                <div class="tip-box">
+                <p>Le <strong>Mad Lin</strong> survient lorsque l'on <strong style="color:#d32f2f;">s'arrête</strong> sur une lettre précédée d'une lettre de <strong>Lin</strong> (Douceur).</p>
+                <div class="tip-box" style="background:#ffebee; border-color:#d32f2f;">
+                    ⚠️ <strong>IMPORTANT :</strong> Cette règle ne s'applique <strong>QU'À L'ARRÊT (الوقف)</strong> !<br>
+                    Si tu continues ta lecture sans t'arrêter, il n'y a pas de Mad Lin.
+                </div>
+                <div class="tip-box" style="margin-top:10px;">
                     <strong>Les Lettres de Lin :</strong><br>
                     Le <strong>Waw ( و )</strong> et le <strong>Ya ( ي )</strong> porteurs d'un <strong>Sukun</strong> et précédés d'une <strong>Fatha</strong>.
                 </div>

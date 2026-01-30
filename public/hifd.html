@@ -525,6 +525,20 @@
             animation: pulse 1.5s infinite;
         }
 
+        .repeat-select {
+            width: 50px;
+            height: 32px;
+            padding: 2px 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border: 2px solid var(--primary);
+            border-radius: 6px;
+            background: var(--bg-body);
+            color: var(--primary);
+            cursor: pointer;
+            font-family: var(--font-ui);
+        }
+
         .btn-mic {
             background: transparent;
             border: 2px dashed var(--text-sec);
@@ -1200,7 +1214,7 @@
         window.APP_DATA = { surahs: JUZ_AMMA_DATA };
         const surahList = [{ num: 87, name: "Al-A'la" }, { num: 88, name: "Al-Ghashiyah" }, { num: 89, name: "Al-Fajr" }, { num: 90, name: "Al-Balad" }, { num: 91, name: "Ash-Shams" }, { num: 92, name: "Al-Layl" }, { num: 93, name: "Ad-Duha" }, { num: 94, name: "Ash-Sharh" }, { num: 95, name: "At-Tin" }, { num: 96, name: "Al-Alaq" }, { num: 97, name: "Al-Qadr" }, { num: 98, name: "Al-Bayyina" }, { num: 99, name: "Az-Zalzalah" }, { num: 100, name: "Al-Adiyat" }, { num: 101, name: "Al-Qariah" }, { num: 102, name: "At-Takathur" }, { num: 103, name: "Al-Asr" }, { num: 104, name: "Al-Humazah" }, { num: 105, name: "Al-Fil" }, { num: 106, name: "Quraysh" }, { num: 107, name: "Al-Ma'un" }, { num: 108, name: "Al-Kawthar" }, { num: 109, name: "Al-Kafirun" }, { num: 110, name: "An-Nasr" }, { num: 111, name: "Al-Masad" }, { num: 112, name: "Al-Ikhlas" }, { num: 113, name: "Al-Falaq" }, { num: 114, name: "An-Nas" }];
 
-        let currentRepeat = 0, currentUrl = "";
+        let currentRepeat = 0, currentUrl = "", repeatTarget = 1, repeatCurrent = 0;
         let tafsirCache = {};
         let isBlurred = false, isInitials = false;
         let currentSurahNum = 87;
@@ -1798,21 +1812,59 @@
                 if (a.num >= 2) steps += `<label class="step-item"><input type="checkbox" id="chk_rev_${u}" onchange="handleCheck(this.id, this.checked, '${u}')"><span class="step-label">Réviser 1 → ${a.num}</span></label>`;
                 steps += '</div>';
 
-                html += `<div class="verset-row"><div class="verset-num-col"><div class="verset-num" id="vnum_${u}">${a.num}</div></div><div class="verset-content"><div class="ar-text ${isBlurred ? 'blurred' : ''}" id="ar_${u}">${pt}</div><div class="phonetic">${a.phon}</div><div class="actions"><button class="btn-play" id="btn_${u}" onclick="playAudio(${num}, ${a.num})"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg></button><button class="btn-mic" id="rec_${u}" onclick="toggleRecord('${u}')"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></button><button class="btn-trash" id="trash_${u}" onclick="deleteRecord('${u}')">🗑️</button><button class="btn-action" onclick="toggleTafsir('${u}', ${num}, ${a.num}, this)">Tafsir</button><button class="btn-action" onclick="toggleExpand('note_area_${u}', this)">Note</button></div><div class="expand-container" id="tafsir_area_${u}"></div><div class="expand-container ${nv ? 'open' : ''}" id="note_area_${u}"><textarea class="note-textarea" id="note_${u}" placeholder="Notes..." oninput="handleNote(this.id, this.value)">${nv}</textarea></div></div><div class="verset-steps"><div class="steps-header">🎯 Mission Hifz</div>${steps}</div></div>`;
+                html += `<div class="verset-row"><div class="verset-num-col"><div class="verset-num" id="vnum_${u}">${a.num}</div></div><div class="verset-content"><div class="ar-text ${isBlurred ? 'blurred' : ''}" id="ar_${u}">${pt}</div><div class="phonetic">${a.phon}</div><div class="actions"><button class="btn-play" id="btn_${u}" onclick="playAudioRepeat(${num}, ${a.num}, document.getElementById('rep_${u}').value)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg></button><select id="rep_${u}" class="repeat-select" title="Répétitions"><option value="1">1x</option><option value="3">3x</option><option value="5">5x</option><option value="10" selected>10x</option></select><button class="btn-mic" id="rec_${u}" onclick="toggleRecord('${u}')"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></button><button class="btn-trash" id="trash_${u}" onclick="deleteRecord('${u}')">🗑️</button><button class="btn-action" onclick="toggleTafsir('${u}', ${num}, ${a.num}, this)">Tafsir</button><button class="btn-action" onclick="toggleExpand('note_area_${u}', this)">Note</button></div><div class="expand-container" id="tafsir_area_${u}"></div><div class="expand-container ${nv ? 'open' : ''}" id="note_area_${u}"><textarea class="note-textarea" id="note_${u}" placeholder="Notes..." oninput="handleNote(this.id, this.value)">${nv}</textarea></div></div><div class="verset-steps"><div class="steps-header">🎯 Mission Hifz</div>${steps}</div></div>`;
             });
             c.innerHTML = html;
             data.ayahs.forEach(a => { const u = `${num}_${a.num}`;['chk_rep', 'chk_lia', 'chk_rev'].forEach(p => { const i = `${p}_${u}`; if (document.getElementById(i) && userData.checkboxes[i]) document.getElementById(i).checked = true }); const n = document.getElementById(`vnum_${u}`); const all = document.querySelectorAll(`input[id^='chk_'][id$='_${u}']`); let ok = true; all.forEach(k => { if (!k.checked) ok = false }); if (ok && all.length > 0) n.classList.add('completed'); });
             const savedTheme = localStorage.getItem('itqan_theme_clean') || 'day'; setTheme(savedTheme); autoSave();
         }
 
-        function playAudio(surah, ayah) {
-            if (isLooping) stopRangeLoop(); const p = document.getElementById('global-player'), btn = document.getElementById(`btn_${surah}_${ayah}`);
+        function playAudioRepeat(surah, ayah, count) {
+            if (isLooping) stopRangeLoop();
+            const p = document.getElementById('global-player'), btn = document.getElementById(`btn_${surah}_${ayah}`);
             const url = `https://everyayah.com/data/Alafasy_128kbps/${String(surah).padStart(3, '0')}${String(ayah).padStart(3, '0')}.mp3`;
-            if (!p.paused && currentUrl === url) { p.pause(); btn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>'; btn.classList.remove('playing'); document.querySelectorAll('.verset-row').forEach(r => r.classList.remove('dimmed')); return; }
-            document.querySelectorAll('.btn-play').forEach(b => { b.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>'; b.classList.remove('playing'); });
-            currentUrl = url; btn.classList.add('playing'); btn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="6" width="12" height="12" rx="2" ry="2"/></svg>';
-            focusVerse(`${surah}_${ayah}`); p.src = url; p.play().catch(() => { }); p.onended = function () { btn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>'; btn.classList.remove('playing'); document.querySelectorAll('.verset-row').forEach(r => r.classList.remove('dimmed')); };
+
+            // Toggle pause if already playing same
+            if (!p.paused && currentUrl === url) {
+                p.pause(); repeatCurrent = 0; repeatTarget = 1;
+                btn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>';
+                btn.classList.remove('playing');
+                document.querySelectorAll('.verset-row').forEach(r => r.classList.remove('dimmed'));
+                return;
+            }
+
+            // Reset all buttons
+            document.querySelectorAll('.btn-play').forEach(b => {
+                b.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>';
+                b.classList.remove('playing');
+            });
+
+            // Setup repeat
+            repeatTarget = parseInt(count) || 1;
+            repeatCurrent = 1;
+            currentUrl = url;
+            btn.classList.add('playing');
+            btn.innerHTML = `<span style="font-size:0.7rem;font-weight:bold;">${repeatCurrent}/${repeatTarget}</span>`;
+            focusVerse(`${surah}_${ayah}`);
+            p.src = url;
+            p.play().catch(() => { });
+
+            p.onended = function () {
+                if (repeatCurrent < repeatTarget) {
+                    repeatCurrent++;
+                    btn.innerHTML = `<span style="font-size:0.7rem;font-weight:bold;">${repeatCurrent}/${repeatTarget}</span>`;
+                    p.currentTime = 0;
+                    p.play().catch(() => { });
+                } else {
+                    repeatCurrent = 0; repeatTarget = 1;
+                    btn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>';
+                    btn.classList.remove('playing');
+                    document.querySelectorAll('.verset-row').forEach(r => r.classList.remove('dimmed'));
+                }
+            };
         }
+
+        function playAudio(surah, ayah) { playAudioRepeat(surah, ayah, 1); }
 
         document.addEventListener('click', function (e) { if (e.target.classList.contains('tj')) { e.stopPropagation(); handleTajweedClick(e.target); } });
         document.addEventListener("DOMContentLoaded", function () { loadUserData(); });
