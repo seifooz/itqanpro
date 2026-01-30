@@ -1592,7 +1592,8 @@
                     { p: "أَحْوَىٰ", code: null, css: null, char: 'و' }, // Correction utilisateur
                     { p: "لِلْيُسْرَىٰ", code: "ra_emph", css: "tj-ra-emph", char: 'ر' }, // Ra Tafkhim
                     { p: "لِلْيُسْرَىٰ", code: null, css: null, char: 'ي' }, // Pas de Mad sur le Ya
-                    { p: "ٱلْأَعْلَى", code: null, css: null, char: 'ع' }
+                    { p: "ٱلْأَعْلَى", code: null, css: null, char: 'ع' },
+                    { p: "بِمُصَيْطِرٍ", code: null, css: null, char: 'ي' }
                 ];
 
                 // --- PRE-CHECK OVERRIDES ---
@@ -1721,12 +1722,15 @@
             for (let w = 0; w < words.length; w++) {
                 let word = words[w]; if (!word) { html += " "; currentIndex++; continue; }
                 let wordRules = [];
+                const isLastWord = (w === words.length - 1); // Check if this is the last word of the verse
 
                 // Collecter toutes les règles du mot
                 for (let k = 0; k < word.length; k++) {
                     let actualIdx = currentIndex + k;
                     if (charRules[actualIdx]) {
                         const r = charRules[actualIdx]; const ruleObj = TAJWEED_DB[r.code];
+                        // Skip Mad Lin if word is not at the end of the verse
+                        if (r.code === "madd_lin" && !isLastWord) continue;
                         const alreadyExists = wordRules.some(wr => wr.code === r.code && wr.char === r.char);
                         if (!alreadyExists && ruleObj) {
                             wordRules.push({ code: r.code, css: r.css, title: ruleObj.title, rule: ruleObj.rule, meth: ruleObj.meth, char: r.char, nextChar: r.next, isTanween: r.isTanween });
@@ -1799,10 +1803,29 @@
             let b = (num !== 1 && num !== 9) ? `<div class="basmalah">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>` : '';
             let html = `<div class="surah-header-block"><h2 class="surah-title">${data.name}</h2>${b}<div class="progress-text">Cahier de suivi</div></div>`;
 
+            // Multiple Basmala variants for stripping
+            const BASMALAS = [
+                "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ ", // with trailing space
+                "بِّسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ ", // with shadda + space
+                "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",   // without space
+                "بِّسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ"   // with shadda no space
+            ].map(b => b.normalize('NFC'));
+
             data.ayahs.forEach(a => {
-                let pt = a.text;
+                let rawText = a.text;
+                // Strip Basmala from verse 1 (except for Surah Al-Fatiha)
+                if (a.num === 1 && num !== 1) {
+                    const normalizedText = rawText.normalize('NFC');
+                    for (const bsm of BASMALAS) {
+                        if (normalizedText.startsWith(bsm)) {
+                            rawText = rawText.substring(bsm.length).trim();
+                            break;
+                        }
+                    }
+                }
+                let pt = rawText;
                 try {
-                    pt = applyTajweed(a.text, true);
+                    pt = applyTajweed(rawText, true);
                 } catch (e) {
                     console.error("Tajweed error:", e);
                 }
