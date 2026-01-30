@@ -163,7 +163,7 @@ const MAD_LAZIM_DATA = {
         },
 
         // FINAL EXAM
-        { type: "intro", prof: "🧐 <strong>Évaluation Finale</strong>" },
+        { type: "intro", prof: "🧐 <strong>Évaluation Finale du Mad Lazim</strong>" },
         {
             type: "quiz_theory",
             prof: "1/2 - Quelle est la durée de TOUS les Mad Lazim ?",

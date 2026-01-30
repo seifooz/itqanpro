@@ -21,7 +21,7 @@ const IDGHAM_BILA_GHUNNAH_DATA = {
         // 1. SCOPE
         {
             type: "lesson",
-            prof: "Introduction.<br>Sur quoi porte cette règle ?",
+            prof: "Introduction.<br>Sur quoi porte la règle d'Idgham Bila Ghunnah ?",
             html: `
             <div class="concept-card">
                 <h3>Champ d'Application</h3>
@@ -189,7 +189,7 @@ const IDGHAM_BILA_GHUNNAH_DATA = {
         },
 
         // --- PARTIE 2 : ATELIER ---
-        { type: "intro", prof: "Atelier Pratique.<br>Entraînez-vous avec les 2 lettres." },
+        { type: "intro", prof: "Atelier Pratique.<br>Entraînez-vous à l'Idgham avec les 2 lettres." },
 
         // WORKSHOP
         { type: "workshop", prof: `Lettre 1 : <strong>Lam (ل)</strong>. ${IBG_HELP_HTML}`, examples: [{ type: "Noun Sakina", ar: "مِن لَّدُنْهُ", url: "idgham_bg_min_ladunhu", hint: "Expl: Noun + Lam -> Idgham BG (Mil-ladunhu)" }, { type: "Tanween", ar: "وَيْلٌ لِّكُلِّ", url: "idgham_bg_waylul_likulli", hint: "Expl: Tanween + Lam -> Idgham BG (Waylul-likulli)" }] },

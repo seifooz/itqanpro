@@ -159,7 +159,7 @@ const QALQALA_DATA = {
         },
 
         // --- PARTIE 2 : ATELIER ---
-        { type: "intro", prof: "Atelier Pratique.<br>Écoutez et ressentez le rebond." },
+        { type: "intro", prof: "Atelier Pratique.<br>Écoutez et ressentez la Qalqala." },
 
         {
             type: "workshop", prof: `Exemples de <strong>Qalqala</strong> (Sughra & Kubra). ${QAL_HELP_HTML}`, examples: [

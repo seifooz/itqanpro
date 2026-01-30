@@ -118,7 +118,7 @@ const MAD_MUNFASIL_DATA = {
         },
 
         // EXAM
-        { type: "intro", prof: "🧐 <strong>Évaluation</strong>" },
+        { type: "intro", prof: "🧐 <strong>Évaluation du Mad Munfasil</strong>" },
         {
             type: "quiz_theory",
             prof: "1/3 - Quelle est la différence clé avec le Mad Muttasil ?",

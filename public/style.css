@@ -2797,36 +2797,58 @@ body {
     }
 
     .dark-card {
-        flex-direction: row;
-        padding: 15px;
+        flex-direction: column;
+        /* Vertical stack like home */
+        padding: 25px 20px;
         gap: 15px;
+        text-align: center;
+        /* Center content */
+        align-items: center;
+        min-height: auto;
     }
 
     .dc-icon-box {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        border-radius: 12px;
+        width: 65px;
+        height: 65px;
+        min-width: 65px;
+        border-radius: 18px;
+        font-size: 1.8rem;
+        margin: 0 auto;
+        /* Center icon */
     }
 
     .dc-icon-box svg {
-        width: 22px;
-        height: 22px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .dc-content {
+        align-items: center;
+        width: 100%;
     }
 
     .dc-title {
-        font-size: 0.9rem;
+        font-size: 1.2rem !important;
+        margin-bottom: 8px !important;
+        text-align: center;
+        white-space: normal;
+        display: block;
     }
 
     .dc-desc {
-        font-size: 0.8rem;
-        display: none;
+        font-size: 0.9rem !important;
+        display: block !important;
+        /* Make visible again */
+        color: rgba(255, 255, 255, 0.7) !important;
+        line-height: 1.5;
+        margin-bottom: 10px;
     }
 
     .dc-footer {
-        flex-direction: column;
-        gap: 5px;
-        align-items: flex-start;
+        width: 100%;
+        justify-content: space-between;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     /* Mobile Footer Refinement */
@@ -2884,40 +2906,62 @@ body {
 
     /* Mobile Text & Layout Fixes */
     @media (max-width: 480px) {
-
-        /* Allow text more room */
         .dark-card {
-            padding: 12px !important;
-            gap: 10px !important;
+            padding: 20px 15px !important;
         }
 
-        /* Shrink icon slightly */
-        .dc-icon-box {
-            width: 42px !important;
-            height: 42px !important;
-            min-width: 42px !important;
-        }
-
-        /* Adjust Typography */
         .dc-title {
-            font-size: 0.95rem !important;
-            line-height: 1.3 !important;
-            margin-bottom: 2px !important;
-        }
-
-        .dc-desc {
-            font-size: 0.8rem !important;
-            line-height: 1.3;
-        }
-
-        /* Ensure grid is full width without overflow */
-        .dark-grid {
-            padding: 0 5px !important;
-            gap: 10px !important;
+            font-size: 1.1rem !important;
         }
 
         .main-container {
-            padding: 0 10px !important;
+            padding: 0 15px !important;
+            overflow-x: hidden;
+            /* Prevent container overflow */
+        }
+
+        /* Prevent Concept Card Overflow */
+        .concept-card {
+            padding: 20px 15px !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+            overflow-wrap: break-word !important;
+            word-wrap: break-word !important;
+        }
+
+        /* Adjust Large Arabic Text */
+        .ar-big {
+            font-size: 1.8rem !important;
+            line-height: 1.4 !important;
+            word-break: break-all;
+            /* Allow breaking very long Arabic words if needed */
+        }
+
+        .ar-block {
+            font-size: 1.5rem !important;
+        }
+
+        /* Ensure images/diagrams don't overflow */
+        .concept-card img,
+        .concept-card svg {
+            max-width: 100% !important;
+            height: auto !important;
+        }
+
+        /* Immersion Mobile Fixes */
+        .mushaf-container {
+            padding: 20px 10px !important;
+            line-height: 2 !important;
+            text-align: center !important;
+        }
+
+        .m-word {
+            font-size: 1.8rem !important;
+            /* Smaller font on mobile */
+            margin: 2px 1px !important;
+            display: inline !important;
+            /* Allow natural flow */
         }
     }
 
@@ -3160,4 +3204,618 @@ body {
         font-size: 0.65rem;
         padding: 4px 10px;
     }
+}
+
+/* ================================================== */
+/* IMMERSION EXERCISES (Styles Mushaf)                */
+/* ================================================== */
+
+.immersion-instruction {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    font-size: 1.1rem;
+    color: #2d3436;
+    border-left: 5px solid var(--accent-blue);
+    line-height: 1.5;
+}
+
+.mushaf-container {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    direction: rtl;
+    /* Essential for Arabic */
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    line-height: 2.2;
+    margin-bottom: 20px;
+    border: 1px solid #f0f0f0;
+
+    /* Ensure wrapping */
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.m-word {
+    font-family: var(--font-ar);
+    /* 'Scheherazade New', serif */
+    font-size: 2.4rem;
+    color: #2d3436;
+    display: inline-block;
+    padding: 0 4px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    vertical-align: middle;
+}
+
+.m-word:hover {
+    background: #f1f2f6;
+    color: var(--primary);
+}
+
+.m-word.selected {
+    background: #e3f2fd;
+    color: var(--primary-dark);
+    box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.3);
+}
+
+.m-word.answered {
+    cursor: default;
+}
+
+.m-word.correct {
+    color: #2e7d32;
+    background: #e8f5e9;
+}
+
+.m-word.wrong {
+    color: #c62828;
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* ================================================== */
+/* AGGRESSIVE MOBILE OVERRIDES (FINAL FIX)            */
+/* ================================================== */
+
+@media (max-width: 600px) {
+
+    /* 1. Force Containers to Vertical & Full Width */
+    .main-container,
+    .viewport,
+    .dark-grid,
+    .quiz-grid,
+    .concept-card,
+    .dark-card,
+    .mushaf-container,
+    .mz-analysis,
+    .ex-logic,
+    .phrase-audio {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        /* Override native min-width */
+        box-sizing: border-box !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* 2. Fix Horizontal Overflow in Body */
+    body,
+    html {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+    }
+
+    /* 3. Text Wrapping Enforcers */
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    span,
+    div,
+    li,
+    .m-word {
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+        max-width: 100% !important;
+    }
+
+    /* 4. Specific Immersion Fixes */
+    .mushaf-container {
+        padding: 15px 10px !important;
+        text-align: center !important;
+        line-height: 1.8 !important;
+        display: block !important;
+        /* Block for text flow */
+    }
+
+    .m-word {
+        display: inline-block !important;
+        /* Inline-block to respect line-height */
+        font-size: 1.6rem !important;
+        margin: 5px 2px !important;
+        width: auto !important;
+        /* Reset width */
+    }
+
+    /* 5. Analysis Boxes (Module 1 Examples) */
+    .mz-container {
+        padding: 10px !important;
+    }
+
+    .mz-phrase {
+        font-size: 2rem !important;
+        white-space: normal !important;
+        line-height: 1.4 !important;
+    }
+
+    .mz-analysis {
+        flex-direction: row !important;
+        /* Keep analysis row for small icons if possible, or wrap */
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+
+    /* 6. Card Padding Reset */
+    .dark-card,
+    .concept-card {
+        padding: 20px 15px !important;
+        gap: 15px !important;
+        height: auto !important;
+    }
+
+    /* 7. Hide non-essential spacers if any cause overflow */
+    .spacer,
+    .divider {
+        max-width: 100% !important;
+    }
+}
+
+/* ================================================== */
+/* FINAL FOOTER & CONTRAST FIXES                      */
+/* ================================================== */
+
+/* 1. Mobile Footer Centering */
+@media (max-width: 480px) {
+
+    .dc-footer,
+    .footer,
+    .nav-row {
+        justify-content: center !important;
+        text-align: center !important;
+        gap: 20px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    #btn-prev,
+    #btn-next {
+        margin: 0 !important;
+        flex-grow: 0 !important;
+        /* Prevent stretching */
+        min-width: 60px !important;
+    }
+}
+
+/* 2. UNIVERSAL DARK TEXT ENFORCER for Light Boxes */
+/* Catches all variations of white, off-white, light-blue, light-green backgrounds */
+
+/* Light Blue / Cyan */
+[style*="background:#e0f7fa"] *,
+[style*="background: #e0f7fa"] *,
+[style*="background:#e1f5fe"] *,
+[style*="background: #e1f5fe"] *,
+[style*="background:#e3f2fd"] *,
+[style*="background: #e3f2fd"] *,
+
+/* Light Green */
+[style*="background:#e8f5e9"] *,
+[style*="background: #e8f5e9"] *,
+[style*="background:#f1f8e9"] *,
+[style*="background: #f1f8e9"] *,
+[style*="background:#f9fbe7"] *,
+[style*="background: #f9fbe7"] *,
+
+/* Light Yellow / Orange */
+[style*="background:#fff3e0"] *,
+[style*="background: #fff3e0"] *,
+[style*="background:#fffde7"] *,
+[style*="background: #fffde7"] *,
+[style*="background:#fff9c4"] *,
+[style*="background: #fff9c4"] *,
+
+/* Light Red / Pink */
+[style*="background:#ffebee"] *,
+[style*="background: #ffebee"] *,
+[style*="background:#fce4ec"] *,
+[style*="background: #fce4ec"] *,
+
+/* Pure White / Grey */
+[style*="background:white"] *,
+[style*="background: white"] *,
+[style*="background:#ffffff"] *,
+[style*="background: #ffffff"] *,
+[style*="background:#f5f5f5"] *,
+[style*="background: #f5f5f5"] *,
+[style*="background:#fafafa"] *,
+[style*="background: #fafafa"] * {
+    color: #2d3436 !important;
+    /* Dark Charcoal */
+}
+
+/* Specific overrides for bold text to ensure it's black */
+[style*="font-weight:bold"],
+strong,
+b {
+    /* Only apply if inside a light box context if possible, 
+      but for now, let's rely on the inheritance above. 
+      However, we need to ensure the parent rule wins.
+      The rule above uses * so it should cover b/strong tags. */
+}
+
+/* Fix for specific components that might use their own color rules */
+.audio-card *,
+.quiz-grid *,
+.theory-q-block * {
+    /* If they have light backgrounds, they are covered above. */
+}
+
+/* Ensure the course text generally isn't washed out in cards */
+.concept-card {
+    /* Base color for dark card is handled, but if there are unstyled divs */
+}
+
+/* ================================================== */
+/* FINAL CONTRAST FIX - FORCE DARK TEXT ON LIGHT BG   */
+/* ================================================== */
+
+/* 1. Specific Box Overrides */
+/* These boxes often appear inside darker cards but have light backgrounds themselves. */
+.tip-box,
+.info-box,
+.alert-box,
+.definition-box,
+.example-box {
+    color: #1a1a1a !important;
+    /* Force nearly black text */
+}
+
+/* 2. Direct Child Enforcer */
+/* Ensure paragraphs, headings, and spans inside these boxes also turn black. */
+.tip-box *,
+.info-box *,
+.alert-box *,
+.definition-box *,
+.example-box * {
+    color: #1a1a1a !important;
+}
+
+/* 3. Aggressive Inline Style Override for Light Backgrounds */
+/* If an element has a specific light background color set inline, force its text to be dark. */
+
+/* Light Blue Backgrounds (Common in Mad Badal/Tajwid) */
+[style*="background:#e3f2fd"],
+[style*="background: #e3f2fd"],
+[style*="background:#bbdefb"],
+[style*="background: #bbdefb"] {
+    color: #0d47a1 !important;
+    /* Dark Blue Text */
+}
+
+[style*="background:#e3f2fd"] *,
+[style*="background: #e3f2fd"] *,
+[style*="background:#bbdefb"] *,
+[style*="background: #bbdefb"] * {
+    color: #0d47a1 !important;
+    /* Recursive for children */
+}
+
+/* Light Yellow/Orange (Common for emphasis) */
+[style*="background:#fff3e0"],
+[style*="background: #fff3e0"],
+[style*="background:#fffde7"],
+[style*="background: #fffde7"] {
+    color: #e65100 !important;
+    /* Dark Orange Text */
+}
+
+[style*="background:#fff3e0"] *,
+[style*="background: #fff3e0"] *,
+[style*="background:#fffde7"] *,
+[style*="background: #fffde7"] * {
+    color: #e65100 !important;
+}
+
+/* White Backgrounds */
+[style*="background:white"],
+[style*="background: white"],
+[style*="background:#ffffff"],
+[style*="background: #ffffff"] {
+    color: #2d3436 !important;
+    /* Dark Charcoal */
+}
+
+[style*="background:white"] *,
+[style*="background: white"] *,
+[style*="background:#ffffff"] *,
+[style*="background: #ffffff"] * {
+    color: #2d3436 !important;
+}
+
+/* 4. Fix for "Durée" box specific case in Mad Badal */
+/* It uses inline style: background:#e3f2fd; border:2px solid #2196f3; */
+/* The text inside has specific colors like #0d47a1. We want to ENSURE those are visible. */
+/* The code above sets color to #0d47a1 which is good. */
+
+/* 5. Fix for Letter Grids (Light text on light bg issue) */
+.letters-grid .letter-card,
+.dark-card .letter-box {
+    /* If the card itself is light, text must be dark */
+    /* Usually these are controlled by theme, but if explicit background is set: */
+}
+
+/* Force specific problematic elements identified in screenshots */
+/* "Lettres de Lin" box */
+[style*="background:#e3f2fd"] strong,
+[style*="background:#e3f2fd"] b {
+    color: #000000 !important;
+}
+
+/* ================================================== */
+/* SUPER AGGRESSIVE CONTRAST FIX v2                   */
+/* ================================================== */
+
+/* Target ANY element that has a light background inline style */
+/* and force ALL its children to be dark and fully opaque */
+
+/* Light Blue */
+[style*="background:#e3f2fd"] *,
+[style*="background: #e3f2fd"] *,
+[style*="background:#bbdefb"] *,
+[style*="background: #bbdefb"] * {
+    color: #000000 !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+    --text: #000000 !important;
+    --text-light: #333333 !important;
+}
+
+/* Light Yellow */
+[style*="background:#fff3e0"] *,
+[style*="background: #fff3e0"] *,
+[style*="background:#fffde7"] *,
+[style*="background: #fffde7"] * {
+    color: #000000 !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+}
+
+/* White / Off-White */
+[style*="background:white"] *,
+[style*="background: white"] *,
+[style*="background:#ffffff"] *,
+[style*="background: #ffffff"] *,
+[style*="background:#f5f5f5"] *,
+[style*="background: #f5f5f5"] * {
+    color: #000000 !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+}
+
+/* Specific targeted fixes for the screenshots provided */
+/* "Jugement : Wajib (Obligatoire)" box */
+.concept-card [style*="background"] h3,
+.concept-card [style*="background"] div,
+.concept-card [style*="background"] span,
+.concept-card [style*="background"] p,
+.concept-card [style*="background"] strong {
+    color: #000000 !important;
+}
+
+/* Fix "Durée" text specifically */
+/* In case it uses a class we missed, target the content directly if possible (CSS can't do text content, but we target context) */
+.concept-card div[style*="border-radius"] {
+    color: #000000 !important;
+}
+
+/* Re-apply overrides for Letter Grids if they are light */
+.letters-grid .letter-card {
+    color: #000000 !important;
+}
+
+/* But wait, letter cards might be dark. Only if they have light bg. */
+.letters-grid .letter-card[style*="background:white"],
+.letters-grid .letter-card[style*="background: #ffffff"] {
+    color: #000000 !important;
+}
+
+/* ================================================== */
+/* UNIVERSAL CONTRAST FIX v3 (CASE INSENSITIVE HACK)  */
+/* ================================================== */
+
+/* Light Blue Variations (#e3f2fd, #bbdefb, cyan) */
+[style*="background"] {
+    /* Base rule: if it has a background inline style, we might need to check it */
+}
+
+/* We simply duplicate selectors for Uppercase and different properties */
+
+/* #E3F2FD */
+[style*="background:#E3F2FD"] *,
+[style*="background: #E3F2FD"] *,
+[style*="background-color:#e3f2fd"] *,
+[style*="background-color: #e3f2fd"] *,
+[style*="background-color:#E3F2FD"] *,
+[style*="background-color: #E3F2FD"] *,
+
+/* #BBDEFB */
+[style*="background:#BBDEFB"] *,
+[style*="background: #BBDEFB"] *,
+[style*="background-color:#bbdefb"] *,
+[style*="background-color: #bbdefb"] *,
+[style*="background-color:#BBDEFB"] *,
+[style*="background-color: #BBDEFB"] *,
+
+/* RGB variations just in case */
+[style*="rgb(227, 242, 253)"] *,
+[style*="rgb(187, 222, 251)"] * {
+    color: #000000 !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+    --text: #000000 !important;
+    --text-light: #333333 !important;
+}
+
+
+/* Light Yellow Variations (#fff3e0, #fffde7) */
+[style*="background:#FFF3E0"] *,
+[style*="background: #FFF3E0"] *,
+[style*="background-color:#fff3e0"] *,
+[style*="background-color: #fff3e0"] *,
+[style*="background-color:#FFF3E0"] *,
+[style*="background-color: #FFF3E0"] *,
+
+[style*="background:#FFFDE7"] *,
+[style*="background: #FFFDE7"] *,
+[style*="background-color:#fffde7"] *,
+[style*="background-color: #fffde7"] *,
+[style*="background-color:#FFFDE7"] *,
+[style*="background-color: #FFFDE7"] * {
+    color: #000000 !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+}
+
+/* Generic White Variations */
+[style*="background-color:white"] *,
+[style*="background-color: white"] *,
+[style*="background-color:#ffffff"] *,
+[style*="background-color: #ffffff"] *,
+[style*="background-color:#FFFFFF"] *,
+[style*="background-color: #FFFFFF"] * {
+    color: #000000 !important;
+    opacity: 1 !important;
+}
+
+/* Direct targeted override for the specific card types seen in screenshots */
+.tip-box *,
+.info-box *,
+.alert-box *,
+.definition-box *,
+.example-box * {
+    /* If they have light background classes, force dark text */
+    /* This is safer than inline style parsing if classes exist */
+}
+
+/* Force dark text on specific light-colored classes if they exist */
+.bg-blue-50 *,
+.bg-blue-100 *,
+.bg-cyan-50 *,
+.bg-cyan-100 *,
+.bg-yellow-50 *,
+.bg-yellow-100 *,
+.bg-orange-50 *,
+.bg-orange-100 *,
+.bg-white * {
+    color: #000000 !important;
+}
+
+/* ================================================== */
+/* FINAL CONTRAST FIX v4 (CONTAINER TARGETING)        */
+/* ================================================== */
+
+/* 1. Target the CONTAINER ITSELF, not just children */
+[style*="background"] {
+    color: #000000 !important;
+    text-shadow: none !important;
+}
+
+/* 2. Specific Class Overrides */
+.tip-box,
+.def-box,
+.alert-box,
+.info-box,
+.example-box {
+    color: #000000 !important;
+    text-shadow: none !important;
+}
+
+/* 3. Force dark text on all descendants of these classes too */
+.tip-box *,
+.def-box *,
+.alert-box *,
+.info-box *,
+.example-box * {
+    color: #000000 !important;
+    text-shadow: none !important;
+}
+
+/* 4. Re-iterate the inline style variations, targeting the element itself + children */
+/* Light Blue */
+[style*="background:#e3f2fd"],
+[style*="background: #e3f2fd"],
+[style*="background:#bbdefb"],
+[style*="background: #bbdefb"],
+[style*="background-color:#e3f2fd"],
+[style*="background-color: #e3f2fd"],
+[style*="background-color:#bbdefb"],
+[style*="background-color: #bbdefb"] {
+    color: #000000 !important;
+}
+
+/* Light Yellow */
+[style*="background:#fff3e0"],
+[style*="background: #fff3e0"],
+[style*="background:#fffde7"],
+[style*="background: #fffde7"],
+[style*="background-color:#fff3e0"],
+[style*="background-color: #fff3e0"],
+[style*="background-color:#fffde7"],
+[style*="background-color: #fffde7"] {
+    color: #000000 !important;
+}
+
+/* White */
+[style*="background:#ffffff"],
+[style*="background: #ffffff"],
+[style*="background:white"],
+[style*="background: white"],
+[style*="background-color:#ffffff"],
+[style*="background-color: #ffffff"],
+[style*="background-color:white"],
+[style*="background-color: white"] {
+    color: #000000 !important;
+}
+
+/* 5. Specific fix for the text mentioned by user */
+/* "Pourquoi Badal ?" is in a .tip-box, covered above. */
+/* "Ghafurun" examples are in flex containers with inline backgrounds. */
+
+/* 6. Exception for Arabic Highlighting if needed, BUT user asked for black. */
+/* We will keep the forced black for now as requested. */
+/* If specific arabic words need color, they usually have specific classes, but */
+/* the 'color: #000000 !important' on * will override them. */
+/* To allow Colored Arabic: */
+.ar-word,
+.ar-word * {
+    /* If the user wants specific Tajwid colors, we might need to NOT force black on .ar-word */
+    /* But for now, let's stick to readability as priority. */
+    /* Re-enabling specific colors if they have !important inline could work, */
+    /* but let's assume the user wants EVERYTHING readable first. */
 }

@@ -22,7 +22,7 @@ const IKHFAA_DATA = {
         // 1. SCOPE
         {
             type: "lesson",
-            prof: "Introduction.<br>Sur quoi porte cette règle ?",
+            prof: "Introduction.<br>Sur quoi porte la règle de l'Ikhfaa ?",
             html: `
             <div class="concept-card">
                 <h3>Champ d'Application</h3>
@@ -263,7 +263,7 @@ const IKHFAA_DATA = {
         },
 
         // --- PARTIE 2 : ATELIER ---
-        { type: "intro", prof: "Atelier Pratique.<br>Entraînez-vous avec les deux types." },
+        { type: "intro", prof: "Atelier Pratique.<br>Entraînez-vous à l'Ikhfaa avec les deux types." },
 
         // WORKSHOP - Muraqqaqa
         {

@@ -108,7 +108,7 @@ const MIM_REVIEW_DATA = {
         {
             type: "immersion",
             prof: "Attention au Ba.",
-            instruction: "Identifiez la règle.",
+            instruction: "Identifiez la règle du Mim.",
             surah: 105,
             words: [
                 { t: "تَرْمِيهِم", ok: true, rules: [{ label: "م", optIdx: 1 }], reason: "Mim + Ba = Ikhfaa Shafawi." },

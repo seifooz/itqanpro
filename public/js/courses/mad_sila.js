@@ -178,10 +178,10 @@ const MAD_SILA_DATA = {
         },
 
         // EXAM
-        { type: "intro", prof: "🧐 <strong>Évaluation</strong>" },
+        { type: "intro", prof: "🧐 <strong>Évaluation du Mad Sila</strong>" },
         {
             type: "quiz_theory",
-            prof: "Vérifions votre compréhension.",
+            prof: "Vérifions votre compréhension du Mad Sila.",
             questions: [
                 {
                     q: "Quand applique-t-on le Mad As-Sila ?",

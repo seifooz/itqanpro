@@ -23,7 +23,7 @@ const MIM_IKHFAA_DATA = {
         // 1. SCOPE
         {
             type: "lesson",
-            prof: "Introduction.<br>Sur quoi porte cette règle ?",
+            prof: "Introduction.<br>Sur quoi porte la règle d'Ikhfaa Shafawi ?",
             html: `
             <div class="concept-card">
                 <h3>Champ d'Application</h3>
@@ -126,7 +126,7 @@ const MIM_IKHFAA_DATA = {
         },
 
         // --- PARTIE 2 : ATELIER ---
-        { type: "intro", prof: "Atelier Pratique.<br>Écoutez et Répétez." },
+        { type: "intro", prof: "Atelier Pratique.<br>Écoutez et Répétez l'Ikhfaa Shafawi." },
 
         {
             type: "workshop", prof: `Entraînement <strong>Ikhfaa Shafawi</strong>. ${IKH_SH_HELP_HTML}`, examples: [

@@ -21,7 +21,7 @@ const IQLAB_DATA = {
         // 1. SCOPE
         {
             type: "lesson",
-            prof: "Introduction.<br>Sur quoi porte cette règle ?",
+            prof: "Introduction.<br>Sur quoi porte la règle de l'Iqlab ?",
             html: `
             <div class="concept-card">
                 <h3>Champ d'Application</h3>
@@ -188,7 +188,7 @@ const IQLAB_DATA = {
         },
 
         // --- PARTIE 2 : ATELIER ---
-        { type: "intro", prof: "Atelier Pratique.<br>Entraînez-vous avec la lettre Ba." },
+        { type: "intro", prof: "Atelier Pratique.<br>Entraînez-vous à l'Iqlab avec la lettre Ba." },
 
         // WORKSHOP
         { type: "workshop", prof: `Lettre Unique : <strong>Ba (ب)</strong>. ${IQ_HELP_HTML}`, examples: [{ type: "Noun Sakina", ar: "مِنۢ بَعْدِ", url: "iqlab_min_badi", hint: "Expl: Noun + Ba -> Iqlab (Mim-ba'di)" }, { type: "Tanween", ar: "سَمِيعٌۢ بَصِيرٌ", url: "iqlab_samiun_baseer", hint: "Expl: Tanween + Ba -> Iqlab (Sami'um-basir)" }] },

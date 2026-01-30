@@ -172,7 +172,7 @@ const MAD_ARID_DATA = {
         },
         {
             type: "intro",
-            prof: "🧐 <strong>Évaluation</strong>"
+            prof: "🧐 <strong>Évaluation du Mad Arid</strong>"
         },
         {
             type: "quiz_theory",

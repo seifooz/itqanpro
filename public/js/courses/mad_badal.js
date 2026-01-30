@@ -55,7 +55,7 @@ const MAD_BADAL_DATA = {
         },
         {
             type: "quiz_theory",
-            prof: "Vérifions si vous avez bien compris la nuance.",
+            prof: "Vérifions si vous avez bien compris le Mad Badal.",
             questions: [
                 {
                     q: "Où se trouve la Hamza dans le Mad Badal ?",

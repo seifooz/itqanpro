@@ -20,7 +20,7 @@ const IZHAR_DATA = {
         // 1. SCOPE : À QUI ÇA S'ADRESSE ?
         {
             type: "lesson",
-            prof: "Introduction.<br>Sur quoi porte cette règle ?",
+            prof: "Introduction.<br>Sur quoi porte la règle de l'Izhar ?",
             html: `
             <div class="concept-card">
                 <h3>Champ d'Application</h3>
@@ -184,7 +184,7 @@ const IZHAR_DATA = {
         // Quiz Théorie
         {
             type: "quiz_theory",
-            prof: "Vérification.<br>Quel signe déclenche la recherche de la règle ?",
+            prof: "Vérification.<br>Quel signe déclenche la recherche de la règle de l'Izhar ?",
             opts: [
                 { t: "La voyelle Fatha", good: false },
                 { t: "Le Noun Sakina ou le Tanween", good: true }
@@ -199,7 +199,7 @@ const IZHAR_DATA = {
         },
 
         // --- PARTIE 2 : ATELIER ---
-        { type: "intro", prof: "Atelier Pratique.<br>Entraînez-vous à prononcer." },
+        { type: "intro", prof: "Atelier Pratique.<br>Entraînez-vous à prononcer l'Izhar." },
 
         // WORKSHOP
         { type: "workshop", prof: `Lettre 1 : <strong>Hamza (ء)</strong>. ${HELP_HTML}`, examples: [{ type: "Noun Sakina", ar: "مَنْ ءَامَنَ", url: "izhar_man_aamana", hint: "Expl: Noun Sakina + Hamza (Gorge) -> Izhar" }, { type: "Tanween", ar: "كُلٌّ ءَامَنَ", url: "izhar_kullun_aamana", hint: "Expl: Tanween + Hamza (Gorge) -> Izhar" }] },

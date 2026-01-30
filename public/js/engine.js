@@ -298,7 +298,7 @@ function showPortal() {
             ${sectionsHTML}
             
             <div class="portal-footer">
-                © 2026 Itqān Pro • Nourel Agency
+                © 2026 Itqān Pro. Tous droits réservés.
             </div>
         </div>
     </div>

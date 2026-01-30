@@ -199,7 +199,7 @@ const MAD_EWAD_DATA = {
         },
 
         // EXAM
-        { type: "intro", prof: "🧐 <strong>Évaluation</strong>" },
+        { type: "intro", prof: "🧐 <strong>Évaluation du Mad Ewad</strong>" },
         {
             type: "quiz_theory",
             prof: "Vérifions vos connaissances sur le Mad Al-Ewad.",

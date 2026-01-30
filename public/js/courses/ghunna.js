@@ -150,7 +150,7 @@ const GHUNNA_DATA = {
         },
 
         // EXAMEN FINAL
-        { type: "intro", prof: "🧐 <strong>Examen Final</strong><br>Simple mais efficace." },
+        { type: "intro", prof: "🧐 <strong>Examen Final de la Ghunna</strong><br>Simple mais efficace." },
 
         {
             type: "quiz_theory",
