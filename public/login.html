@@ -200,35 +200,40 @@
 
         <form id="loginForm" onsubmit="return handleLogin(event)">
             <div class="form-group">
-                <label for="identifier">Identifiant</label>
-                <input type="text" id="identifier" placeholder="Entrez votre identifiant" required>
+                <label for="accessKey">Clé d'accès</label>
+                <input type="text" id="accessKey" placeholder="Ex: K8A2-B9X1" required
+                    style="text-transform: uppercase; letter-spacing: 1px;">
+                <p class="warning-text" style="color: #f1c40f; font-size: 0.85rem; margin-top: 8px;">⚠️ Attention :
+                    Cette clé d'accès est personnelle et à usage unique.</p>
+                <p class="error-message" id="errorMsg">Clé d'accès invalide. Veuillez vérifier.</p>
             </div>
 
-            <div class="form-group">
-                <label for="password">Mot de passe</label>
-                <input type="password" id="password" placeholder="Entrez votre mot de passe" required>
-                <p class="error-message" id="errorMsg">Mot de passe incorrect. Veuillez réessayer.</p>
-            </div>
-
-            <button type="submit" class="btn-login">Entrer</button>
+            <button type="submit" class="btn-login">Accéder</button>
         </form>
+
+        <div style="text-align: center; margin-top: 20px; font-size: 0.9rem;">
+            <p style="color: rgba(255,255,255,0.7); margin-bottom: 5px;">Vous n'avez pas d'accès ?</p>
+            <a href="https://www.itqanpro.fr/" target="_blank"
+                style="color: #FFD700; text-decoration: none; font-weight: 600; border-bottom: 1px dashed #FFD700;">Consultez
+                itqanpro.fr ➜</a>
+        </div>
 
         <p class="footer-text">© 2026 Itqān Pro. Tous droits réservés.</p>
     </div>
 
     <script>
-        // List of valid passwords
-        const VALID_PASSWORDS = [
-            'ITQAN2024',
-            'TAJWID777',
-            'MADRASA99',
-            'QURAN1234',
-            'RECITE500',
-            'HAFIZ2025',
-            'ALQURAN01',
-            'IJAZAH123',
-            'QIRAAT888',
-            'TILAWAH77'
+        // GENERATED ACCESS KEYS
+        const ACCESS_KEYS = [
+            'K8A2-B9X1',
+            'M4C5-D3F2',
+            'P7L9-Q1W3',
+            'R2T4-Y6U8',
+            'E5R7-T9Y1',
+            'A1S2-D3F4',
+            'G5H6-J7K8',
+            'Z9X8-C7V6',
+            'B2N3-M4L5',
+            'Q1W2-E3R4'
         ];
 
         // Check if already logged in
@@ -239,22 +244,25 @@
         function handleLogin(event) {
             event.preventDefault();
 
-            const password = document.getElementById('password').value.toUpperCase().trim();
-            const passwordInput = document.getElementById('password');
+            const keyInput = document.getElementById('accessKey');
+            const key = keyInput.value.toUpperCase().trim();
             const errorMsg = document.getElementById('errorMsg');
 
-            if (VALID_PASSWORDS.includes(password)) {
+            if (ACCESS_KEYS.includes(key)) {
                 // Success! Store in localStorage and redirect
                 localStorage.setItem('itqan_logged_in', 'true');
+                // Store the used key just in case we need it later
+                localStorage.setItem('itqan_user_key', key);
+
                 window.location.href = 'index.html';
             } else {
-                // Wrong password
-                passwordInput.classList.add('error');
+                // Wrong key
+                keyInput.classList.add('error');
                 errorMsg.classList.add('visible');
 
                 // Remove error state after animation
                 setTimeout(() => {
-                    passwordInput.classList.remove('error');
+                    keyInput.classList.remove('error');
                 }, 400);
             }
 
@@ -262,7 +270,7 @@
         }
 
         // Clear error on input
-        document.getElementById('password').addEventListener('input', function () {
+        document.getElementById('accessKey').addEventListener('input', function () {
             this.classList.remove('error');
             document.getElementById('errorMsg').classList.remove('visible');
         });
